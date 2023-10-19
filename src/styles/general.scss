@@ -1,0 +1,1217 @@
+//main Variables
+$purple-800: #440bd4;
+$pink-800: #e92efb;
+$red-800: #ff2079;
+$red-600: #ff589a;
+$shade-1000: #000000;
+$shade-800: #333333;
+$shade-700: #4d4d4d;
+$shade-600: #666666;
+$shade-500: #808080;
+$shade-400: #999999;
+$shade-300: #b3b3b3;
+$shade-200: #cccccc;
+$shade-100: #e6e6e6;
+$shade-0: #fff;
+$transparent: rgba($shade-0, 0.01);
+$gradient-col: linear-gradient(45deg, $purple-800 0%, $pink-800 50%, $red-800 100%);
+$gradient: linear-gradient(45deg, rgba($purple-800, 0.1) 0%, rgba($pink-800, 0.1) 50%, rgba($red-800, 0.1) 100%), #333;
+
+//main ScroolBar
+::-webkit-scrollbar {
+    width: 12px;
+    &:window-inactive {
+        width: 0px;
+    }
+}
+::-webkit-scrollbar-track {
+    background: $shade-800;
+}
+::-webkit-scrollbar-thumb {
+    background-color: $shade-0;
+    border-radius: 20px;
+    mix-blend-mode: exclusion;
+    border-color: $shade-800;
+    border-width: 4px;
+    border-style: solid;
+    &:hover {
+        background-color: rgba($red-800, 0.5);
+        border-width: 2px;
+    }
+}
+
+//main HTML
+html {
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 3840px) {
+    html {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 2560px) {
+    html {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 1920px) {
+    html {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 1600px) {
+    html {
+        font-size: 11px;
+    }
+}
+@media only screen and (max-width: 1366px) {
+    html {
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 100vh) {
+    html {
+        font-size: 9px;
+    }
+}
+::selection {
+    background: $red-800;
+    color: #000;
+    text-shadow: $shade-800 0px 0px 1px;
+}
+
+//main FONTS
+@font-face {
+    font-family: "Bebas-Neue";
+    src: url(../assets/fonts/Bebas/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url(../assets/fonts/Montserrat/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: "Montserrat-SemiBold";
+    src: url(../assets/fonts/Montserrat/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    font-family: "Montserrat-ExtraBold";
+    src: url(../assets/fonts/Montserrat/Montserrat-ExtraBold.ttf);
+}
+
+//* Mixins
+@mixin typo($family, $weight, $size) {
+    @if $family == "bebas" {
+        font-family: "Bebas-Neue";
+    } @else if $family == "montserrat" {
+        font-family: "Montserrat-" + $weight;
+    }
+
+    $fsize: 0rem;
+
+    @if $size == "c4" {
+        $fsize: 0.5rem;
+    } @else if $size == "c3" {
+        $fsize: 0.8rem;
+    } @else if $size == "c2" {
+        $fsize: 1rem;
+    } @else if $size == "c1" {
+        $fsize: 1.2rem;
+    } @else if $size == "xs" {
+        $fsize: 1.2rem;
+    } @else if $size == "sm" {
+        $fsize: 1.4rem;
+    } @else if $size == "base" {
+        $fsize: 1.6rem;
+    } @else if $size == "lg" {
+        $fsize: 1.8rem;
+    } @else if $size == "xl" {
+        $fsize: 2rem;
+    } @else if $size == "2xl" {
+        $fsize: 2.4rem;
+    } @else if $size == "3xl" {
+        $fsize: 2.8rem;
+    } @else if $size == "4xl" {
+        $fsize: 3.2rem;
+    } @else if $size == "5xl" {
+        $fsize: 3.6rem;
+    } @else if $size == "6xl" {
+        $fsize: 4.4rem;
+    } @else if $size == "7xl" {
+        $fsize: 4.8rem;
+    } @else if $size == "8xl" {
+        $fsize: 5.6rem;
+    } @else if $size == "9xl" {
+        $fsize: 6.4rem;
+    } @else if $size == "10xl" {
+        $fsize: 8rem;
+    } @else if $size == "12xl" {
+        $fsize: 9.6rem;
+    } @else if $size == "14xl" {
+        $fsize: 11.2rem;
+    } @else if $size == "titulo" {
+        $fsize: 32rem;
+    }
+
+    font-size: $fsize;
+    @if $size == "titulo" {
+        line-height: $fsize;
+    } @else if $size == "12xl" {
+        line-height: $fsize;
+    } @else {
+        line-height: $fsize * 1.3;
+    }
+}
+@mixin containers($gap, $direction) {
+    display: flex;
+    align-items: center;
+    gap: $gap;
+    flex-direction: $direction;
+}
+.monXs {
+    @include typo("montserrat", "Regular", "xs");
+}
+.monXl {
+    @include typo("montserrat", "Regular", "xl");
+}
+.monBs {
+    @include typo("montserrat", "Regular", "base");
+    color: $shade-100;
+    &-dark {
+        @include typo("montserrat", "Regular", "base");
+        color: $shade-800;
+    }
+}
+h1 {
+    @include typo("bebas", "Regular", "titulo");
+    color: $gradient;
+    opacity: 0.075;
+    text-align: left;
+    width: max-content;
+    mix-blend-mode: multiply;
+}
+h2 {
+    @include typo("bebas", "Regular", "12xl");
+    text-align: left;
+    width: max-content;
+}
+h3 {
+    @include typo("bebas", "Regular", "2xl");
+    color: $shade-800;
+    text-align: center;
+}
+h4 {
+    @include typo("bebas", "Regular", "2xl");
+}
+
+//main GENERAL
+a {
+    text-decoration: none;
+}
+b {
+    @include typo("montserrat", "SemiBold", "xl");
+    color: $red-800;
+}
+.div-content {
+    @include containers(5rem, column);
+    padding: 9rem 10rem 0rem 25rem;
+    align-items: flex-start;
+    align-self: stretch;
+    mix-blend-mode: multiply;
+    height: max-content;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    &-plus {
+        padding: 9rem 10rem 0rem 10rem;
+        @include containers(5rem, column);
+        align-items: flex-start;
+
+        h1 {
+            color: #440bd4;
+        }
+    }
+}
+.title-container {
+    padding: 14rem 25rem;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    position: absolute;
+    &-plus {
+        padding: 14rem 10rem;
+        height: 100vh;
+        width: 100vw;
+        z-index: -1;
+        position: absolute;
+    }
+    &-plus {
+        padding: 14rem 20rem;
+        height: 100vh;
+        width: 100vw;
+        z-index: -1;
+        position: absolute;
+    }
+}
+.button {
+    @include containers(0rem, row);
+    justify-content: center;
+    &-tertiary {
+        color: $red-600;
+        text-transform: uppercase;
+        @include typo("bebas", "SemiBold", "2xl");
+        margin-top: 3rem;
+        @include containers(1rem, row);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 117px;
+        &:hover {
+            text-decoration: underline;
+            color: $red-600;
+        }
+    }
+}
+.middle {
+    padding: 10rem 10rem 10rem 25rem;
+    &-plus {
+        padding: 10rem;
+    }
+    &-body {
+        padding: 10rem 20rem;
+    }
+}
+.dark {
+    background: $gradient;
+    color: $shade-100;
+}
+
+.nav {
+    &-link {
+        @include typo("bebas", "Regular", "sm");
+        color: $shade-300;
+
+        &:hover {
+            color: $shade-300;
+        }
+
+        &-normal {
+            color: $shade-300;
+            mix-blend-mode: exclusion;
+        }
+
+        &-normal:hover {
+            color: $shade-300;
+            text-decoration: underline;
+            mix-blend-mode: exclusion;
+        }
+
+        &-inactive {
+            color: $shade-300;
+            mix-blend-mode: exclusion;
+        }
+
+        &-inactive:hover {
+            color: $red-800;
+            text-decoration: underline;
+            mix-blend-mode: exclusion;
+        }
+
+        &-active {
+            color: $red-800;
+        }
+
+        &-active:hover {
+            color: $red-800;
+        }
+
+        &-icons {
+            width: 1.6rem;
+            height: 1.6rem;
+            mix-blend-mode: exclusion;
+        }
+
+        &-icons:hover {
+            mix-blend-mode: normal;
+        }
+    }
+}
+.container-nav-link {
+    &-left {
+        @include containers(1rem, row);
+    }
+    &-right {
+        @include containers(5rem, row);
+        &-media {
+            @include containers(1rem, row);
+        }
+        &-language {
+            @include containers(0rem, row);
+        }
+    }
+}
+.clickable {
+    cursor: pointer;
+}
+.mixN {
+    mix-blend-mode: normal;
+}
+
+.hero {
+    @include containers(0rem, column);
+    padding: 10rem 0rem;
+    &-logo {
+        width: 10rem;
+        height: 10rem;
+    }
+    &-logoName {
+        height: 8rem;
+    }
+    &-role {
+        @include typo("montserrat", "ExtraBold", "5xl");
+        color: $shade-800;
+    }
+    &-data {
+        @include containers(0rem, column);
+        padding: 0rem 10rem;
+    }
+    &-banner {
+        height: 30rem;
+        width: 100%;
+        mix-blend-mode: multiply;
+        background-size: cover;
+        background-position: center;
+        animation: slide 300s infinite linear;
+    }
+
+    @keyframes slide {
+        0% {
+            background-position-x: 0px;
+        }
+        100% {
+            background-position-x: 1000vw;
+        }
+    }
+}
+
+//main Liverpool
+.liverpool {
+    background: url("../assets/imgs/liverpool/background.png"), #fff;
+    background-size: cover;
+}
+
+.info-card {
+    @include containers(1rem, column);
+    max-width: 30rem;
+    min-width: 30rem;
+    align-items: center;
+    justify-content: center;
+    &-icon {
+        width: 8rem;
+        height: 8rem;
+    }
+    &-title {
+        @include typo("bebas", "Regular", "4xl");
+    }
+    &-desc {
+        @include typo("montserrat", "Regular", "base");
+        text-align: center;
+    }
+}
+
+.cont-info {
+    @include containers(5rem, row);
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.img-atom {
+    width: 100%;
+}
+
+.cont-brands {
+    @include containers(5rem, column);
+    width: 100%;
+    &-sup {
+        @include containers(1rem, column);
+        width: 100%;
+        align-items: center;
+    }
+    &-car {
+        @include containers(0rem, row);
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        height: 7rem;
+    }
+    &-arrow {
+        width: 3rem;
+        height: 3rem;
+    }
+    &-name{
+        height: 2.5rem;
+    }
+    &-show{
+        &-mock{
+            height: 50rem;
+        }
+    }
+}
+
+#b1 {
+    width: 3rem;
+    height: 3rem;
+}
+
+#b2 {
+    width: 4rem;
+    height: 4rem;
+}
+
+#b3 {
+    width: 5rem;
+    height: 5rem;
+}
+
+#b4 {
+    width: 6rem;
+    height: 6rem;
+}
+
+#b5 {
+    width: 7rem;
+    height: 7rem;
+}
+
+//main HEADER
+.nav-header {
+    display: flex;
+    width: 100vw;
+    height: 4rem;
+    padding: 10px 50px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    background: rgba($shade-0, 0.01);
+    box-shadow: 0px 0.4rem 5rem 0px rgba($shade-800, 0.1);
+    position: fixed;
+    z-index: 100;
+}
+
+//main LEFT NAV
+.nav-left {
+    height: 100vh;
+    width: 200px;
+    padding: 9rem 2.5rem 5rem 5rem;
+    @include containers(2rem, column);
+    align-items: flex-start;
+    justify-content: start;
+    flex-shrink: 0;
+    position: fixed;
+    z-index: 90;
+
+    &-scroll {
+        @include containers(2.5rem, column);
+        padding: 5rem 0.3rem;
+        height: 100%;
+
+        .cont {
+            flex-shrink: 0;
+            @include containers(1rem, column);
+        }
+    }
+
+    .nav-link {
+        @include typo("bebas", "Regular", "base");
+    }
+}
+.scroll-bar {
+    background-color: $shade-500;
+    mix-blend-mode: exclusion;
+    border-radius: 5px;
+    width: 5px;
+    height: 100%;
+
+    &-fill {
+        background-color: $red-800;
+        mix-blend-mode: normal;
+        border-radius: 5px;
+        width: 5px;
+    }
+}
+.spam-pos {
+    color: $shade-300;
+    mix-blend-mode: exclusion;
+    @include typo("bebas", "Regular", "c1");
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+//main SWAL
+.swal-icon {
+    width: 75px;
+    height: 75px;
+    border: none;
+    &-name {
+        height: 30px;
+    }
+}
+.swal-title {
+    @include typo("montserrat", "ExtraBold", "xl");
+    color: $shade-800;
+    margin-top: 3rem;
+}
+.swal-description {
+    @include typo("montserrat", "Regular", "sm");
+    color: $shade-800;
+    margin-top: 3rem;
+    text-align: center;
+}
+.swal2-icon {
+    border-width: 0px;
+}
+
+//main HOME
+#sobre-mi {
+    @include containers(5rem, column);
+    align-items: flex-start;
+    align-self: stretch;
+    mix-blend-mode: multiply;
+    height: max-content;
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+}
+#cont-Home {
+    @include containers(10rem, row);
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 0;
+}
+.div-text {
+    @include containers(3rem, column);
+    align-items: flex-start;
+    width: 50%;
+    height: 100%;
+}
+.photo-portrait {
+    height: calc(100vh - 100px);
+}
+.foto-mia {
+    width: 100%;
+    height: 100%;
+    align-self: baseline;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+//main EDUCATION
+.cont-schools {
+    @include containers(5rem, row);
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: min-content;
+}
+.card-school {
+    color: $shade-100;
+    border-color: $shade-0;
+    outline-style: solid;
+    outline-width: 0.2rem;
+    border-radius: 1.5rem;
+    padding: 3rem 5rem 6rem;
+    @include containers(3rem, column);
+    justify-content: space-between;
+    box-shadow: 0px 0px 2.1rem 0px rgba($shade-1000, 0.2) inset;
+    min-width: calc(50% - 2.5rem);
+    min-height: 51rem;
+    max-height: 61rem;
+
+    a {
+        color: $shade-100;
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 5rem 0px rgba($shade-1000, 0.4) inset;
+        outline-color: $red-800;
+        outline-style: solid;
+        outline-width: 5px;
+    }
+
+    &-img {
+        width: 15rem;
+        height: 15rem;
+    }
+    &-inst {
+        @include typo("bebas", "regular", "lg");
+        text-align: center;
+    }
+    &-carrer {
+        @include typo("bebas", "regular", "5xl");
+        text-align: center;
+    }
+    &-date {
+        @include typo("montserrat", "semibold", "base");
+        text-align: center;
+    }
+    &-ced {
+        @include typo("montserrat", "regular", "xl");
+        text-align: center;
+    }
+    &-first {
+        @include containers(0rem, column);
+    }
+    &-studies {
+        @include containers(1rem, column);
+    }
+    &-extra {
+        @include containers(0rem, column);
+    }
+}
+.cont-courses {
+    @include containers(5rem, row);
+    justify-content: flex-start;
+    color: $shade-100;
+    min-width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+.card-course {
+    @include containers(1.5rem, column);
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 25rem;
+    max-width: 25rem;
+
+    &:hover {
+        .card-course-dataB {
+            border-left-color: $red-800;
+            box-shadow: -10px 0px 0.5rem -5px rgba($shade-1000, 0.2);
+        }
+        .card-course-id {
+            text-decoration: underline;
+        }
+    }
+
+    &-logos {
+        @include typo("montserrat", "semibold", "base");
+        color: $shade-0;
+        @include containers(1rem, row);
+    }
+
+    &-institutes {
+        @include typo("montserrat", "semibold", "sm");
+        color: $shade-0;
+        @include containers(1rem, row);
+    }
+
+    &-date {
+        @include typo("montserrat", "semibold", "xs");
+        color: $shade-0;
+        @include containers(1rem, row);
+    }
+
+    &-name {
+        @include typo("montserrat", "regular", "base");
+        color: $shade-0;
+        @include containers(1rem, row);
+    }
+
+    &-id {
+        @include typo("bebas", "regular", "lg");
+        color: $shade-0;
+        @include containers(1rem, row);
+    }
+
+    &-dataB {
+        @include containers(-1rem, column);
+        align-items: flex-start;
+        border-left-color: $shade-0;
+        border-left-style: solid;
+        border-left-width: 3px;
+        padding-left: 2rem;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 11rem;
+    }
+}
+
+//main EXPERIENCE
+#exp-cont {
+    @include containers(1rem, column);
+}
+.year-label {
+    background-color: $gradient;
+    padding: 0.5rem 1rem 0.3rem 1rem;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+
+    &-title {
+        @include typo("bebas", "regular", "sm");
+        color: $shade-0;
+        margin: 0px;
+    }
+}
+.exp-card {
+    @include containers(2rem, row);
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+}
+.job-card {
+    height: max-content;
+    min-width: calc(50% - 50px - 2rem);
+    max-width: calc(50% - 50px - 2rem);
+    border-radius: 20px 20px 20px 0px;
+    background-color: transparent;
+    padding: 2rem 1.5rem;
+    box-shadow: -25px 25px 50px 0px rgba(51, 51, 51, 0.1);
+    @include containers(1rem, row);
+    align-items: flex-start;
+    &:hover {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+        box-shadow: -25px 25px 50px 0px rgba(51, 51, 51, 0.2);
+        .job-card-out {
+            opacity: 1;
+        }
+    }
+    &-img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    &-out {
+        width: 2rem;
+        height: 2rem;
+        opacity: 0;
+    }
+    &-data {
+        @include containers(1rem, column);
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 100%;
+        width: calc(100% - 3.5rem - 2rem - 2rem);
+        &-duration {
+            @include typo("bebas", "regular", "xs");
+            color: $red-800;
+            margin: 0px;
+        }
+        &-company {
+            @include typo("bebas", "regular", "base");
+            color: $shade-800;
+            margin: 0px;
+        }
+        &-role {
+            @include typo("montserrat", "ExtraBold", "sm");
+            color: $shade-800;
+            margin: 0px;
+        }
+        &-tags {
+            @include containers(1rem, row);
+            width: 100%;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            &-tag {
+                @include typo("montserrat", "SemiBold", "c3");
+                color: $shade-0;
+                text-transform: uppercase;
+                margin: 0px;
+                padding: 0.3rem 0.8rem;
+                border-radius: 5px;
+                background-color: $red-800;
+            }
+            &-img {
+                width: 18px;
+            }
+        }
+    }
+}
+.company {
+    background-color: #fa6e91;
+}
+.project {
+    background-color: #d462d9;
+}
+.job {
+    background-color: #b678f0;
+}
+.design {
+    background-color: #6a62d9;
+}
+.programming {
+    background-color: #70a4ff;
+}
+.date-lateral {
+    @include containers(0rem, column);
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    &-line {
+        background-color: $shade-800;
+        width: 3px;
+        height: 100%;
+        border-radius: 3px;
+        margin: 0px 2rem;
+        min-height: 10px;
+    }
+    &-month {
+        border-color: $shade-800;
+        border-style: solid;
+        border-width: 0px 0rem 0px 0px;
+        width: 100px;
+        text-align: center;
+        &-label {
+            @include typo("montserrat", "SemiBold", "c3");
+            color: $shade-800;
+            margin: 0px;
+            padding: 0.8rem 0rem;
+        }
+    }
+}
+
+//main CONTACT
+#contactemos {
+    min-height: 100%;
+}
+.cont-contact {
+    @include containers(5rem, row);
+    align-items: flex-start;
+    width: 100%;
+    &-text {
+        @include containers(2rem, column);
+        align-items: flex-start;
+        @include typo("bebas", "regular", "xl");
+        color: $shade-800;
+        width: calc(50% - 2.5rem);
+        &-redes {
+            @include containers(0.5rem, row);
+            &-img {
+                width: 2rem;
+                height: 2rem;
+            }
+            &-text {
+                @include typo("montserrat", "regular", "lg");
+                color: $shade-100;
+                margin: 0px;
+                padding: 0px 0.5rem;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    &-form {
+        @include containers(2rem, column);
+        align-items: flex-start;
+        width: calc(50% - 2.5rem);
+        &-input {
+            @include containers(0.5rem, column);
+            align-items: flex-start;
+            width: 100%;
+        }
+    }
+}
+.label-input {
+    @include typo("bebas", "regular", "c1");
+    color: $shade-100;
+    opacity: 0.5;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    background-color: transparent;
+    border-width: 0px 0px 0.2rem 0px;
+    padding: 1.5rem;
+    color: $shade-100;
+    width: 100%;
+    @include typo("montserrat", "regular", "sm");
+    box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.2) inset;
+    &::placeholder {
+        color: $shade-100;
+        mix-blend-mode: soft-light;
+    }
+    &:focus {
+        outline: none;
+        border-color: $red-800;
+        &::placeholder {
+            mix-blend-mode: normal;
+        }
+    }
+}
+textarea {
+    min-height: 20rem;
+    resize: none;
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+}
+
+//main EXPERIENCEHOME
+.job-pri-card {
+    @include containers(1rem, column);
+    box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.1);
+    padding: 2.5rem;
+    border-radius: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 30rem;
+    max-width: 30rem;
+    &:hover {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+        box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.2);
+    }
+    &-img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.job-sec-card {
+    @include containers(1rem, column);
+    box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 20rem;
+    max-width: 20rem;
+    &:hover {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+        box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.2);
+    }
+    &-img {
+        width: 20px;
+        height: 20px;
+    }
+    &-data {
+        @include containers(0rem, column);
+        &-title {
+            @include typo("bebas", "SemiBold", "xs");
+        }
+        &-duration {
+            @include typo("bebas", "Regular", "c3");
+            color: $red-600;
+        }
+        &-role {
+            @include typo("montserrat", "SemiBold", "c2");
+        }
+    }
+}
+
+.cont-jobs {
+    &-pri {
+        @include containers(5rem, row);
+        align-items: flex-start;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    &-sec {
+        @include containers(2.5rem, row);
+        align-items: flex-start;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+.cont-exp {
+    @include containers(0.5rem, column);
+    align-items: flex-start;
+}
+
+.proj-card {
+    @include containers(1rem, row);
+    align-items: flex-start;
+    min-width: 25rem;
+    max-width: 25rem;
+    border-radius: 10px;
+    border-color: $shade-0;
+    border-style: solid;
+    border-width: 0.1rem;
+    padding: 1.5rem;
+    color: $shade-100;
+    &:hover {
+        border-color: $red-800;
+        box-shadow: 0px 0px 5rem 0px rgba($shade-1000, 0.4) inset;
+    }
+    &-img {
+        width: 25px;
+        height: 25px;
+    }
+    &-data {
+        @include containers(0rem, column);
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        &-date {
+            @include typo("bebas", "regular", "base");
+            color: $shade-300;
+        }
+        &-description {
+            @include typo("montserrat", "semibold", "xs");
+            color: $shade-100;
+        }
+    }
+}
+
+.con-proj {
+    @include containers(2.5rem, row);
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+//main FOOTER
+.cont-footer {
+    @include containers(5rem, row);
+    justify-content: space-between;
+    align-content: flex-start;
+    align-items: flex-start;
+    background-color: $shade-800;
+    position: relative;
+    z-index: 100;
+    padding: 5rem 15rem;
+    color: $shade-100;
+
+    a {
+        color: $shade-100;
+        &:hover {
+            color: $red-800;
+        }
+    }
+
+    &-card {
+        @include containers(2rem, column);
+        align-items: flex-start;
+        width: 200px;
+        &-text {
+            @include typo("montserrat", "Regular", "xs");
+            color: $shade-100;
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+    &-img {
+        height: 100px;
+    }
+}
+
+.cont-copy {
+    background-color: $shade-1000;
+    color: $shade-300;
+    padding: 2.5rem 10rem;
+    text-align: center;
+    @include typo("montserrat", "Regular", "c3");
+}
+
+//main MEDIA
+
+@media only screen and (max-width: 100vh) {
+    .nav-left {
+        display: none;
+    }
+    .div-content {
+        padding: 9rem 10rem 0rem 10rem;
+    }
+    .middle {
+        padding: 10rem;
+        &-body {
+            padding: 10rem;
+        }
+    }
+    .cont-footer {
+        padding: 5rem 10rem;
+    }
+    .title-container {
+        padding: 14rem 10rem;
+    }
+}
+
+@media only screen and (max-width: 140vh) {
+    #cont-Home {
+        width: 100%;
+        height: max-content;
+        padding-bottom: 100px;
+    }
+    .div-text {
+        width: 100%;
+    }
+    .photo-portrait {
+        display: none;
+    }
+    .cont-schools {
+        @include containers(5rem, column);
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        height: min-content;
+    }
+    .card-school {
+        width: 100%;
+        min-height: max-content;
+        max-height: max-content;
+    }
+    .card-course {
+        min-width: calc(50% - 2.5rem);
+        max-width: calc(50% - 2.5rem);
+    }
+    .exp-card {
+        @include containers(2rem, row);
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+        height: 200px;
+    }
+    .date-lateral {
+        @include containers(0rem, column);
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+        &-line {
+            background-color: $shade-800;
+            width: 3px;
+            height: 100%;
+            border-radius: 3px;
+            margin: 0px 2rem;
+            min-height: 10px;
+        }
+        &-month {
+            border-color: $shade-800;
+            border-style: solid;
+            border-width: 0px 0rem 0px 0px;
+            width: 100px;
+            text-align: center;
+            &-label {
+                @include typo("montserrat", "SemiBold", "c3");
+                color: $shade-800;
+                margin: 0px;
+                padding: 0.8rem 0rem;
+            }
+        }
+    }
+    .cont-contact {
+        flex-direction: column;
+        &-text {
+            width: 100%;
+        }
+        &-form {
+            width: 100%;
+        }
+    }
+    .cont-footer-img {
+        display: none;
+    }
+    .cont-footer {
+        flex-wrap: wrap;
+    }
+}
