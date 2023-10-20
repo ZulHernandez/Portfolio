@@ -203,7 +203,7 @@ const CoHome = () => {
 	let titles = ["JOBS"];
 
 	return (
-		<div style={{ zIndex: "1" }}>
+		<div id="jobs" style={{ zIndex: "1" }}>
 			<CoTitle titles={titles} space="-plus" />
 			<div className="div-content-plus" style={{ paddingBottom: "100px" }}>
 				<div className="cont-exp">

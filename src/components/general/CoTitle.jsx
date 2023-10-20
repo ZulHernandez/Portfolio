@@ -1,8 +1,8 @@
 var titles;
 
-const CoTitulos = () => {
+const CoTitulos = ({color}) => {
 	return titles.map((title) => {
-		return <h1 key={title}>{title}</h1>;
+		return <h1 style={{color: color}} key={title}>{title}</h1>;
 	});
 };
 
@@ -11,7 +11,7 @@ const CoTitle = (props) => {
 	let space = props.space ? "-plus" : "";
 	return (
 		<div className={"title-container" + space} >
-			<CoTitulos/>
+			<CoTitulos color={props.color}/>
 		</div>
 	);
 };

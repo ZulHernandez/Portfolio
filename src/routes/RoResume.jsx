@@ -4,6 +4,8 @@ import CoEstudios from "../components/resume/CoEstudios";
 import CoExperiencia from "../components/resume/CoExperiencia";
 import CoContact from "../components/resume/CoContact";
 
+import "../styles/resume.css";
+
 import { useContext } from "react";
 import { MyContext } from "../components/context/MyContext";
 

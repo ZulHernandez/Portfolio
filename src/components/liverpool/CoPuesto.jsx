@@ -48,7 +48,7 @@ const CoPuesto = () => {
 	const titles = ["Role &", "Activities"];
 	return (
 		<div style={{ zIndex: "2"}}>
-			<CoTitle titles={titles} space="-body" />
+			<CoTitle titles={titles} space="-body" color="#833177" />
 			<div className="div-content middle-body">
 				<p className="monBs-dark">
 					Given the magnitude and complexity of the projects within Liverpool,
