@@ -50,7 +50,7 @@ $gap: #122344;
 //main Liverpool
 .liverpool {
     background: url("../assets/imgs/liverpool/background.png"), #fff;
-    background-size: cover;
+    background-size: contain;
 }
 
 .info-card {
@@ -69,6 +69,25 @@ $gap: #122344;
     &-desc {
         @include c.typo("montserrat", "Regular", "base");
         text-align: center;
+    }
+}
+
+.mini-info-card {
+    @include c.containers(1rem, column);
+    max-width: 25rem;
+    min-width: 25rem;
+    align-items: center;
+    justify-content: center;
+    &-icon {
+        width: 5rem;
+        height: 5rem;
+    }
+    &-title {
+        @include c.typo("bebas", "Regular", "2xl");
+    }
+    &-desc {
+        @include c.typo("montserrat", "Regular", "sm");
+        text-align: center; 
     }
 }
 
@@ -303,8 +322,9 @@ $gap: #122344;
     }
 }
 
-.dark {
+.darkLiver {
     background: linear-gradient(0deg, rgba(131, 49, 119, 0.5) 0%, rgba(131, 49, 119, 0.5) 100%), #333;
+    color: c.$shade-100;
 }
 
 #b1 {
@@ -338,6 +358,20 @@ $gap: #122344;
         opacity: 1;
         width: 90%;
         border-radius: 10px;
+    }
+}
+
+.cont-steps{
+    @include c.containers(4rem, row);
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.caso-card{
+    border-radius: 1rem;
+    &-img{
+        width: 100%;
     }
 }
 

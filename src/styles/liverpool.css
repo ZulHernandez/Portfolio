@@ -610,7 +610,7 @@ b {
 }
 .liverpool {
   background: url("../assets/imgs/liverpool/background.png"), #fff;
-  background-size: cover;
+  background-size: contain;
 }
 
 .info-card {
@@ -636,6 +636,32 @@ b {
   font-family: "Montserrat-Regular";
   font-size: 1.6rem;
   line-height: 2.08rem;
+  text-align: center;
+}
+
+.mini-info-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  max-width: 25rem;
+  min-width: 25rem;
+  align-items: center;
+  justify-content: center;
+}
+.mini-info-card-icon {
+  width: 5rem;
+  height: 5rem;
+}
+.mini-info-card-title {
+  font-family: "Bebas-Neue";
+  font-size: 2.4rem;
+  line-height: 3.12rem;
+}
+.mini-info-card-desc {
+  font-family: "Montserrat-Regular";
+  font-size: 1.4rem;
+  line-height: 1.82rem;
   text-align: center;
 }
 
@@ -1293,8 +1319,9 @@ b {
   padding-left: 8px;
 }
 
-.dark {
+.darkLiver {
   background: linear-gradient(0deg, rgba(131, 49, 119, 0.5) 0%, rgba(131, 49, 119, 0.5) 100%), #333;
+  color: #e6e6e6;
 }
 
 #b1 {
@@ -1327,6 +1354,23 @@ b {
   opacity: 1;
   width: 90%;
   border-radius: 10px;
+}
+
+.cont-steps {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.caso-card {
+  border-radius: 1rem;
+}
+.caso-card-img {
+  width: 100%;
 }
 
 @media only screen and (max-width: 140vh) {

@@ -31,7 +31,7 @@ const CoResearch = () => {
 	return (
 		<div className="MixN" style={{ zIndex: "3" }}>
 			<CoTitle titles={titles} space="-body" />
-			<div className="div-content middle-body dark">
+			<div className="div-content middle-body darkLiver">
 				<p className="monBs">
 					As a fundamental part of creating experience and interface solutions,
 					the approach to the language and behavior of users is extremely
