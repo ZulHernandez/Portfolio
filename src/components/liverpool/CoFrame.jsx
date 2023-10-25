@@ -1,8 +1,6 @@
 import CoTitle from "../general/CoTitle";
 
 import { useLayoutEffect, useState } from "react";
-import { useEffect } from "react";
-import React from "react";
 
 import arrow from "../../assets/imgs/vector/arrow.svg";
 import ENatomH from "../../assets/imgs/liverpool/ENatomicDesign.svg";
@@ -36,7 +34,12 @@ import pokName from "../../assets/imgs/liverpool/brands/potteryK/name.svg";
 import pokMock from "../../assets/imgs/liverpool/brands/potteryK/mock.png";
 import sparks from "../../assets/imgs/liverpool/sparks.svg";
 
+import PropTypes from "prop-types";
+
 const CoExpone = ({ marca }) => {
+	CoExpone.propTypes = {
+		marca: PropTypes.object.isRequired,
+	};
 	return (
 		<div className="cont-brands-show">
 			<img
@@ -236,15 +239,15 @@ const CoBrandsCard = () => {
 							setBrand(brand > 1 ? brand - 1 : 9);
 						}}
 					/>
-					<img id="b1" src={brands[0 + brand].logo} />
-					<img id="b2" src={brands[1 + brand].logo} />
-					<img id="b3" src={brands[2 + brand].logo} />
-					<img id="b4" src={brands[3 + brand].logo} />
-					<img id="b5" src={brands[4 + brand].logo} />
-					<img id="b4" src={brands[5 + brand].logo} />
-					<img id="b3" src={brands[6 + brand].logo} />
-					<img id="b2" src={brands[7 + brand].logo} />
-					<img id="b1" src={brands[8 + brand].logo} />
+					<img id="b1" src={brands[0 + brand].logo} alt={brands[0 + brand].brand}/>
+					<img id="b2" src={brands[1 + brand].logo} alt={brands[1 + brand].brand}/>
+					<img id="b3" src={brands[2 + brand].logo} alt={brands[2 + brand].brand}/>
+					<img id="b4" src={brands[3 + brand].logo} alt={brands[3 + brand].brand}/>
+					<img id="b5" src={brands[4 + brand].logo} alt={brands[4 + brand].brand}/>
+					<img id="b4" src={brands[5 + brand].logo} alt={brands[5 + brand].brand}/>
+					<img id="b3" src={brands[6 + brand].logo} alt={brands[6 + brand].brand}/>
+					<img id="b2" src={brands[7 + brand].logo} alt={brands[7 + brand].brand}/>
+					<img id="b1" src={brands[8 + brand].logo} alt={brands[8 + brand].brand}/>
 					<img
 						style={{ transform: "rotate(90deg)" }}
 						className="cont-brands-arrow clickable"

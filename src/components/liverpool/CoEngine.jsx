@@ -12,6 +12,75 @@ import bannerSales from "../../assets/imgs/liverpool/bannerSales.png";
 import bannerPega from "../../assets/imgs/liverpool/bannerPega.png";
 import bannerAtla from "../../assets/imgs/liverpool/bannerAtla.png";
 
+import figma from "../../assets/imgs/liverpool/figma.svg";
+import figmaApi from "../../assets/imgs/liverpool/figmaApi.svg";
+import styleD from "../../assets/imgs/liverpool/styleD.svg";
+import javaS from "../../assets/imgs/liverpool/javaS.svg";
+import bash from "../../assets/imgs/liverpool/bash.svg";
+import node from "../../assets/imgs/liverpool/node.svg";
+import react from "../../assets/imgs/liverpool/react.svg";
+import gitHub from "../../assets/imgs/liverpool/gitHub.svg";
+import npm from "../../assets/imgs/liverpool/npm.svg";
+
+const CoTech = () => {
+	let tecs = [
+		{
+			id: 1,
+			logo: figma,
+			name: "Figma",
+		},
+		{
+			id: 2,
+			logo: figmaApi,
+			name: "Figma API",
+		},
+		{
+			id: 3,
+			logo: styleD,
+			name: "Style Dictionary",
+		},
+		{
+			id: 4,
+			logo: javaS,
+			name: "JavaScript",
+		},
+		{
+			id: 5,
+			logo: bash,
+			name: "Bash",
+		},
+		{
+			id: 6,
+			logo: node,
+			name: "Node JS",
+		},
+		{
+			id: 7,
+			logo: react,
+			name: "React",
+		},
+		{
+			id: 8,
+			logo: gitHub,
+			name: "GitHub",
+		},
+		{
+			id: 9,
+			logo: npm,
+			name: "NPM",
+		},
+	];
+
+	return tecs.map((tec) => {
+		return (
+			<div key={tec.id} className="tec-card">
+				<img className="tec-card-img" src={tec.logo} alt={tec.name} />
+				<p className="tec-card-title">{tec.name}</p>
+			</div>
+		);
+	});
+};
+
 const CoCardCopa = () => {
 	let casos = [
 		{
@@ -39,16 +108,20 @@ const CoCardCopa = () => {
 
 	return casos.map((caso) => {
 		return (
-			<div key={caso.id} className="caso-card">
-				<img className="caso-card-img" src={caso.banner} alt={caso.title} />
-				<div className="cont-caso-info">
-					<h3>{caso.title}</h3>
-					<p>{caso.sub}</p>
-					<a href={caso.link} target="_blank" rel="noreferrer">
-						Visit Design System
-					</a>
+			<a key={caso.id} href={caso.link} target="_blank" rel="noreferrer">
+				<div className="caso-card">
+					<img className="caso-card-img" src={caso.banner} alt={caso.title} />
+					<div className="caso-card-info">
+						<div>
+							<h3>{caso.title}</h3>
+							<p>{caso.sub}</p>
+						</div>
+						<p className="">
+							{caso.link}
+						</p>
+					</div>
 				</div>
-			</div>
+			</a>
 		);
 	});
 };
@@ -133,7 +206,19 @@ const CoEngine = () => {
 					<br /> The realization of this initiative involved the following
 					steps:
 				</p>
-				<CoCardCopa />
+				<div className="cont-caso">
+					<CoCardCopa />
+				</div>
+				<p className="monBs-dark">
+					<h3 style={{ textAlign: "Left" }}>Tools</h3>
+					Once the success stories have been reviewed and the different ways in
+					which these companies solved the various problems that arise during
+					the application of these processes within their design systems have
+					been investigated, these specific work tools were arrived at:
+				</p>
+				<div className="cont-tec">
+					<CoTech />
+				</div>
 			</div>
 		</div>
 	);

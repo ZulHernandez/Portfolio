@@ -9,24 +9,46 @@ function scrollAnchor(anchor) {
 //* Componente de navegación izquierdo
 const CoLeftNav = () => {
 	//* Evaluamos la posición y hacemos scroll
-	const { posicion, setPosicion } = useContext(MyContext);
+	const { posicion, setPosicion, language } = useContext(MyContext);
+
+	let posiciones = [
+		"about-me",
+		"studies-courses",
+		"experience-projects",
+		"get-in-touch",
+		"sobre-mi",
+		"estudios-cursos",
+		"experiencia-proyectos",
+		"contactame",
+	];
 
 	switch (posicion) {
 		case 1:
-			scrollAnchor("about-me");
+			scrollAnchor(posiciones[language == "EN" ? 0 : 4]);
 			break;
 		case 2:
-			scrollAnchor("studies-courses");
+			scrollAnchor(posiciones[language == "EN" ? 1 : 5]);
 			break;
 		case 3:
-			scrollAnchor("experience-projects");
+			scrollAnchor(posiciones[language == "EN" ? 2 : 6]);
 			break;
 		case 4:
-			scrollAnchor("get-in-touch");
+			scrollAnchor(posiciones[language == "EN" ? 3 : 7]);
 			break;
 		default:
 			break;
 	}
+
+	let options = [
+		"about me",
+		"studies &\n courses",
+		"experience &\n projects",
+		"get in touch",
+		"sobre mi",
+		"estudios y\n cursos",
+		"experiencia y\n proyectos",
+		"Contactame",
+	];
 
 	return (
 		<div className="nav-left">
@@ -34,27 +56,25 @@ const CoLeftNav = () => {
 				onClick={() => setPosicion(1)}
 				className="nav-link-inactive nav-link clickable"
 			>
-				about me
+				{options[language == "EN" ? 0 : 4]}
 			</span>
 			<span
 				onClick={() => setPosicion(2)}
 				className="nav-link-inactive nav-link clickable"
 			>
-				studies &<br />
-				courses
+				{options[language == "EN" ? 1 : 5]}
 			</span>
 			<span
 				onClick={() => setPosicion(3)}
 				className="nav-link-inactive nav-link clickable"
 			>
-				experience &<br />
-				projects
+				{options[language == "EN" ? 2 : 6]}
 			</span>
 			<span
 				onClick={() => setPosicion(4)}
 				className="nav-link-inactive nav-link clickable"
 			>
-				get in touch
+				{options[language == "EN" ? 3 : 7]}
 			</span>
 		</div>
 	);

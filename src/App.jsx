@@ -10,17 +10,18 @@ import CoFooter from "./components/general/CoFooter";
 function App() {
 	const [posicion, setPosicion] = useState(1);
 	const [ruta, setRuta] = useState("/");
+	const [language, setLanguage] = useState("EN");
 
 	return (
 		<>
-			<MyContext.Provider value={{ posicion, setPosicion, ruta, setRuta}}>
-				<CoNav ruta={ruta} />
+			<MyContext.Provider value={{ posicion, setPosicion, ruta, setRuta, language, setLanguage}}>
+				<CoNav lan={language} ruta={ruta} />
 				<Routes>
 					<Route path="/" element={<RoResume />} />
 					<Route path="/experience" element={<RoExperience/>} />
 					<Route path="/experience/liverpool" element={<RoLiverpool />} />
 				</Routes>
-				<CoFooter ruta={ruta} />
+				<CoFooter />
 			</MyContext.Provider>
 		</>
 	);

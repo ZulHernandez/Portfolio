@@ -16,6 +16,9 @@ import Farrow from "../../assets/imgs/vector/arrow_forward.svg";
 import out from "../../assets/imgs/vector/outward.svg";
 import Swal from "sweetalert2";
 
+import { useContext } from "react";
+import { MyContext } from "../../components/context/MyContext";
+
 let experience = [
 	{
 		month: "february",
@@ -25,7 +28,7 @@ let experience = [
 		role: "UI/UX Senior Designer",
 		tags: ["job", "design", "programming"],
 		side: "left",
-		url: "https://www.liverpool.com.mx",
+		url: "experience/liverpool",
 		des: "Research, prototype, and management of digital products for more than six brands.<br/>Creation, management, and automation of the company’s design framework.<br/>Development of plugins and tools for automating design and programming processes.",
 	},
 	{
@@ -35,6 +38,7 @@ let experience = [
 		duration: "(may 2022 - today)",
 		role: "UI/UX Developer & Designer",
 		subc: uam,
+		subcName: "UAM Azcapotzalco",
 		tags: ["project", "design", "programming"],
 		url: "https://www.liverpool.com.mx",
 		des: "Design and development of a data visualization website about the noise phenomenon in Mexico City and the Metropolitan Area.",
@@ -46,6 +50,7 @@ let experience = [
 		duration: "(november 2021 - february 2023)",
 		role: "UI/UX Senior Designer",
 		subc: imss,
+		subcName: "IMSS",
 		tags: ["job", "design"],
 		side: "left",
 		des: "Definition of user stories and creation of prototypes for different external and internal tools of the Mexican Social Security Institute.",
@@ -57,6 +62,7 @@ let experience = [
 		duration: "(may 2021 - november 2021)",
 		role: "Web Designer",
 		subc: uam,
+		subcName: "UAM Azcapotzalco",
 		tags: ["project", "design", "programming"],
 		des: "Prototyping and development of a website for the presentation of the Protected Natural Areas of Mexico City.",
 	},
@@ -67,9 +73,10 @@ let experience = [
 		duration: "(august 2020 - september 2021)",
 		role: "UI/UX Designer",
 		subc: marsoft,
+		subcName: "Marsoft",
 		tags: ["project", "design", "programming"],
 		side: "left",
-		url: "https://www.liverpool.com.mx",
+		url: "experience/liverpool",
 		des: "Development and design of a Mini ERP and Marketplace for e-commerce of optical health products",
 	},
 	{
@@ -79,6 +86,7 @@ let experience = [
 		duration: "(november 2018 - march 2019)",
 		role: "Web Designer",
 		subc: marsoft,
+		subcName: "Marsoft",
 		tags: ["project", "design", "programming"],
 		des: "Prototyping and development of a website for a company in the food engineering industry.",
 	},
@@ -89,6 +97,7 @@ let experience = [
 		duration: "(november 2018 - february 2019)",
 		role: "Web Designer",
 		subc: marsoft,
+		subcName: "Marsoft",
 		tags: ["project", "design", "programming"],
 		side: "left",
 		des: "Design and development of a website for a company dedicated to the installation of natural gas in motor vehicles.",
@@ -119,10 +128,127 @@ let experience = [
 		duration: "(november 2016 - february 2017)",
 		role: "Web Developer & Designer",
 		subc: marsoft,
+		subcName: "Marsoft",
 		tags: ["project", "design", "programming"],
 		des: "Development and design of a web tool focused on teaching 3D Builder and Sketchfab for technical drawing students at IPN (National Polytechnic Institute).",
 	},
 ];
+let experiencia = [
+	{
+		month: "febrero",
+		company: "El Puerto de Liverpool",
+		img: liverpool,
+		duration: "(febrero 2023 - actualidad)",
+		role: "Diseñador UI/UX Senior",
+		tags: ["trabajo", "diseño", "programación"],
+		side: "left",
+		url: "experience/liverpool",
+		des: "Investigación, prototipo y administración de productos digitales para más de seis marcas.<br/>Creación, administración y automatización del framework de diseño de la empresa.<br/>Desarrollo de plugin y herramientas para automatización de procesos de diseño y programación.",
+	},
+	{
+		month: "mayo",
+		company: "HUBBUB Alerta Ruido",
+		img: hubbub,
+		duration: "(mayo 2022 - actualidad)",
+		role: "Diseñador y desarrolaldor UI/UX",
+		subc: uam,
+		subcName: "UAM Azcapotzalco",
+		tags: ["proyecto", "diseño", "programación"],
+		url: "https://www.liverpool.com.mx",
+		des: "Definición de historias de usuarios y creación de prototipos para diferentes herramientas externas e internas del Instituto Mexicano del Seguro Social.",
+	},
+	{
+		month: "noviembre",
+		company: "Grupo PM",
+		img: grupopm,
+		duration: "(noviembre 2021 - febrero 2023)",
+		role: "Diseñador UI/UX Senior",
+		subc: imss,
+		subcName: "IMSS",
+		tags: ["trabajo", "diseño"],
+		side: "left",
+		des: "Definición de historias de usuarios y creación de prototipos para diferentes herramientas externas e internas del Instituto Mexicano del Seguro Social.",
+	},
+	{
+		month: "mayo",
+		company: "Secretaria del Medio Ambiente de la CDMX",
+		img: sedema,
+		duration: "(mayo 2021 - noviembre 2021)",
+		role: "Diseñador Web",
+		subc: uam,
+		subcName: "UAM Azcapotzalco",
+		tags: ["proyecto", "diseño", "programación"],
+		des: "Prototipado y desarrollo de sitio web para la presentación de las Áreas Naturales Protegidas de la Ciudad de México.",
+	},
+	{
+		month: "agosto",
+		company: "GOOK Óptica",
+		img: gook,
+		duration: "(agosto 2020 - septiembre 2021)",
+		role: "Diseñador UI/UX",
+		subc: marsoft,
+		subcName: "Marsoft",
+		tags: ["proyecto", "diseño", "programación"],
+		side: "left",
+		url: "experience/liverpool",
+		des: "Desarrollo y diseño de Mini ERP y Marketplace para e-commerce de productos de la salud óptica.",
+	},
+	{
+		month: "noviembre",
+		company: "Ingenieria y Desarrollo para Equipos Alimenticios (IDEA)",
+		img: idea,
+		duration: "(noviembre 2018 - marzo 2019)",
+		role: "Diseñador Web",
+		subc: marsoft,
+		subcName: "Marsoft",
+		tags: ["proyecto", "diseño", "programación"],
+		des: "Prototipado y desarrollo de sitio web para empresa con giro en ingeniería de alimentos.",
+	},
+	{
+		month: "noviembre",
+		company: "Combucar",
+		img: combucar,
+		duration: "(noviembre 2018 - febrero 2019)",
+		role: "Diseñador Web",
+		subc: marsoft,
+		subcName: "Marsoft",
+		tags: ["proyecto", "diseño", "programación"],
+		side: "left",
+		des: "Diseño y desarrollo de sitio web para empresa dedicada a la instalación de Gas natural en vehiculos automotores.",
+	},
+	{
+		month: "abril",
+		company: "Marsoft",
+		img: marsoft,
+		duration: "(abril 2018 - noviembre 2021)",
+		role: "Co-fundador / Director de Diseño",
+		tags: ["compañia", "trabajo", "diseño", "programación"],
+		des: "Administración de proyectos y equipos de trabajo en ambos giros de la empresa. Comunicación constante con clientes, definición de requerimientos y testeo.<br/>Fundación de una compañía dedicada al desarrollo de software y diseño empresarial.",
+	},
+	{
+		month: "mayo",
+		company: "Yalmalay",
+		img: yalmalay,
+		duration: "(mayo 2017 - octubre 2017)",
+		role: "Diseñador y desarrollador Web",
+		tags: ["proyecto", "diseño", "programación"],
+		side: "left",
+		des: "Desarrollo de aplicación web y mobile para ofrecer servicios de estética a domicilio.",
+	},
+	{
+		month: "noviembre",
+		company: "Poli Libro",
+		img: polilibro,
+		duration: "(noviembre 2016 - febrero 2017)",
+		role: "Diseñador y desarrollador Web",
+		subc: marsoft,
+		subcName: "Marsoft",
+		tags: ["proyecto", "diseño", "programación"],
+		des: "Desarrollo y diseño de herramienta web enfocada en la enseñanza de 3D Builder y Sketchfab para estudiantes de dibujo técnico en el IPN.",
+	},
+];
+
+import PropTypes from "prop-types";
 
 const CoYear = ({ year }) => {
 	return (
@@ -131,6 +257,12 @@ const CoYear = ({ year }) => {
 		</div>
 	);
 };
+
+CoYear.propTypes = {
+	year: PropTypes.string.isRequired,
+};
+
+// Remove the import statement for PropTypes since it has already been imported in the previous code block
 
 const CoMonth = (props) => {
 	return (
@@ -146,7 +278,13 @@ const CoMonth = (props) => {
 	);
 };
 
-function alerta(compa) {
+CoMonth.propTypes = {
+	month: PropTypes.string.isRequired,
+	side: PropTypes.string.isRequired,
+};
+
+function alerta(compa, language) {
+
 	let tagss;
 	let subCoStyle = "block";
 	let display = "flex";
@@ -170,8 +308,15 @@ function alerta(compa) {
 			"</span>";
 	}
 
+	let botonText = language == "EN" ? "SEE MORE" : "VER MÁS";
+
 	Swal.fire({
-		iconHtml: "<img class='swal-icon' src='" + compa.img + "'></img>",
+		iconHtml:
+			"<img class='swal-icon' src='" +
+			compa.img +
+			"' alt='" +
+			compa.company +
+			"'></img>",
 		html:
 			"<h3>" +
 			compa.company +
@@ -183,7 +328,9 @@ function alerta(compa) {
 			subCoStyle +
 			"' src=" +
 			compa.subc +
-			"></img>" +
+			" alt='" +
+			compa.subcName +
+			"'></img>" +
 			tagss +
 			"</div><p class='swal-description'>" +
 			compa.des +
@@ -191,7 +338,9 @@ function alerta(compa) {
 			display +
 			"'><div onClick='window.open(`" +
 			compa.url +
-			"`, `_blank`)' class='button-tertiary clickable'>see more<img src=" +
+			"`,`_self`)' class='button-tertiary clickable'>" +
+			botonText +
+			"<img src=" +
 			Farrow +
 			"></img></div></div>",
 		width: 600,
@@ -203,23 +352,38 @@ function alerta(compa) {
 }
 
 const CoExpCard = ({ company }) => {
+
+	const { language } = useContext(MyContext);
+
+	CoExpCard.propTypes = {
+		company: PropTypes.object.isRequired,
+	};
+
 	return (
 		<div
 			className="job-card clickable"
-			onClick={() => alerta(company)}
+			onClick={() => alerta(company, language)}
 			style={{
 				borderRadius:
 					company.side == "left" ? "20px 20px 0px 20px" : "20px 20px 20px 0px",
 			}}
 		>
-			<img className="job-card-img" src={company.img}></img>
+			<img
+				className="job-card-img"
+				src={company.img}
+				alt={company.company}
+			></img>
 			<div className="job-card-data">
 				<div>
 					<p className="job-card-data-duration">{company.duration}</p>
 					<p className="job-card-data-company">{company.company}</p>
 					<p className="job-card-data-role">{company.role}</p>
 				</div>
-				<CoTag tags={company.tags} subc={company.subc} />
+				<CoTag
+					tags={company.tags}
+					subc={company.subc}
+					subcName={company.subcName}
+				/>
 			</div>
 			<img className="job-card-out" src={out}></img>
 		</div>
@@ -227,6 +391,10 @@ const CoExpCard = ({ company }) => {
 };
 
 const CoExp = ({ company }) => {
+	CoExp.propTypes = {
+		company: PropTypes.object.isRequired,
+	};
+
 	let side = company.side;
 
 	if (side === "left") {
@@ -261,29 +429,37 @@ const CoExp = ({ company }) => {
 };
 
 const CoExperiencia = () => {
-	const titles = ["experiencia", "y proyectos"];
+	const { language } = useContext(MyContext);
+
+	const titles = ["experience", "& projects"];
+	const titulos = ["experiencia", "y proyectos"];
+
 	return (
-		<div style={{ zIndex: "3" }} className="mixN" id="experience-projects">
-			<CoTitle titles={titles} />
+		<div
+			style={{ zIndex: "3" }}
+			className="mixN"
+			id={language == "EN" ? "experience-projects" : "experiencia-proyectos"}
+		>
+			<CoTitle titles={language == "EN" ? titles : titulos} />
 			<div id="exp-cont" className="div-content middle">
-				<CoYear year="today" />
-				<CoExp company={experience[0]} />
+				<CoYear year={language == "EN" ? "TODAY" : "ACTUALIDAD"} />
+				<CoExp company={language == "EN" ? experience[0] : experiencia[0]} />
 				<CoYear year="2023" />
-				<CoExp company={experience[1]} />
+				<CoExp company={language == "EN" ? experience[1] : experiencia[1]} />
 				<CoYear year="2022" />
-				<CoExp company={experience[2]} />
-				<CoExp company={experience[3]} />
+				<CoExp company={language == "EN" ? experience[2] : experiencia[2]} />
+				<CoExp company={language == "EN" ? experience[3] : experiencia[3]} />
 				<CoYear year="2021" />
-				<CoExp company={experience[4]} />
+				<CoExp company={language == "EN" ? experience[4] : experiencia[4]} />
 				<CoYear year="2020" />
 				<CoYear year="2019" />
-				<CoExp company={experience[5]} />
-				<CoExp company={experience[6]} />
-				<CoExp company={experience[7]} />
+				<CoExp company={language == "EN" ? experience[5] : experiencia[5]} />
+				<CoExp company={language == "EN" ? experience[6] : experiencia[6]} />
+				<CoExp company={language == "EN" ? experience[7] : experiencia[7]} />
 				<CoYear year="2018" />
-				<CoExp company={experience[8]} />
+				<CoExp company={language == "EN" ? experience[8] : experiencia[8]} />
 				<CoYear year="2017" />
-				<CoExp company={experience[9]} />
+				<CoExp company={language == "EN" ? experience[9] : experiencia[9]} />
 				<CoYear year="2016" />
 			</div>
 		</div>

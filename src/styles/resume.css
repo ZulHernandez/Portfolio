@@ -1,8 +1,6 @@
+@charset "UTF-8";
 ::-webkit-scrollbar {
   width: 12px;
-}
-::-webkit-scrollbar:window-inactive {
-  width: 0px;
 }
 
 ::-webkit-scrollbar-track {
@@ -407,154 +405,6 @@ b {
 
 .swal2-icon {
   border-width: 0px;
-}
-
-.job-pri-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-direction: column;
-  box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.1);
-  padding: 2.5rem;
-  border-radius: 10px;
-  justify-content: flex-start;
-  align-items: center;
-  min-width: 30rem;
-  max-width: 30rem;
-}
-.job-pri-card:hover {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
-  box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.2);
-}
-.job-pri-card-img {
-  width: 50px;
-  height: 50px;
-}
-
-.job-sec-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-direction: column;
-  box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.1);
-  padding: 1rem;
-  border-radius: 10px;
-  justify-content: flex-start;
-  align-items: center;
-  min-width: 20rem;
-  max-width: 20rem;
-}
-.job-sec-card:hover {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
-  box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.2);
-}
-.job-sec-card-img {
-  width: 20px;
-  height: 20px;
-}
-.job-sec-card-data {
-  display: flex;
-  align-items: center;
-  gap: 0rem;
-  flex-direction: column;
-}
-.job-sec-card-data-title {
-  font-family: "Bebas-Neue";
-  font-size: 1.2rem;
-  line-height: 1.56rem;
-}
-.job-sec-card-data-duration {
-  font-family: "Bebas-Neue";
-  font-size: 0.8rem;
-  line-height: 1.04rem;
-  color: #ff589a;
-}
-.job-sec-card-data-role {
-  font-family: "Montserrat-SemiBold";
-  font-size: 1rem;
-  line-height: 1.3rem;
-}
-
-.cont-jobs-pri {
-  display: flex;
-  align-items: center;
-  gap: 5rem;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 100%;
-  flex-wrap: wrap;
-}
-.cont-jobs-sec {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-.cont-exp {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.proj-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-direction: row;
-  align-items: flex-start;
-  min-width: 25rem;
-  max-width: 25rem;
-  border-radius: 10px;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0.1rem;
-  padding: 1.5rem;
-  color: #e6e6e6;
-}
-.proj-card:hover {
-  border-color: #ff2079;
-  box-shadow: 0px 0px 5rem 0px rgba(0, 0, 0, 0.4) inset;
-}
-.proj-card-img {
-  width: 25px;
-  height: 25px;
-}
-.proj-card-data {
-  display: flex;
-  align-items: center;
-  gap: 0rem;
-  flex-direction: column;
-  width: 100%;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.proj-card-data-date {
-  font-family: "Bebas-Neue";
-  font-size: 1.6rem;
-  line-height: 2.08rem;
-  color: #b3b3b3;
-}
-.proj-card-data-description {
-  font-family: "Montserrat-semibold";
-  font-size: 1.2rem;
-  line-height: 1.56rem;
-  color: #e6e6e6;
-}
-
-.con-proj {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 100%;
-  flex-wrap: wrap;
 }
 
 .cont-footer {
@@ -1133,23 +983,23 @@ b {
   width: 18px;
 }
 
-.company {
+.company, .compañia {
   background-color: #fa6e91;
 }
 
-.project {
+.project, .proyecto {
   background-color: #d462d9;
 }
 
-.job {
+.job, .trabajo {
   background-color: #b678f0;
 }
 
-.design {
+.design, .diseño {
   background-color: #6a62d9;
 }
 
-.programming {
+.programming, .programación {
   background-color: #70a4ff;
 }
 

@@ -1,6 +1,9 @@
 import logo from "../assets/imgs/liverpool/logo.svg";
 import logoName from "../assets/imgs/liverpool/logoName.svg";
 import banner from "../assets/imgs/liverpool/banner.png";
+import { useContext } from "react";
+import { MyContext } from "../components/context/MyContext";
+
 import "../styles/liverpool.css";
 
 import CoHero from "../components/general/CoHero";
@@ -10,6 +13,7 @@ import CoFrame from "../components/liverpool/CoFrame";
 import CoEngine from "../components/liverpool/CoEngine";
 
 const RoLiverpool = () => {
+	const { language } = useContext(MyContext);
 	return (
 		<div
 			style={{ display: "flex", flexDirection: "column" }}
@@ -18,8 +22,9 @@ const RoLiverpool = () => {
 			<CoHero
 				logo={logo}
 				logoName={logoName}
-				role="UX/UI senior designer"
-				tags={["job", "design", "programming"]}
+				company="Liverpool"
+				role={language == "EN" ? "UX/UI senior designer" : "Diseñador UX/UI senior"}
+				tags={language == "EN" ? ["job", "design", "programming"] : ["trabajo", "diseño", "programación"]}
 				subc={null}
 				banner={banner}
 			/>

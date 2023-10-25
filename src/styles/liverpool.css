@@ -1361,16 +1361,86 @@ b {
   align-items: center;
   gap: 4rem;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
 }
 
+.cont-caso {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .caso-card {
   border-radius: 1rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.1);
 }
 .caso-card-img {
   width: 100%;
+  border-radius: 1rem 1rem 0px 0px;
+}
+.caso-card-info {
+  padding: 3rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.caso-card-info h3 {
+  text-align: left;
+  font-family: "Montserrat-SemiBold";
+  font-size: 2rem;
+  line-height: 2.6rem;
+}
+.caso-card-info p {
+  font-family: "Montserrat-Regular";
+  font-size: 1.4rem;
+  line-height: 1.82rem;
+  color: #333333;
+}
+.caso-card-info a {
+  font-family: "Montserrat-Regular";
+  font-size: 1rem;
+  line-height: 1.3rem;
+  color: #333333;
+  text-decoration: underline;
+}
+
+.cont-tec {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.tec-card {
+  width: 15rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+.tec-card img {
+  width: 5rem;
+  height: 5rem;
+}
+.tec-card p {
+  font-family: "Montserrat-SemiBold";
+  font-size: 1.6rem;
+  line-height: 2.08rem;
+  text-align: center;
 }
 
 @media only screen and (max-width: 140vh) {
@@ -1389,6 +1459,12 @@ b {
   .div-input {
     width: 235px;
   }
+  .cont-caso {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex-direction: column;
+  }
 }
 @media only screen and (max-width: 70vh) {
   .img-atom {
@@ -1396,5 +1472,80 @@ b {
   }
   .div-content {
     align-items: center;
+  }
+  #b1 {
+    display: none;
+  }
+  #b2 {
+    display: none;
+  }
+  #b3 {
+    display: none;
+  }
+  .tec-card {
+    width: 10rem;
+  }
+  .cont-brands-show-compo-text-Liverpool {
+    color: #e10098;
+    font-family: "Roboto";
+    font-size: 2.8rem;
+    width: calc(470px + 5rem);
+    width: 100%;
+  }
+  .cont-brands-show-compo-text-Suburbia {
+    color: #612066;
+    font-family: "Oscine";
+    font-size: 2.8rem;
+    width: calc(470px + 5rem);
+    width: 100%;
+  }
+  .cont-brands-show-compo-text-Banana {
+    color: #333333;
+    font-family: "Lynstone";
+    font-size: 2.8rem;
+    width: calc(470px + 5rem);
+    width: 100%;
+  }
+  .cont-brands-show-compo-text-Pottery {
+    color: #990000;
+    font-family: "Lato";
+    font-size: 2.8rem;
+    width: calc(470px + 5rem);
+    width: 100%;
+  }
+  .cont-brands-show-compo-text-PotteryK {
+    color: #80b9e6;
+    font-family: "Arial";
+    font-size: 2.8rem;
+    width: calc(470px + 5rem);
+    width: 100%;
+  }
+  .cont-brands-show-compo-text-Toys {
+    color: #0f4dbc;
+    font-family: "BuenosAires";
+    font-size: 2.8rem;
+    width: calc(470px + 5rem);
+    width: 100%;
+  }
+  .cont-brands-show-compo-text-Williams {
+    color: #e81818;
+    font-family: "Flama";
+    font-size: 2.8rem;
+    width: calc(470px + 5rem);
+    width: 100%;
+  }
+  .cont-brands-show-compo-text-West {
+    color: #ed2724;
+    font-family: "Gotham";
+    font-size: 2.8rem;
+    width: calc(470px + 5rem);
+    width: 100%;
+  }
+  .cont-brands-show-compo-text-GAP {
+    color: #122344;
+    font-family: "Arial";
+    font-size: 2.8rem;
+    width: calc(470px + 5rem);
+    width: 100%;
   }
 }/*# sourceMappingURL=liverpool.css.map */

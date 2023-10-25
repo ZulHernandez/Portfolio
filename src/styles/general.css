@@ -1,9 +1,6 @@
 ::-webkit-scrollbar {
   width: 12px;
 }
-::-webkit-scrollbar:window-inactive {
-  width: 0px;
-}
 
 ::-webkit-scrollbar-track {
   background: #333333;

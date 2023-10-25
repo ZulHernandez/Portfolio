@@ -87,7 +87,7 @@ $gap: #122344;
     }
     &-desc {
         @include c.typo("montserrat", "Regular", "sm");
-        text-align: center; 
+        text-align: center;
     }
 }
 
@@ -143,6 +143,7 @@ $gap: #122344;
         &-compo {
             @include c.containers(2.5rem, column);
             align-items: flex-start;
+            width: -moz-fit-content;
             width: fit-content;
             &-row {
                 @include c.containers(5rem, row);
@@ -352,8 +353,8 @@ $gap: #122344;
     height: 7rem;
 }
 
-.line{
-    &-liver{
+.line {
+    &-liver {
         border: 0.3rem solid #833177;
         opacity: 1;
         width: 90%;
@@ -361,20 +362,74 @@ $gap: #122344;
     }
 }
 
-.cont-steps{
+.cont-steps {
     @include c.containers(4rem, row);
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
 }
 
-.caso-card{
+.cont-caso {
+    @include c.containers(4rem, row);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.caso-card {
     border-radius: 1rem;
-    &-img{
+    width: -moz-fit-content;
+    width: fit-content;
+    box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.1);
+    &-img {
         width: 100%;
+        border-radius: 1rem 1rem 0px 0px;
+    }
+    &-info {
+        padding: 3rem 2.5rem;
+        @include c.containers(2rem, column);
+        align-items: flex-start;
+
+        h3 {
+            text-align: left;
+            @include c.typo("montserrat", "SemiBold", "xl");
+        }
+
+        p {
+            @include c.typo("montserrat", "Regular", "sm");
+            color: c.$shade-800;
+        }
+
+        a {
+            @include c.typo("montserrat", "Regular", "c2");
+            color: c.$shade-800;
+            text-decoration: underline;
+        }
     }
 }
 
+.cont-tec {
+    @include c.containers(5rem, row);
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.tec-card {
+    width: 15rem;
+    @include c.containers(2rem, column);
+
+    img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    p {
+        @include c.typo("montserrat", "SemiBold", "base");
+        text-align: center;
+    }
+}
 
 @media only screen and (max-width: 140vh) {
     .cont-brands-show-mock {
@@ -393,6 +448,9 @@ $gap: #122344;
     .div-input {
         width: 235px;
     }
+    .cont-caso {
+        @include c.containers(4rem, column);
+    }
 }
 
 @media only screen and (max-width: 70vh) {
@@ -401,5 +459,55 @@ $gap: #122344;
     }
     .div-content {
         align-items: center;
+    }
+    #b1 {
+        display: none;
+    }
+    #b2 {
+        display: none;
+    }
+    #b3 {
+        display: none;
+    }
+    .tec-card {
+        width: 10rem;
+    }
+    .cont-brands-show-compo-text {
+        &-Liverpool {
+            @include typoSpecial($liverpool, "Roboto");
+            width: 100%;
+        }
+        &-Suburbia {
+            @include typoSpecial($suburbia, "Oscine");
+            width: 100%;
+        }
+        &-Banana {
+            @include typoSpecial($bannana, "Lynstone");
+            width: 100%;
+        }
+        &-Pottery {
+            @include typoSpecial($pottery, "Lato");
+            width: 100%;
+        }
+        &-PotteryK {
+            @include typoSpecial($potteryk, "Arial");
+            width: 100%;
+        }
+        &-Toys {
+            @include typoSpecial($toys, "BuenosAires");
+            width: 100%;
+        }
+        &-Williams {
+            @include typoSpecial($william, "Flama");
+            width: 100%;
+        }
+        &-West {
+            @include typoSpecial($west, "Gotham");
+            width: 100%;
+        }
+        &-GAP {
+            @include typoSpecial($gap, "Arial");
+            width: 100%;
+        }
     }
 }

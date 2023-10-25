@@ -20,9 +20,6 @@ $gradient: linear-gradient(45deg, rgba($purple-800, 0.1) 0%, rgba($pink-800, 0.1
 //main ScroolBar
 ::-webkit-scrollbar {
     width: 12px;
-    &:window-inactive {
-        width: 0px;
-    }
 }
 ::-webkit-scrollbar-track {
     background: $shade-800;

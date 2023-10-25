@@ -12,7 +12,10 @@ import clLink from "../../assets/imgs/vector/color-link.svg";
 import clSketch from "../../assets/imgs/vector/color-sketch.svg";
 import bnCalendario from "../../assets/imgs/vector/bn-Calendar.svg";
 import cCalendario from "../../assets/imgs/vector/color-Calendar.svg";
+
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { MyContext } from "../../components/context/MyContext";
 
 //* Redes sociales
 let redes = [
@@ -78,23 +81,55 @@ const CoRedes = (props) => {
 };
 
 //* Componente del header
-const CoNav = (props) => {
+const CoNav = () => {
+
+	const {ruta, language, setLanguage } = useContext(MyContext);
+
 	return (
 		<div className="nav-header">
 			<div className="container-nav-link-left">
 				<Link to="/">
-					<img src={props.ruta == "/" ? sign : signGrey} alt="sign" />
+					<img src={ruta == "/" ? sign : signGrey} alt="sign" />
 				</Link>
 				<span className="nav-link">|</span>
 				<Link to="/experience">
-					<span className={props.ruta == "/" ? "nav-link-inactive nav-link clickable" : "nav-link-active nav-link clickable"}>
-						Experience
+					<span
+						className={
+							ruta == "/"
+								? "nav-link-inactive nav-link clickable"
+								: "nav-link-active nav-link clickable"
+						}
+					>
+						{language == "EN" ? "Experience" : "Experiencia"}
 					</span>
 				</Link>
 			</div>
 			<div className="container-nav-link-right">
 				<div className="container-nav-link-right-media">
 					<CoRedes />
+				</div>
+				<div className="container-nav-link-right-media">
+					<span
+						className={
+							language == "ES"
+								? "nav-link-inactive nav-link clickable"
+								: "nav-link-active nav-link clickable"
+						}
+						onClick={() => setLanguage("EN")}
+					>
+						EN
+					</span>
+					<span className="nav-link">|</span>
+					<span
+						className={
+							language == "EN"
+								? "nav-link-inactive nav-link clickable"
+								: "nav-link-active nav-link clickable"
+						}
+						onClick={() => setLanguage("ES")}
+					>
+						ES
+					</span>
 				</div>
 			</div>
 		</div>
