@@ -96,7 +96,7 @@ let jobsPrincipal = [
 		subc: uam,
 		subcName: "UAM Azcapotzalco",
 		tags: ["project", "design", "programming"],
-		url: "https://www.liverpool.com.mx",
+		url: "../experience/hubbub",
 	},
 	{
 		id: 3,
@@ -129,7 +129,7 @@ let trabajosPrincipal = [
 		subc: uam,
 		subcName: "UAM Azcapotzalco",
 		tags: ["proyecto", "diseño", "programación"],
-		url: "https://www.liverpool.com.mx",
+		url: "../experience/hubbub",
 	},
 	{
 		id: 3,
@@ -260,7 +260,7 @@ let trabajosSecond = [
 		duration: "(abril 2018 - noviembre 2021)",
 		role: "Co-fundador / Director de diseño",
 		tags: ["compañia", "trabajo", "diseño", "programación"],
-		des: "Fundación de una compañía dedicada al desarrollo de software y diseño empresarial..<br/>Administración de proyectos y equipos de trabajo en ambos giros de la empresa. Comunicación constante con clientes, definición de requerimientos y testeo.",
+		des: "Fundación de una compañía dedicada al desarrollo de software y diseño empresarial.<br/>Administración de proyectos y equipos de trabajo en ambos giros de la empresa. Comunicación constante con clientes, definición de requerimientos y testeo.",
 	},
 	{
 		id: 6,
@@ -269,7 +269,7 @@ let trabajosSecond = [
 		duration: "(mayo 2017 - octubre 2017)",
 		role: "Diseñador y desarrollador Web",
 		tags: ["proyecto", "diseño", "programación"],
-		des: "Desarrollo de aplicación web y mobile para ofrecer servicios de estética a domicilio",
+		des: "Desarrollo de aplicación web y mobile para ofrecer servicios de estética a domicilio.",
 	},
 	{
 		id: 7,

@@ -371,7 +371,7 @@ $gap: #122344;
 
 .cont-caso {
     @include c.containers(4rem, row);
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
 }

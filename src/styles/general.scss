@@ -182,7 +182,7 @@ html {
 h1 {
     @include typo("bebas", "Regular", "titulo");
     color: $gradient;
-    opacity: 0.075;
+    opacity: 0.05;
     text-align: left;
     width: max-content;
     mix-blend-mode: multiply;
@@ -237,13 +237,6 @@ b {
     position: absolute;
     &-plus {
         padding: 14rem 10rem;
-        height: 100vh;
-        width: 100vw;
-        z-index: -1;
-        position: absolute;
-    }
-    &-plus {
-        padding: 14rem 20rem;
         height: 100vh;
         width: 100vw;
         z-index: -1;
@@ -355,7 +348,7 @@ b {
 }
 
 .hero {
-    @include containers(0rem, column);
+    @include containers(12rem, column);
     padding: 10rem 0rem;
     &-logo {
         width: 10rem;
@@ -373,23 +366,45 @@ b {
         padding: 0rem 10rem;
     }
     &-banner {
-        height: 30rem;
-        width: 100%;
-        mix-blend-mode: multiply;
-        background-size: cover;
-        background-position: center;
-        animation: slide 300s infinite linear;
+        &-Liverpool {
+            height: 30rem;
+            width: 100%;
+            mix-blend-mode: multiply;
+            background-size: cover;
+            background-repeat: repeat-x;
+            background-position: center;
+            animation: slide 300s infinite linear;
+        }
+        &-HUBBUB {
+            height: 30rem;
+            width: 100%;
+            mix-blend-mode: multiply;
+            background-size: contain;
+            background-repeat: repeat-x;
+            background-position: center;
+            animation: slide 60s infinite linear, color 5s infinite ease-in-out ;
+        }
     }
 
     @keyframes slide {
         0% {
-            background-position-x: 0px; 
+            background-position-x: 0px;
         }
         100% {
-            background-position-x: 1000vw; 
+            background-position-x: 1000vw;
+        }
+    }
+
+    @keyframes color {
+        0% {
+            filter: hue-rotate(0deg);
+        }
+        100% {
+            filter: hue-rotate(359deg);
         }
     }
 }
+
 
 //main HEADER
 .nav-header {
@@ -423,13 +438,12 @@ b {
 .swal-description {
     @include typo("montserrat", "Regular", "sm");
     color: $shade-800;
-    margin-top: 3rem; 
+    margin-top: 3rem;
     text-align: center;
 }
 .swal2-icon {
     border-width: 0px;
 }
-
 
 //main FOOTER
 .cont-footer {
@@ -570,7 +584,7 @@ b {
     }
     .cont-footer-img {
         display: none;
-    } 
+    }
     .cont-footer {
         flex-wrap: wrap;
     }

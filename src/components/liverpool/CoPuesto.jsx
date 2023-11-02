@@ -79,7 +79,7 @@ let actEnfoque = [
 		icon: code,
 		title: "Ingeniería",
 		description:
-			"Creación y mantenimiento de tokens, así como implementación de variables y APIs de diseño",
+			"Creación y mantenimiento de tokens, así como implementación de variables y APIs de diseño.",
 	},
 ];
 

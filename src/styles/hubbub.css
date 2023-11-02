@@ -580,264 +580,204 @@ b {
     flex-wrap: wrap;
   }
 }
-.job-pri-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-direction: column;
-  box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.1);
-  padding: 2.5rem;
-  border-radius: 10px;
-  justify-content: flex-start;
-  align-items: center;
-  min-width: 30rem;
-  max-width: 30rem;
-}
-.job-pri-card:hover {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
-  box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.2);
-}
-.job-pri-card-img {
-  width: 50px;
-  height: 50px;
+.hubbub {
+  background: url("../assets/imgs/hubbub/background.png"), #fff;
+  background-size: contain;
 }
 
-.job-sec-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-direction: column;
-  box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.1);
-  padding: 1rem;
-  border-radius: 10px;
-  justify-content: flex-start;
-  align-items: center;
-  min-width: 20rem;
-  max-width: 20rem;
-}
-.job-sec-card:hover {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
-  box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.2);
-}
-.job-sec-card-img {
-  width: 20px;
-  height: 20px;
-}
-.job-sec-card-data {
-  display: flex;
-  align-items: center;
-  gap: 0rem;
-  flex-direction: column;
-}
-.job-sec-card-data-title {
-  font-family: "Bebas-Neue";
-  font-size: 1.2rem;
-  line-height: 1.56rem;
-}
-.job-sec-card-data-duration {
-  font-family: "Bebas-Neue";
-  font-size: 0.8rem;
-  line-height: 1.04rem;
-  color: #ff589a;
-}
-.job-sec-card-data-role {
-  font-family: "Montserrat-SemiBold";
-  font-size: 1rem;
-  line-height: 1.3rem;
-}
-
-.cont-jobs-pri {
+.cont-step {
   display: flex;
   align-items: center;
   gap: 5rem;
   flex-direction: row;
-  align-items: flex-start;
   width: 100%;
-  flex-wrap: wrap;
-}
-.cont-jobs-sec {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-  flex-direction: row;
   align-items: flex-start;
-  width: 100%;
-  flex-wrap: wrap;
+  height: 100%;
 }
 
-.cont-exp {
+.selected {
+  opacity: 1;
+}
+
+.noneselected {
+  opacity: 0.25;
+}
+
+.step-card {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   flex-direction: column;
-  align-items: flex-start;
+  width: calc((100% - 10rem) / 3);
+}
+.step-card p {
+  border-style: dotted;
+  border-width: 0.5rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  font-family: "Montserrat-Regular";
+  font-size: 1.4rem;
+  line-height: 1.82rem;
+  text-align: center;
 }
 
-.proj-card {
+.cont-substep {
+  display: flex;
+  align-items: center;
+  gap: 9rem;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+}
+
+.microstep-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-direction: column;
+  max-width: 20rem;
+}
+.microstep-card h4 {
+  font-family: "Montserrat-SemiBold";
+  font-size: 1.6rem;
+  line-height: 2.08rem;
+  text-align: center;
+}
+.microstep-card p {
+  font-family: "Montserrat-Regular";
+  font-size: 1.4rem;
+  line-height: 1.82rem;
+  text-align: center;
+}
+
+#paso1 h3,
+#paso1 h4 {
+  color: #f061aa;
+}
+#paso1 .step-card-description {
+  border-color: #f061aa;
+}
+
+#paso2 h3,
+#paso2 h4 {
+  color: #0075ff;
+}
+#paso2 .step-card-description {
+  border-color: #0075ff;
+}
+
+#paso3 h3,
+#paso3 h4 {
+  color: #ff7c7c;
+}
+#paso3 .step-card-description {
+  border-color: #ff7c7c;
+}
+
+.darkHubbub {
+  background-color: #333333;
+  color: #e6e6e6;
+}
+
+.cont-res {
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.cont-problem {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  flex-direction: column;
+  width: -moz-max-content;
+  width: max-content;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 1rem 5rem 0 0;
+  border-style: solid;
+  border-width: 0 0.2rem 0 0;
+  border-color: #e6e6e6;
+}
+
+.problem-card {
   display: flex;
   align-items: center;
   gap: 1rem;
   flex-direction: row;
+  width: 100%;
   align-items: flex-start;
-  min-width: 25rem;
-  max-width: 25rem;
-  border-radius: 10px;
-  border-color: #fff;
-  border-style: solid;
-  border-width: 0.1rem;
-  padding: 1.5rem;
-  color: #e6e6e6;
+  justify-content: flex-start;
 }
-.proj-card:hover {
-  border-color: #ff2079;
-  box-shadow: 0px 0px 5rem 0px rgba(0, 0, 0, 0.4) inset;
+.problem-card img {
+  width: 5rem;
+  height: 5rem;
 }
-.proj-card-img {
-  width: 25px;
-  height: 25px;
-}
-.proj-card-data {
+.problem-card div {
   display: flex;
   align-items: center;
   gap: 0rem;
   flex-direction: column;
-  width: 100%;
-  justify-content: flex-start;
   align-items: flex-start;
+  padding-top: 1rem;
 }
-.proj-card-data-date {
-  font-family: "Bebas-Neue";
-  font-size: 1.6rem;
-  line-height: 2.08rem;
-  color: #b3b3b3;
+.problem-card p {
+  font-family: "Montserrat-Regular";
+  font-size: 1.4rem;
+  line-height: 1.82rem;
+  text-align: left;
 }
-.proj-card-data-description {
-  font-family: "Montserrat-semibold";
-  font-size: 1.2rem;
-  line-height: 1.56rem;
+
+.cont-sol {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0 0 5rem;
+}
+.cont-sol h3 {
   color: #e6e6e6;
 }
 
-.con-proj {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 100%;
-  flex-wrap: wrap;
-}
-
 @media only screen and (max-width: 100vh) {
-  .nav-left {
+  .cont-step {
+    width: 100%;
+  }
+  .noneselected {
     display: none;
   }
-  .div-content {
-    padding: 9rem 10rem 0rem 10rem;
+  .step-card {
+    width: 100%;
   }
-  .middle {
-    padding: 10rem;
-  }
-  .middle-body {
-    padding: 10rem;
-  }
-  .cont-footer {
-    padding: 5rem 10rem;
-  }
-  .title-container {
-    padding: 14rem 10rem;
+  .step-card-description {
+    width: 100%;
   }
 }
-@media only screen and (max-width: 140vh) {
-  #cont-Home {
-    width: 100%;
-    height: -moz-max-content;
-    height: max-content;
-    padding-bottom: 100px;
-  }
-  .div-text {
-    width: 100%;
-  }
-  .photo-portrait {
-    display: none;
-  }
-  .cont-schools {
+@media only screen and (max-width: 70vh) {
+  .cont-step {
     display: flex;
     align-items: center;
     gap: 5rem;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+    flex-direction: row;
     width: 100%;
-    height: -moz-min-content;
-    height: min-content;
   }
-  .card-school {
-    width: 100%;
-    min-height: -moz-max-content;
-    min-height: max-content;
-    max-height: -moz-max-content;
-    max-height: max-content;
-  }
-  .card-course {
-    min-width: calc(50% - 2.5rem);
-    max-width: calc(50% - 2.5rem);
-  }
-  .exp-card {
+  .cont-substep {
     display: flex;
     align-items: center;
     gap: 2rem;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-    width: 100%;
-    height: 200px;
-  }
-  .date-lateral {
-    display: flex;
-    align-items: center;
-    gap: 0rem;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    height: 100%;
-  }
-  .date-lateral-line {
-    background-color: #333333;
-    width: 3px;
-    height: 100%;
-    border-radius: 3px;
-    margin: 0px 2rem;
-    min-height: 10px;
-  }
-  .date-lateral-month {
-    border-color: #333333;
-    border-style: solid;
-    border-width: 0px 0rem 0px 0px;
-    width: 100px;
-    text-align: center;
-  }
-  .date-lateral-month-label {
-    font-family: "Montserrat-SemiBold";
-    font-size: 0.8rem;
-    line-height: 1.04rem;
-    color: #333333;
-    margin: 0px;
-    padding: 0.8rem 0rem;
-  }
-  .cont-contact {
-    flex-direction: column;
-  }
-  .cont-contact-text {
     width: 100%;
   }
-  .cont-contact-form {
-    width: 100%;
-  }
-  .cont-footer-img {
-    display: none;
-  }
-  .cont-footer {
-    flex-wrap: wrap;
-  }
-}/*# sourceMappingURL=experience.css.map */
+}/*# sourceMappingURL=hubbub.css.map */

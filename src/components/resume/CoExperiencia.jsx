@@ -40,7 +40,7 @@ let experience = [
 		subc: uam,
 		subcName: "UAM Azcapotzalco",
 		tags: ["project", "design", "programming"],
-		url: "https://www.liverpool.com.mx",
+		url: "experience/hubbub",
 		des: "Design and development of a data visualization website about the noise phenomenon in Mexico City and the Metropolitan Area.",
 	},
 	{
@@ -154,7 +154,7 @@ let experiencia = [
 		subc: uam,
 		subcName: "UAM Azcapotzalco",
 		tags: ["proyecto", "diseño", "programación"],
-		url: "https://www.liverpool.com.mx",
+		url: "experience/hubbub",
 		des: "Definición de historias de usuarios y creación de prototipos para diferentes herramientas externas e internas del Instituto Mexicano del Seguro Social.",
 	},
 	{

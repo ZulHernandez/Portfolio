@@ -111,7 +111,7 @@ h1 {
   font-size: 32rem;
   line-height: 32rem;
   color: linear-gradient(45deg, rgba(68, 11, 212, 0.1) 0%, rgba(233, 46, 251, 0.1) 50%, rgba(255, 32, 121, 0.1) 100%), #333;
-  opacity: 0.075;
+  opacity: 0.05;
   text-align: left;
   width: -moz-max-content;
   width: max-content;
@@ -188,13 +188,6 @@ b {
 }
 .title-container-plus {
   padding: 14rem 10rem;
-  height: 100vh;
-  width: 100vw;
-  z-index: -1;
-  position: absolute;
-}
-.title-container-plus {
-  padding: 14rem 20rem;
   height: 100vh;
   width: 100vw;
   z-index: -1;
@@ -322,7 +315,7 @@ b {
 .hero {
   display: flex;
   align-items: center;
-  gap: 0rem;
+  gap: 12rem;
   flex-direction: column;
   padding: 10rem 0rem;
 }
@@ -346,13 +339,23 @@ b {
   flex-direction: column;
   padding: 0rem 10rem;
 }
-.hero-banner {
+.hero-banner-Liverpool {
   height: 30rem;
   width: 100%;
   mix-blend-mode: multiply;
   background-size: cover;
+  background-repeat: repeat-x;
   background-position: center;
   animation: slide 300s infinite linear;
+}
+.hero-banner-HUBBUB {
+  height: 30rem;
+  width: 100%;
+  mix-blend-mode: multiply;
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: center;
+  animation: slide 60s infinite linear, color 5s infinite ease-in-out;
 }
 @keyframes slide {
   0% {
@@ -360,6 +363,14 @@ b {
   }
   100% {
     background-position-x: 1000vw;
+  }
+}
+@keyframes color {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(359deg);
   }
 }
 

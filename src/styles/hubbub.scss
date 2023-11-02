@@ -1,0 +1,175 @@
+@use "./general.scss" as c;
+
+$rose: #f061aa;
+$blue: #0075ff;
+$red: #ff7c7c;
+
+//main Liverpool
+.hubbub {
+    background: url("../assets/imgs/hubbub/background.png"), #fff;
+    background-size: contain;
+}
+
+.cont-step {
+    @include c.containers(5rem, row);
+    width: 100%;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.selected {
+    opacity: 1;
+}
+
+.noneselected {
+    opacity: 0.25;
+}
+
+.step-card {
+    @include c.containers(0.5rem, column);
+    width: calc((100% - 10rem) / 3);
+    p {
+        border-style: dotted;
+        border-width: 0.5rem;
+        border-radius: 1rem;
+        padding: 2rem;
+        @include c.typo("montserrat", "Regular", "sm");
+        text-align: center;
+    }
+}
+
+.cont-substep {
+    @include c.containers(9rem, row);
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+}
+
+.microstep-card {
+    @include c.containers(0.5rem, column);
+    max-width: 20rem;
+    h4 {
+        @include c.typo("montserrat", "SemiBold", "base");
+        text-align: center;
+    }
+    p {
+        @include c.typo("montserrat", "Regular", "sm");
+        text-align: center;
+    }
+}
+
+#paso1 {
+    h3,
+    h4 {
+        color: $rose;
+    }
+    .step-card-description {
+        border-color: $rose;
+    }
+}
+
+#paso2 {
+    h3,
+    h4 {
+        color: $blue;
+    }
+    .step-card-description {
+        border-color: $blue;
+    }
+}
+
+#paso3 {
+    h3,
+    h4 {
+        color: $red;
+    }
+    .step-card-description {
+        border-color: $red;
+    }
+}
+
+.darkHubbub {
+    background-color: #333333;
+    color: c.$shade-100;
+}
+
+.cont-res {
+    @include c.containers(0rem, row);
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    height: max-content;
+}
+
+.cont-problem {
+    @include c.containers(5rem, column);
+    width: max-content;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 1rem 5rem 0 0;
+    border-style: solid;
+    border-width: 0 0.2rem 0 0;
+    border-color: c.$shade-100;
+}
+
+.problem-card {
+    @include c.containers(1rem, row);
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    img {
+        width: 5rem;
+        height: 5rem;
+    }
+    div {
+        @include c.containers(0rem, column);
+        align-items: flex-start;
+        padding-top: 1rem;
+    }
+    p {
+        @include c.typo("montserrat", "Regular", "sm");
+        text-align: left;
+    }
+}
+
+.cont-sol {
+    @include c.containers(5rem, row);
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 0 0 5rem;
+    h3 {
+        color: c.$shade-100;
+    }
+}
+
+@media only screen and (max-width: 140vh) {
+}
+
+@media only screen and (max-width: 100vh) {
+    .cont-step {
+        width: 100%;
+    }
+    .noneselected {
+        display: none;
+    }
+    .step-card {
+        width: 100%;
+        &-description {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 70vh) {
+    .cont-step {
+        @include c.containers(5rem, row);
+        width: 100%;
+    }
+    .cont-substep {
+        @include c.containers(2rem, column);
+        width: 100%;
+    }
+}

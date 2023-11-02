@@ -5,6 +5,8 @@ import { useLayoutEffect, useState } from "react";
 import arrow from "../../assets/imgs/vector/arrow.svg";
 import ENatomH from "../../assets/imgs/liverpool/ENatomicDesign.svg";
 import ENatomV from "../../assets/imgs/liverpool/ENatomicDesignVer.svg";
+import ESatomH from "../../assets/imgs/liverpool/ESatomicDesign.svg";
+import ESatomV from "../../assets/imgs/liverpool/ESatomicDesignVer.svg";
 import toyLogo from "../../assets/imgs/liverpool/brands/toys/logo.svg";
 import toyName from "../../assets/imgs/liverpool/brands/toys/name.svg";
 import toyMock from "../../assets/imgs/liverpool/brands/toys/mock.png";
@@ -34,9 +36,13 @@ import pokName from "../../assets/imgs/liverpool/brands/potteryK/name.svg";
 import pokMock from "../../assets/imgs/liverpool/brands/potteryK/mock.png";
 import sparks from "../../assets/imgs/liverpool/sparks.svg";
 
+import { useContext } from "react";
+import { MyContext } from "../context/MyContext";
+
 import PropTypes from "prop-types";
 
 const CoExpone = ({ marca }) => {
+	const { language } = useContext(MyContext);
 	CoExpone.propTypes = {
 		marca: PropTypes.object.isRequired,
 	};
@@ -50,11 +56,11 @@ const CoExpone = ({ marca }) => {
 			<div className="cont-brands-show-compo">
 				<div className="cont-brands-show-compo-row">
 					<div className={"clickable btn-primary-" + marca.brand}>
-						Text button here
+						{language == "EN" ? "Text button here" : "Texto del botón"}
 						<img src={sparks} />
 					</div>
 					<div className={"clickable btn-second-" + marca.brand}>
-						Text button here
+						{language == "EN" ? "Text button here" : "Texto del botón"}
 						<svg
 							width="25"
 							height="24"
@@ -80,10 +86,10 @@ const CoExpone = ({ marca }) => {
 				<div className="cont-brands-show-compo-row">
 					<div className="div-input">
 						<input
-							placeholder="Place holder text"
+							placeholder={language == "EN" ? "Placeholder text" : "Texto placeholder"}
 							className={"input-" + marca.brand}
 						></input>
-						<span className="input-span">Help text</span>
+						<span className="input-span">{language == "EN" ? "Help text" : "Texto de ayuda"}</span>
 					</div>
 				</div>
 				<p className={"cont-brands-show-compo-text-" + marca.brand}>
@@ -239,15 +245,51 @@ const CoBrandsCard = () => {
 							setBrand(brand > 1 ? brand - 1 : 9);
 						}}
 					/>
-					<img id="b1" src={brands[0 + brand].logo} alt={brands[0 + brand].brand}/>
-					<img id="b2" src={brands[1 + brand].logo} alt={brands[1 + brand].brand}/>
-					<img id="b3" src={brands[2 + brand].logo} alt={brands[2 + brand].brand}/>
-					<img id="b4" src={brands[3 + brand].logo} alt={brands[3 + brand].brand}/>
-					<img id="b5" src={brands[4 + brand].logo} alt={brands[4 + brand].brand}/>
-					<img id="b4" src={brands[5 + brand].logo} alt={brands[5 + brand].brand}/>
-					<img id="b3" src={brands[6 + brand].logo} alt={brands[6 + brand].brand}/>
-					<img id="b2" src={brands[7 + brand].logo} alt={brands[7 + brand].brand}/>
-					<img id="b1" src={brands[8 + brand].logo} alt={brands[8 + brand].brand}/>
+					<img
+						id="b1"
+						src={brands[0 + brand].logo}
+						alt={brands[0 + brand].brand}
+					/>
+					<img
+						id="b2"
+						src={brands[1 + brand].logo}
+						alt={brands[1 + brand].brand}
+					/>
+					<img
+						id="b3"
+						src={brands[2 + brand].logo}
+						alt={brands[2 + brand].brand}
+					/>
+					<img
+						id="b4"
+						src={brands[3 + brand].logo}
+						alt={brands[3 + brand].brand}
+					/>
+					<img
+						id="b5"
+						src={brands[4 + brand].logo}
+						alt={brands[4 + brand].brand}
+					/>
+					<img
+						id="b4"
+						src={brands[5 + brand].logo}
+						alt={brands[5 + brand].brand}
+					/>
+					<img
+						id="b3"
+						src={brands[6 + brand].logo}
+						alt={brands[6 + brand].brand}
+					/>
+					<img
+						id="b2"
+						src={brands[7 + brand].logo}
+						alt={brands[7 + brand].brand}
+					/>
+					<img
+						id="b1"
+						src={brands[8 + brand].logo}
+						alt={brands[8 + brand].brand}
+					/>
 					<img
 						style={{ transform: "rotate(90deg)" }}
 						className="cont-brands-arrow clickable"
@@ -264,47 +306,44 @@ const CoBrandsCard = () => {
 	);
 };
 
-function useWindowSize() {
-	const [orient, setOrient] = useState("");
-	useLayoutEffect(() => {
-		function updateSize() {
-			if (window.innerWidth > window.innerHeight * 0.7) {
-				setOrient(ENatomH);
-			} else {
-				setOrient(ENatomV);
-			}
-		}
-		window.addEventListener("resize", updateSize);
-		updateSize();
-		return () => window.removeEventListener("resize", updateSize);
-	}, []);
-	return orient;
-}
-
 const CoFrame = () => {
+	const { language } = useContext(MyContext);
 	const titles = ["Framework", "UI Design"];
+	const titulos = ["Framework", "Diseño de UI"];
 
 	const orient = useWindowSize();
 
+	function useWindowSize() {
+		const [orient, setOrient] = useState([]);
+		useLayoutEffect(() => {
+			function updateSize() {
+				if (window.innerWidth > window.innerHeight * 0.7) {
+					setOrient([ENatomH, ESatomH]);
+				} else {
+					setOrient([ENatomV, ESatomV]);
+				}
+			}
+			window.addEventListener("resize", updateSize);
+			updateSize();
+			return () => window.removeEventListener("resize", updateSize);
+		}, []);
+		return orient;
+	}
+
 	return (
 		<div style={{ zIndex: "3" }}>
-			<CoTitle titles={titles} space="-body" color="#833177" />
+			<CoTitle titles={language == "EN" ? titles : titulos} space="-body" color="#833177" />
 			<div className="div-content middle-body">
 				<p className="monBs-dark">
-					Due to the different businesses that exist within Liverpool, we work
-					with a design system that first bases its construction on the Atomic
-					Design methodology for the determination of its elements within a
-					global library called GLUE.
+					{language == "EN"
+						? "Due to the different businesses that operate within Liverpool, a design system is used that first bases its construction on the Atomic Design methodology for the determination of its elements within a global library called GLUE."
+						: "Debido a los diferentes negocios que operan dentro de Liverpool, se utiliza un sistema de diseño que primero basa su construcción en la metodología de Atomic Design para la determinación de sus elementos dentro de una librería global llamada GLUE."}
 				</p>
-				<img className="img-atom" src={orient} alt="atomic design" />
+				<img className="img-atom" src={language == "EN" ? orient[0] : orient[1]} alt="atomic design" />
 				<p className="monBs-dark">
-					My job as a UXer is the maintenance, expansion, documentation, and
-					application of GLUE within the different projects that UX attends. For
-					the creation of improvements or other secondary businesses under
-					Suburbia and Liverpool, they rely on UI Kits that take GLUE as a
-					template.
-					<br /> These are examples of the different businesses that operate
-					within the port and their applications:
+					{language == "EN"
+						? "My job as a UXer is the maintenance, expansion, documentation, and application of GLUE within the different projects that UX attends. For the creation of improvements or other secondary businesses under Suburbia and Liverpool, they rely on UI Kits that take GLUE as a template. \nThese are examples of the different businesses that operate within the port and their applications:"
+						: "Mi trabajo como UXer es el mantenimiento, expansión, documentación y aplicación de GLUE dentro de los diferentes proyectos que atiende UX. Para la creación de mejoras u otros negocios secundarios bajo Suburbia y Liverpool, se apoyan de UI Kits que toman a GLUE como plantilla. \nEstos son ejemplos de los diferentes negocios que operan dentro del puerto y sus aplicaciones:"}
 				</p>
 				<CoBrandsCard />
 			</div>

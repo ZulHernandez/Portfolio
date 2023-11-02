@@ -13,7 +13,8 @@ import CoFrame from "../components/liverpool/CoFrame";
 import CoEngine from "../components/liverpool/CoEngine";
 
 const RoLiverpool = () => {
-	const { language } = useContext(MyContext);
+	const { language, setRuta } = useContext(MyContext);
+    setRuta("/experience");
 	return (
 		<div
 			style={{ display: "flex", flexDirection: "column" }}
