@@ -86,10 +86,14 @@ const CoExpone = ({ marca }) => {
 				<div className="cont-brands-show-compo-row">
 					<div className="div-input">
 						<input
-							placeholder={language == "EN" ? "Placeholder text" : "Texto placeholder"}
+							placeholder={
+								language == "EN" ? "Placeholder text" : "Texto placeholder"
+							}
 							className={"input-" + marca.brand}
 						></input>
-						<span className="input-span">{language == "EN" ? "Help text" : "Texto de ayuda"}</span>
+						<span className="input-span">
+							{language == "EN" ? "Help text" : "Texto de ayuda"}
+						</span>
 					</div>
 				</div>
 				<p className={"cont-brands-show-compo-text-" + marca.brand}>
@@ -332,14 +336,24 @@ const CoFrame = () => {
 
 	return (
 		<div style={{ zIndex: "3" }}>
-			<CoTitle titles={language == "EN" ? titles : titulos} space="-body" color="#833177" />
+			<CoTitle
+				titles={language == "EN" ? titles : titulos}
+				space="-body"
+				color="#833177"
+			/>
 			<div className="div-content middle-body">
 				<p className="monBs-dark">
 					{language == "EN"
 						? "Due to the different businesses that operate within Liverpool, a design system is used that first bases its construction on the Atomic Design methodology for the determination of its elements within a global library called GLUE."
 						: "Debido a los diferentes negocios que operan dentro de Liverpool, se utiliza un sistema de diseño que primero basa su construcción en la metodología de Atomic Design para la determinación de sus elementos dentro de una librería global llamada GLUE."}
 				</p>
-				<img className="img-atom" src={language == "EN" ? orient[0] : orient[1]} alt="atomic design" />
+				<div className="atom-design">
+					<img
+						className="img-atom"
+						src={language == "EN" ? orient[0] : orient[1]}
+						alt="atomic design"
+					/>
+				</div>
 				<p className="monBs-dark">
 					{language == "EN"
 						? "My job as a UXer is the maintenance, expansion, documentation, and application of GLUE within the different projects that UX attends. For the creation of improvements or other secondary businesses under Suburbia and Liverpool, they rely on UI Kits that take GLUE as a template. \nThese are examples of the different businesses that operate within the port and their applications:"

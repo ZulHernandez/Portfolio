@@ -19,21 +19,20 @@ $gradient: linear-gradient(45deg, rgba($purple-800, 0.1) 0%, rgba($pink-800, 0.1
 
 //main ScroolBar
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: $shade-800;
+    background: $shade-0;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: $shade-0;
+    background-color: $shade-800;
     border-radius: 20px;
-    mix-blend-mode: exclusion;
-    border-color: $shade-800;
-    border-width: 4px;
     border-style: solid;
+    border-width: 2px;
+    border-color: $shade-0;
+    mix-blend-mode: exclusion;
     &:hover {
-        background-color: rgba($red-800, 0.5);
-        border-width: 2px;
+        background-color: rgba($red-800, 1);
     }
 }
 
@@ -256,6 +255,7 @@ b {
         justify-content: center;
         align-items: center;
         width: 117px;
+        transition: all 0.1s ease-in-out;
         &:hover {
             text-decoration: underline;
             color: $red-600;
@@ -280,6 +280,7 @@ b {
     &-link {
         @include typo("bebas", "Regular", "sm");
         color: $shade-300;
+        transition: all 0.25s ease-in-out;
 
         &:hover {
             color: $shade-300;
@@ -360,6 +361,7 @@ b {
     &-role {
         @include typo("montserrat", "ExtraBold", "5xl");
         color: $shade-800;
+        text-align: center;
     }
     &-data {
         @include containers(0rem, column);
@@ -383,6 +385,15 @@ b {
             background-repeat: repeat-x;
             background-position: center;
             animation: slide 60s infinite linear, color 5s infinite ease-in-out ;
+        }
+        &-GOOK {
+            height: 30rem;
+            width: 100%;
+            mix-blend-mode: multiply;
+            background-size: contain;
+            background-repeat: repeat-x;
+            background-position: center;
+            animation: slide 180s infinite linear;
         }
     }
 
@@ -488,28 +499,44 @@ b {
     @include typo("montserrat", "Regular", "c3");
 }
 
-//main MEDIA
-
-@media only screen and (max-width: 100vh) {
-    .nav-left {
-        display: none;
+.info-card {
+    @include containers(1rem, column);
+    width: 30rem;
+    align-items: center;
+    justify-content: center;
+    &-icon {
+        height: 8rem;
     }
-    .div-content {
-        padding: 9rem 10rem 0rem 10rem;
+    &-title {
+        @include typo("bebas", "Regular", "4xl");
     }
-    .middle {
-        padding: 10rem;
-        &-body {
-            padding: 10rem;
-        }
-    }
-    .cont-footer {
-        padding: 5rem 10rem;
-    }
-    .title-container {
-        padding: 14rem 10rem;
+    &-desc {
+        @include typo("montserrat", "Regular", "base");
+        text-align: center;
     }
 }
+
+.mini-info-card {
+    @include containers(1rem, column);
+    max-width: 25rem;
+    min-width: 25rem;
+    align-items: center;
+    justify-content: center;
+    &-icon {
+        width: 5rem;
+        height: 5rem;
+    }
+    &-title {
+        @include typo("bebas", "Regular", "2xl");
+    }
+    &-desc {
+        @include typo("montserrat", "Regular", "sm");
+        text-align: center;
+    }
+}
+
+//main MEDIA
+
 
 @media only screen and (max-width: 140vh) {
     #cont-Home {
@@ -588,4 +615,28 @@ b {
     .cont-footer {
         flex-wrap: wrap;
     }
+}
+
+@media only screen and (max-width: 100vh) {
+    .nav-left {
+        display: none;
+    }
+    .div-content {
+        padding: 9rem 10rem 0rem 10rem;
+    }
+    .middle {
+        padding: 10rem;
+        &-body {
+            padding: 10rem;
+        }
+    }
+    .cont-footer {
+        padding: 5rem 10rem;
+    }
+    .title-container {
+        padding: 14rem 10rem;
+    }
+}
+
+@media only screen and (max-width: 70vh) {
 }

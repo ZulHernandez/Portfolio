@@ -46,24 +46,23 @@ const CoCurso = () => {
 	];
 	let courses = [
 		{
+			id: 1,
+			institution: [institutes[2]],
+			date: "November 2023",
+			nombre: "Responsive Web Design & Bootstrap",
+			num: "91334263826",
+			link: "https://www.educacionit.com/perfil/saul-ulises-hernandez-cruz-913342/certificado/63826",
+		},
+		{
 			id: 2,
-			institution: [institutes[0], institutes[1]],
-			date: "July 2022",
-			nombre:
-				"First steps in the UX design process: Empathize, define, and ideate",
-			num: "SZPFQ7A2EZNS",
-			link: "https://www.coursera.org/account/accomplishments/certificate/SZPFQ7A2EZNS",
+			institution: [institutes[2]],
+			date: "August 2023",
+			nombre: "React.JS Developer",
+			num: "91334263297",
+			link: "https://www.educacionit.com/perfil/saul-ulises-hernandez-cruz-913342/certificado/63297",
 		},
 		{
 			id: 3,
-			institution: [institutes[0], institutes[1]],
-			date: "July 2022",
-			nombre: "Basic aspects of user experience design",
-			num: "SEPLGR3N9YDA",
-			link: "https://www.coursera.org/account/accomplishments/certificate/SEPLGR3N9YDA",
-		},
-		{
-			id: 1,
 			institution: [institutes[0], institutes[1]],
 			date: "August 2022",
 			nombre: "Create page layouts and low-fidelity prototypes",
@@ -72,33 +71,41 @@ const CoCurso = () => {
 		},
 		{
 			id: 4,
-			institution: [institutes[2]],
-			date: "August 2023",
-			nombre: "React.JS Developer",
-			num: "91334263297",
-			link: "https://www.educacionit.com/perfil/saul-ulises-hernandez-cruz-913342/certificado/63297",
-		},
-	];
-	let cursos = [
-		{
-			id: 2,
 			institution: [institutes[0], institutes[1]],
-			date: "Julio 2022",
+			date: "July 2022",
 			nombre:
-				"Primeros pasos en el proceso de diseño de UX: Empatizar, definir e idear",
+				"First steps in the UX design process: Empathize, define, and ideate",
 			num: "SZPFQ7A2EZNS",
 			link: "https://www.coursera.org/account/accomplishments/certificate/SZPFQ7A2EZNS",
 		},
 		{
-			id: 3,
+			id: 5,
 			institution: [institutes[0], institutes[1]],
-			date: "Julio 2022",
-			nombre: "Aspectos básicos del diseño de la experiencia del usuario",
+			date: "July 2022",
+			nombre: "Basic aspects of user experience design",
 			num: "SEPLGR3N9YDA",
 			link: "https://www.coursera.org/account/accomplishments/certificate/SEPLGR3N9YDA",
 		},
+	];
+	let cursos = [
 		{
 			id: 1,
+			institution: [institutes[2]],
+			date: "Noviembre 2023",
+			nombre: "Responsive Web Design & Bootstrap",
+			num: "91334263826",
+			link: "https://www.educacionit.com/perfil/saul-ulises-hernandez-cruz-913342/certificado/63826",
+		},
+		{
+			id: 2,
+			institution: [institutes[2]],
+			date: "Agosto 2023",
+			nombre: "React.JS Developer",
+			num: "91334263297",
+			link: "https://www.educacionit.com/perfil/saul-ulises-hernandez-cruz-913342/certificado/63297",
+		},
+		{
+			id: 3,
 			institution: [institutes[0], institutes[1]],
 			date: "Agosto 2022",
 			nombre: "Crear esquemas de página y prototipos de baja fidelidad",
@@ -107,11 +114,20 @@ const CoCurso = () => {
 		},
 		{
 			id: 4,
-			institution: [institutes[2]],
-			date: "Agosto 2023",
-			nombre: "React.JS Developer",
-			num: "91334263297",
-			link: "https://www.educacionit.com/perfil/saul-ulises-hernandez-cruz-913342/certificado/63297",
+			institution: [institutes[0], institutes[1]],
+			date: "Julio 2022",
+			nombre:
+				"Primeros pasos en el proceso de diseño de UX: Empatizar, definir e idear",
+			num: "SZPFQ7A2EZNS",
+			link: "https://www.coursera.org/account/accomplishments/certificate/SZPFQ7A2EZNS",
+		},
+		{
+			id: 5,
+			institution: [institutes[0], institutes[1]],
+			date: "Julio 2022",
+			nombre: "Aspectos básicos del diseño de la experiencia del usuario",
+			num: "SEPLGR3N9YDA",
+			link: "https://www.coursera.org/account/accomplishments/certificate/SEPLGR3N9YDA",
 		},
 	];
 

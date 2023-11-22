@@ -5,6 +5,7 @@ import RoResume from "./routes/RoResume";
 import RoExperience from "./routes/RoExperience";
 import RoLiverpool from "./routes/RoLiverpool";
 import RoHubbub from "./routes/RoHubbub";
+import RoGook from "./routes/RoGook";
 import CoNav from "./components/general/CoNav";
 import CoFooter from "./components/general/CoFooter";
 
@@ -22,6 +23,7 @@ function App() {
 					<Route path="/experience" element={<RoExperience/>} />
 					<Route path="/experience/liverpool" element={<RoLiverpool />} />
 					<Route path="/experience/hubbub" element={<RoHubbub />}/>
+					<Route path="/experience/gook" element={<RoGook />}/>
 				</Routes>
 				<CoFooter />
 			</MyContext.Provider>

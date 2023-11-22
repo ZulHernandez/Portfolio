@@ -107,7 +107,7 @@ let jobsPrincipal = [
 		subc: marsoft,
 		subcName: "Marsoft",
 		tags: ["project", "design", "programming"],
-		url: "https://www.liverpool.com.mx",
+		url: "../experience/gook",
 	},
 ];
 let trabajosPrincipal = [

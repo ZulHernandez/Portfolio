@@ -1,22 +1,21 @@
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #333333;
+  background: #fff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #fff;
+  background-color: #333333;
   border-radius: 20px;
-  mix-blend-mode: exclusion;
-  border-color: #333333;
-  border-width: 4px;
   border-style: solid;
+  border-width: 2px;
+  border-color: #fff;
+  mix-blend-mode: exclusion;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 32, 121, 0.5);
-  border-width: 2px;
+  background-color: #ff2079;
 }
 
 html {
@@ -215,6 +214,7 @@ b {
   justify-content: center;
   align-items: center;
   width: 117px;
+  transition: all 0.1s ease-in-out;
 }
 .button-tertiary:hover {
   text-decoration: underline;
@@ -241,6 +241,7 @@ b {
   font-size: 1.4rem;
   line-height: 1.82rem;
   color: #b3b3b3;
+  transition: all 0.25s ease-in-out;
 }
 .nav-link:hover {
   color: #b3b3b3;
@@ -330,6 +331,7 @@ b {
   font-size: 3.6rem;
   line-height: 4.68rem;
   color: #333333;
+  text-align: center;
 }
 .hero-data {
   display: flex;
@@ -467,26 +469,57 @@ b {
   line-height: 1.04rem;
 }
 
-@media only screen and (max-width: 100vh) {
-  .nav-left {
-    display: none;
-  }
-  .div-content {
-    padding: 9rem 10rem 0rem 10rem;
-  }
-  .middle {
-    padding: 10rem;
-  }
-  .middle-body {
-    padding: 10rem;
-  }
-  .cont-footer {
-    padding: 5rem 10rem;
-  }
-  .title-container {
-    padding: 14rem 10rem;
-  }
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  width: 30rem;
+  align-items: center;
+  justify-content: center;
 }
+.info-card-icon {
+  width: 8rem;
+  height: 8rem;
+}
+.info-card-title {
+  font-family: "Bebas-Neue";
+  font-size: 3.2rem;
+  line-height: 4.16rem;
+}
+.info-card-desc {
+  font-family: "Montserrat-Regular";
+  font-size: 1.6rem;
+  line-height: 2.08rem;
+  text-align: center;
+}
+
+.mini-info-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  max-width: 25rem;
+  min-width: 25rem;
+  align-items: center;
+  justify-content: center;
+}
+.mini-info-card-icon {
+  width: 5rem;
+  height: 5rem;
+}
+.mini-info-card-title {
+  font-family: "Bebas-Neue";
+  font-size: 2.4rem;
+  line-height: 3.12rem;
+}
+.mini-info-card-desc {
+  font-family: "Montserrat-Regular";
+  font-size: 1.4rem;
+  line-height: 1.82rem;
+  text-align: center;
+}
+
 @media only screen and (max-width: 140vh) {
   #cont-Home {
     width: 100%;
@@ -580,6 +613,26 @@ b {
     flex-wrap: wrap;
   }
 }
+@media only screen and (max-width: 100vh) {
+  .nav-left {
+    display: none;
+  }
+  .div-content {
+    padding: 9rem 10rem 0rem 10rem;
+  }
+  .middle {
+    padding: 10rem;
+  }
+  .middle-body {
+    padding: 10rem;
+  }
+  .cont-footer {
+    padding: 5rem 10rem;
+  }
+  .title-container {
+    padding: 14rem 10rem;
+  }
+}
 @font-face {
   font-family: "Arial";
   src: url("../assets/fonts/brands/ARIAL.TTF");
@@ -621,58 +674,6 @@ b {
   background-size: contain;
 }
 
-.info-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-direction: column;
-  max-width: 30rem;
-  min-width: 30rem;
-  align-items: center;
-  justify-content: center;
-}
-.info-card-icon {
-  width: 8rem;
-  height: 8rem;
-}
-.info-card-title {
-  font-family: "Bebas-Neue";
-  font-size: 3.2rem;
-  line-height: 4.16rem;
-}
-.info-card-desc {
-  font-family: "Montserrat-Regular";
-  font-size: 1.6rem;
-  line-height: 2.08rem;
-  text-align: center;
-}
-
-.mini-info-card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-direction: column;
-  max-width: 25rem;
-  min-width: 25rem;
-  align-items: center;
-  justify-content: center;
-}
-.mini-info-card-icon {
-  width: 5rem;
-  height: 5rem;
-}
-.mini-info-card-title {
-  font-family: "Bebas-Neue";
-  font-size: 2.4rem;
-  line-height: 3.12rem;
-}
-.mini-info-card-desc {
-  font-family: "Montserrat-Regular";
-  font-size: 1.4rem;
-  line-height: 1.82rem;
-  text-align: center;
-}
-
 .cont-info {
   display: flex;
   align-items: center;
@@ -695,6 +696,7 @@ b {
   gap: 5rem;
   flex-direction: column;
   width: 100%;
+  transition: all 0.25s ease-in-out;
 }
 .cont-brands-sup {
   display: flex;
@@ -1420,6 +1422,15 @@ b {
   line-height: 1.3rem;
   color: #333333;
   text-decoration: underline;
+}
+
+.atom-design {
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
 }
 
 .cont-tec {

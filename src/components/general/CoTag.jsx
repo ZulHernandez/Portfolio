@@ -35,7 +35,7 @@ const CoTag = (props) => {
 CoTag.propTypes = {
 	tags: PropTypes.array.isRequired,
 	subc: PropTypes.string,
-	align: PropTypes.bool,
+	align: PropTypes.string,
 	subcName: PropTypes.string,
 };
 

@@ -76,7 +76,7 @@ let experience = [
 		subcName: "Marsoft",
 		tags: ["project", "design", "programming"],
 		side: "left",
-		url: "experience/liverpool",
+		url: "experience/gook",
 		des: "Development and design of a Mini ERP and Marketplace for e-commerce of optical health products",
 	},
 	{

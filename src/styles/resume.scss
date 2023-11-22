@@ -110,6 +110,7 @@
     min-width: calc(50% - 2.5rem);
     min-height: 51rem;
     max-height: 61rem;
+    transition: all 0.1s ease-in-out;
 
     a {
         color: c.$shade-100;
@@ -171,9 +172,11 @@
         .card-course-dataB {
             border-left-color: c.$red-800;
             box-shadow: -10px 0px 0.5rem -5px rgba(c.$shade-1000, 0.2);
+            transition: all 0.1s ease-in-out;
         }
         .card-course-id {
             text-decoration: underline;
+            transition: all 0.1s ease-in-out;
         }
     }
 
@@ -254,11 +257,14 @@
     box-shadow: -25px 25px 50px 0px rgba(51, 51, 51, 0.1);
     @include c.containers(1rem, row);
     align-items: flex-start;
+    transition: all 0.25s ease-in-out;
     &:hover {
         background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
         box-shadow: -25px 25px 50px 0px rgba(51, 51, 51, 0.2);
+        transition: all 0.25s ease-in-out;
         .job-card-out {
             opacity: 1;
+            transition: all 0.25s ease-in-out;
         }
     }
     &-img {
@@ -380,6 +386,7 @@
                 color: c.$shade-100;
                 margin: 0px;
                 padding: 0px 0.5rem;
+                transition: all 1s ease-in-out;
                 &:hover {
                     text-decoration: underline;
                 }
@@ -510,5 +517,21 @@ textarea {
         &-form {
             width: 100%;
         }
+    }
+}
+
+
+@media only screen and (max-width: 70vh) {
+    .cont-courses{
+        row-gap: 8rem;
+    }
+    .date-lateral-month{
+        width: 72px;
+    }
+    .year-label {
+        width: 75px;
+    }
+    .job-card{
+        flex-direction: column;
     }
 }

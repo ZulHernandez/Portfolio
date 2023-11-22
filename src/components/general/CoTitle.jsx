@@ -16,7 +16,7 @@ const CoTitle = (props) => {
 	CoTitle.propTypes = {
 		titles: PropTypes.array.isRequired,
 		color: PropTypes.string,
-		space: PropTypes.bool,
+		space: PropTypes.string,
 	}; 
 
 	titles = props.titles;

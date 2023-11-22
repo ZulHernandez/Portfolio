@@ -53,44 +53,6 @@ $gap: #122344;
     background-size: contain;
 }
 
-.info-card {
-    @include c.containers(1rem, column);
-    max-width: 30rem;
-    min-width: 30rem;
-    align-items: center;
-    justify-content: center;
-    &-icon {
-        width: 8rem;
-        height: 8rem;
-    }
-    &-title {
-        @include c.typo("bebas", "Regular", "4xl");
-    }
-    &-desc {
-        @include c.typo("montserrat", "Regular", "base");
-        text-align: center;
-    }
-}
-
-.mini-info-card {
-    @include c.containers(1rem, column);
-    max-width: 25rem;
-    min-width: 25rem;
-    align-items: center;
-    justify-content: center;
-    &-icon {
-        width: 5rem;
-        height: 5rem;
-    }
-    &-title {
-        @include c.typo("bebas", "Regular", "2xl");
-    }
-    &-desc {
-        @include c.typo("montserrat", "Regular", "sm");
-        text-align: center;
-    }
-}
-
 .cont-info {
     @include c.containers(5rem, row);
     justify-content: center;
@@ -114,6 +76,7 @@ $gap: #122344;
 .cont-brands {
     @include c.containers(5rem, column);
     width: 100%;
+    transition: all 0.25s ease-in-out;
     &-sup {
         @include c.containers(1rem, column);
         width: 100%;
@@ -406,6 +369,12 @@ $gap: #122344;
             text-decoration: underline;
         }
     }
+}
+
+.atom-design{
+    @include c.containers(0rem, row);
+    width: 100%;
+    justify-content: center;
 }
 
 .cont-tec {
