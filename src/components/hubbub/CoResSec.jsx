@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { MyContext } from "../context/MyContext";
 
-import screen1 from "../../assets/imgs/hubbub/research/celCarru/HUBBUB1.png";
-import screen2 from "../../assets/imgs/hubbub/research/celCarru/HUBBUB2.png";
-import screen3 from "../../assets/imgs/hubbub/research/celCarru/HUBBUB3.png";
-import screen4 from "../../assets/imgs/hubbub/research/celCarru/HUBBUB5.png";
-import screen5 from "../../assets/imgs/hubbub/research/celCarru/HUBBUB6.png";
+import screen1 from "../../assets/imgs/hubbub/research/celCarru/HUBBUB1.webp";
+import screen2 from "../../assets/imgs/hubbub/research/celCarru/HUBBUB2.webp";
+import screen3 from "../../assets/imgs/hubbub/research/celCarru/HUBBUB3.webp";
+import screen4 from "../../assets/imgs/hubbub/research/celCarru/HUBBUB5.webp";
+import screen5 from "../../assets/imgs/hubbub/research/celCarru/HUBBUB6.webp";
 import CoTitle from "../general/CoTitle";
 
 const CoScreen = () => {

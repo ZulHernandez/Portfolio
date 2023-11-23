@@ -8,9 +8,9 @@ import metod from "../../assets/imgs/liverpool/metod.svg";
 import metrics from "../../assets/imgs/liverpool/metrics.svg";
 import production from "../../assets/imgs/liverpool/production.svg";
 import invest from "../../assets/imgs/liverpool/invest.svg";
-import bannerSales from "../../assets/imgs/liverpool/bannerSales.png";
-import bannerPega from "../../assets/imgs/liverpool/bannerPega.png";
-import bannerAtla from "../../assets/imgs/liverpool/bannerAtla.png";
+import bannerSales from "../../assets/imgs/liverpool/bannerSales.webp";
+import bannerPega from "../../assets/imgs/liverpool/bannerPega.webp";
+import bannerAtla from "../../assets/imgs/liverpool/bannerAtla.webp";
 
 import figma from "../../assets/imgs/liverpool/figma.svg";
 import figmaApi from "../../assets/imgs/liverpool/figmaApi.svg";

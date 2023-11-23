@@ -1,21 +1,21 @@
 import { useContext, useState } from "react";
 import { MyContext } from "../context/MyContext";
 
-import page1 from "../../assets/imgs/hubbub/userStory/userStory_Página_1.png";
-import page2 from "../../assets/imgs/hubbub/userStory/userStory_Página_2.png";
-import page3 from "../../assets/imgs/hubbub/userStory/userStory_Página_3.png";
-import page4 from "../../assets/imgs/hubbub/userStory/userStory_Página_4.png";
-import page5 from "../../assets/imgs/hubbub/userStory/userStory_Página_5.png";
+import page1 from "../../assets/imgs/hubbub/userStory/userStory_Página_1.webp";
+import page2 from "../../assets/imgs/hubbub/userStory/userStory_Página_2.webp";
+import page3 from "../../assets/imgs/hubbub/userStory/userStory_Página_3.webp";
+import page4 from "../../assets/imgs/hubbub/userStory/userStory_Página_4.webp";
+import page5 from "../../assets/imgs/hubbub/userStory/userStory_Página_5.webp";
 import plus from "../../assets/imgs/hubbub/userStory/zoom_in.svg";
 import minus from "../../assets/imgs/hubbub/userStory/zoom_out.svg";
-import gallery1 from "../../assets/imgs/hubbub/bocetos/1.png";
-import gallery2 from "../../assets/imgs/hubbub/bocetos/2.png";
-import gallery3 from "../../assets/imgs/hubbub/bocetos/3.png";
-import gallery4 from "../../assets/imgs/hubbub/bocetos/4.png";
-import gallery5 from "../../assets/imgs/hubbub/bocetos/5.png";
-import gallery6 from "../../assets/imgs/hubbub/bocetos/6.png";
-import gallery7 from "../../assets/imgs/hubbub/bocetos/7.png";
-import gallery8 from "../../assets/imgs/hubbub/bocetos/8.png";
+import gallery1 from "../../assets/imgs/hubbub/bocetos/1.webp";
+import gallery2 from "../../assets/imgs/hubbub/bocetos/2.webp";
+import gallery3 from "../../assets/imgs/hubbub/bocetos/3.webp";
+import gallery4 from "../../assets/imgs/hubbub/bocetos/4.webp";
+import gallery5 from "../../assets/imgs/hubbub/bocetos/5.webp";
+import gallery6 from "../../assets/imgs/hubbub/bocetos/6.webp";
+import gallery7 from "../../assets/imgs/hubbub/bocetos/7.webp";
+import gallery8 from "../../assets/imgs/hubbub/bocetos/8.webp";
 
 import CoTitle from "../general/CoTitle";
 

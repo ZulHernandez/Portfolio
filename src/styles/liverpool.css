@@ -358,6 +358,15 @@ b {
   background-position: center;
   animation: slide 60s infinite linear, color 5s infinite ease-in-out;
 }
+.hero-banner-GOOK {
+  height: 30rem;
+  width: 100%;
+  mix-blend-mode: multiply;
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: center;
+  animation: slide 180s infinite linear;
+}
 @keyframes slide {
   0% {
     background-position-x: 0px;
@@ -479,7 +488,6 @@ b {
   justify-content: center;
 }
 .info-card-icon {
-  width: 8rem;
   height: 8rem;
 }
 .info-card-title {
@@ -670,7 +678,7 @@ b {
   src: url("../assets/fonts/brands/ROBOTO-MEDIUM_0.TTF");
 }
 .liverpool {
-  background: url("../assets/imgs/liverpool/background.png"), #fff;
+  background: url("../assets/imgs/liverpool/background.webp"), #fff;
   background-size: contain;
 }
 

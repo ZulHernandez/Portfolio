@@ -666,7 +666,7 @@ b {
   src: url(../assets/fonts/gook/Geomanist-Regular.otf);
 }
 .gook {
-  background: url("../assets/imgs/gook/background.png"), #fff;
+  background: url("../assets/imgs/gook/background.webp"), #fff;
   background-size: contain;
 }
 

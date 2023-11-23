@@ -674,7 +674,7 @@ b {
   src: url(../assets/fonts/hubbub/Montserrat-Black_0.ttf);
 }
 .hubbub {
-  background: url("../assets/imgs/hubbub/background.png"), #fff;
+  background: url("../assets/imgs/hubbub/background.webp"), #fff;
   background-size: contain;
 }
 

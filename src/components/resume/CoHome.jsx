@@ -1,7 +1,7 @@
 import CoTitle from "../general/CoTitle";
-import rGris from "../../assets/imgs/bitmap/misFotos/rayaAzul.png";
-import nGris from "../../assets/imgs/bitmap/misFotos/BNnegro.png";
-import gGris from "../../assets/imgs/bitmap/misFotos/BNguinda.png";
+import rGris from "../../assets/imgs/bitmap/misFotos/rayaAzul.webp";
+import nGris from "../../assets/imgs/bitmap/misFotos/BNnegro.webp";
+import gGris from "../../assets/imgs/bitmap/misFotos/BNguinda.webp";
 
 import { useContext } from "react";
 import { MyContext } from "../../components/context/MyContext";

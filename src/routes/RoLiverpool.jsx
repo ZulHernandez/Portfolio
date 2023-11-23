@@ -1,6 +1,6 @@
 import logo from "../assets/imgs/liverpool/logo.svg";
 import logoName from "../assets/imgs/liverpool/logoName.svg";
-import banner from "../assets/imgs/liverpool/banner.png";
+import banner from "../assets/imgs/liverpool/banner.webp";
 import { useContext } from "react";
 import { MyContext } from "../components/context/MyContext";
 
