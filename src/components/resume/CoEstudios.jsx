@@ -9,7 +9,7 @@ const CoInstLog = (props) => {
 	return props.curso.map((inst) => {
 		return (
 			<div key={inst.id}>
-				<img src={inst.logo} alt={inst.name} />
+				<img loading="lazy" src={inst.logo} alt={inst.name} />
 			</div>
 		);
 	});
@@ -207,7 +207,7 @@ const CoSchool = () => {
 		return (
 			<div key={school.id} className="card-school">
 				<div className="card-school-first">
-					<img
+					<img loading="lazy"
 						className="card-school-img"
 						src={school.img}
 						alt={school.inst}

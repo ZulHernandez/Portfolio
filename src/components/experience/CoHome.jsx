@@ -44,7 +44,7 @@ function alerta(compa) {
 
 	Swal.fire({
 		iconHtml:
-			"<img class='swal-icon' src='" +
+			"<img loading='lazy' class='swal-icon' src='" +
 			compa.img +
 			"' alt='" +
 			compa.company +
@@ -56,7 +56,7 @@ function alerta(compa) {
 			compa.duration +
 			"</p><p class='swal-title'>" +
 			compa.role +
-			"</p><div class='job-card-data-tags' style='justify-content: center'><img class='job-card-data-tags-img' style='display:" +
+			"</p><div class='job-card-data-tags' style='justify-content: center'><img loading='lazy' class='job-card-data-tags-img' style='display:" +
 			subCoStyle +
 			"' src=" +
 			compa.subc +
@@ -295,7 +295,7 @@ const CoJobsSec = () => {
 				onClick={() => alerta(job)}
 				key={job.id}
 			>
-				<img className="job-sec-card-img" src={job.img} alt={job.company} />
+				<img loading="lazy" className="job-sec-card-img" src={job.img} alt={job.company} />
 				<h3 className="job-sec-card-data-title">{job.company}</h3>
 				<div className="job-sec-card-data">
 					<h4 className="job-sec-card-data-duration">{job.duration}</h4>
@@ -315,7 +315,7 @@ const CoJobsPri = () => {
 		return (
 			<Link key={job.id} to={job.url}>
 				<div className="job-pri-card clickable">
-					<img className="job-pri-card-img" src={job.img} alt={job.company} />
+					<img loading="lazy" className="job-pri-card-img" src={job.img} alt={job.company} />
 					<h3 className="job-card-data-title">{job.company}</h3>
 					<h4 className="job-card-data-duration">{job.duration}</h4>
 					<h4 className="job-card-data-role">{job.role}</h4>

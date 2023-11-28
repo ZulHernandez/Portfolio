@@ -30,7 +30,7 @@ import gif3 from "../../assets/imgs/gook/gifs/RepararT.gif";
 
 const CoAvatar = ({ avatares }) => {
 	return avatares.map((avatar) => {
-		return <img key={avatares.indexOf(avatar)} src={avatar} alt="" />;
+		return <img loading="lazy" key={avatares.indexOf(avatar)} src={avatar} alt="" />;
 	});
 };
 
@@ -73,7 +73,7 @@ const CoDesign = () => {
 				<div className="cont-design">
 					<div className="cont-design-item">
 						<div id="white" className="cont-design-item-img">
-							<img src={logotipo} alt="" />
+							<img loading="lazy" src={logotipo} alt="" />
 						</div>
 						<div id="white" className="cont-design-item-txt">
 							Pantone P 1-1 C <br /> CMYK C:0% M:0% Y:0% K:0% <br /> RGB R:255
@@ -83,7 +83,7 @@ const CoDesign = () => {
 					</div>
 					<div className="cont-design-item">
 						<div id="black" className="cont-design-item-img">
-							<img src={logotipoB} alt="" />
+							<img loading="lazy" src={logotipoB} alt="" />
 						</div>
 						<div id="black" className="cont-design-item-txt">
 							Pantone P Process Black C <br /> CMYK C:91% M:79% Y:62% K:97%{" "}

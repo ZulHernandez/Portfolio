@@ -11,38 +11,47 @@ $west: #ed2724;
 $gap: #122344;
 
 @font-face {
+    font-display: swap;
     font-family: "Arial";
     src: url("../assets/fonts/brands/ARIAL.TTF");
 }
 @font-face {
+    font-display: swap;
     font-family: "BuenosAires";
     src: url("../assets/fonts/brands/BUENOSAIRES-BOOK.OTF");
 }
 @font-face {
+    font-display: swap;
     font-family: "Oscine";
     src: url("../assets/fonts/brands/DAZNOSCINE-REGULAR.TTF");
 }
 @font-face {
+    font-display: swap;
     font-family: "Flama";
     src: url("../assets/fonts/brands/FLAMA-BOOK.TTF");
 }
 @font-face {
+    font-display: swap;
     font-family: "Gotham";
     src: url("../assets/fonts/brands/GOTHAMBOOK_0.TTF");
 }
 @font-face {
+    font-display: swap;
     font-family: "Lato";
     src: url("../assets/fonts/brands/LATO-REGULAR_0.TTF");
 }
 @font-face {
+    font-display: swap;
     font-family: "Lynstone";
     src: url("../assets/fonts/brands/LYNSTONE.OTF");
 }
 @font-face {
+    font-display: swap;
     font-family: "Roboto";
     src: url("../assets/fonts/brands/ROBOTO-REGULAR_0.TTF");
 }
 @font-face {
+    font-display: swap;
     font-family: "RobotoMed";
     src: url("../assets/fonts/brands/ROBOTO-MEDIUM_0.TTF");
 }
@@ -371,7 +380,7 @@ $gap: #122344;
     }
 }
 
-.atom-design{
+.atom-design {
     @include c.containers(0rem, row);
     width: 100%;
     justify-content: center;

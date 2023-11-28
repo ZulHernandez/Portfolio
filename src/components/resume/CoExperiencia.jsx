@@ -312,7 +312,7 @@ function alerta(compa, language) {
 
 	Swal.fire({
 		iconHtml:
-			"<img class='swal-icon' src='" +
+			"<img loading='lazy' class='swal-icon' src='" +
 			compa.img +
 			"' alt='" +
 			compa.company +
@@ -324,7 +324,7 @@ function alerta(compa, language) {
 			compa.duration +
 			"</p><p class='swal-title'>" +
 			compa.role +
-			"</p><div class='job-card-data-tags' style='justify-content: center'><img class='job-card-data-tags-img' style='display:" +
+			"</p><div class='job-card-data-tags' style='justify-content: center'><img loading='lazy' class='job-card-data-tags-img' style='display:" +
 			subCoStyle +
 			"' src=" +
 			compa.subc +
@@ -340,7 +340,7 @@ function alerta(compa, language) {
 			compa.url +
 			"`,`_self`)' class='button-tertiary clickable'>" +
 			botonText +
-			"<img src=" +
+			"<img loading='lazy' src=" +
 			Farrow +
 			"></img></div></div>",
 		width: 600,
@@ -368,7 +368,7 @@ const CoExpCard = ({ company }) => {
 					company.side == "left" ? "20px 20px 0px 20px" : "20px 20px 20px 0px",
 			}}
 		>
-			<img
+			<img loading="lazy"
 				className="job-card-img"
 				src={company.img}
 				alt={company.company}
@@ -385,7 +385,7 @@ const CoExpCard = ({ company }) => {
 					subcName={company.subcName}
 				/>
 			</div>
-			<img className="job-card-out" src={out}></img>
+			<img loading="lazy" className="job-card-out" src={out}></img>
 		</div>
 	);
 };

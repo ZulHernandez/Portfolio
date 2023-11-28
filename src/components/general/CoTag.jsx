@@ -21,7 +21,7 @@ const CoTag = (props) => {
 			className="job-card-data-tags"
 			style={{ justifyContent: props.align ? "center" : "left" }}
 		>
-			<img
+			<img loading="lazy"
 				style={{ display: display }}
 				className="job-card-data-tags-img"
 				src={props.subc}

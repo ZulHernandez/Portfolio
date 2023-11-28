@@ -48,7 +48,7 @@ const CoExpone = ({ marca }) => {
 	};
 	return (
 		<div className="cont-brands-show">
-			<img
+			<img loading="lazy"
 				className="cont-brands-show-mock"
 				src={marca.mock}
 				alt={marca.brand + " mock"}
@@ -57,7 +57,7 @@ const CoExpone = ({ marca }) => {
 				<div className="cont-brands-show-compo-row">
 					<div className={"clickable btn-primary-" + marca.brand}>
 						{language == "EN" ? "Text button here" : "Texto del botón"}
-						<img src={sparks} />
+						<img loading="lazy" src={sparks} />
 					</div>
 					<div className={"clickable btn-second-" + marca.brand}>
 						{language == "EN" ? "Text button here" : "Texto del botón"}
@@ -241,7 +241,7 @@ const CoBrandsCard = () => {
 		<div className="cont-brands">
 			<div className="cont-brands-sup">
 				<div className="cont-brands-car">
-					<img
+					<img loading="lazy"
 						style={{ transform: "rotate(-90deg)" }}
 						className="cont-brands-arrow clickable"
 						src={arrow}
@@ -249,52 +249,52 @@ const CoBrandsCard = () => {
 							setBrand(brand > 1 ? brand - 1 : 9);
 						}}
 					/>
-					<img
+					<img loading="lazy"
 						id="b1"
 						src={brands[0 + brand].logo}
 						alt={brands[0 + brand].brand}
 					/>
-					<img
+					<img loading="lazy"
 						id="b2"
 						src={brands[1 + brand].logo}
 						alt={brands[1 + brand].brand}
 					/>
-					<img
+					<img loading="lazy"
 						id="b3"
 						src={brands[2 + brand].logo}
 						alt={brands[2 + brand].brand}
 					/>
-					<img
+					<img loading="lazy"
 						id="b4"
 						src={brands[3 + brand].logo}
 						alt={brands[3 + brand].brand}
 					/>
-					<img
+					<img loading="lazy"
 						id="b5"
 						src={brands[4 + brand].logo}
 						alt={brands[4 + brand].brand}
 					/>
-					<img
+					<img loading="lazy"
 						id="b4"
 						src={brands[5 + brand].logo}
 						alt={brands[5 + brand].brand}
 					/>
-					<img
+					<img loading="lazy"
 						id="b3"
 						src={brands[6 + brand].logo}
 						alt={brands[6 + brand].brand}
 					/>
-					<img
+					<img loading="lazy"
 						id="b2"
 						src={brands[7 + brand].logo}
 						alt={brands[7 + brand].brand}
 					/>
-					<img
+					<img loading="lazy"
 						id="b1"
 						src={brands[8 + brand].logo}
 						alt={brands[8 + brand].brand}
 					/>
-					<img
+					<img loading="lazy"
 						style={{ transform: "rotate(90deg)" }}
 						className="cont-brands-arrow clickable"
 						src={arrow}
@@ -303,7 +303,7 @@ const CoBrandsCard = () => {
 						}}
 					/>
 				</div>
-				<img src={brands[4 + brand].name} alt={brands[4 + brand].brand} />
+				<img loading="lazy" src={brands[4 + brand].name} alt={brands[4 + brand].brand} />
 			</div>
 			<CoExpone marca={brands[4 + brand]} />
 		</div>
@@ -348,7 +348,7 @@ const CoFrame = () => {
 						: "Debido a los diferentes negocios que operan dentro de Liverpool, se utiliza un sistema de diseño que primero basa su construcción en la metodología de Atomic Design para la determinación de sus elementos dentro de una librería global llamada GLUE."}
 				</p>
 				<div className="atom-design">
-					<img
+					<img loading="lazy"
 						className="img-atom"
 						src={language == "EN" ? orient[0] : orient[1]}
 						alt="atomic design"

@@ -552,7 +552,7 @@ const CoFootMap = () => {
 	return (
 		<div className="cont-footer">
 			<CoFootOption />
-			<img className="cont-footer-img" src={sign} alt="Sign" />
+			<img loading="lazy" className="cont-footer-img" src={sign} alt="Sign" />
 		</div>
 	);
 };

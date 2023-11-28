@@ -19,8 +19,23 @@
   background-color: #ff2079;
 }
 
-html {
+html, body {
   overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  color: #333333;
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
 @media screen and (max-width: 3840px) {
@@ -65,18 +80,22 @@ html {
 }
 
 @font-face {
+  font-display: swap;
   font-family: "Bebas-Neue";
   src: url(../assets/fonts/Bebas/BebasNeue-Regular.ttf);
 }
 @font-face {
+  font-display: swap;
   font-family: "Montserrat-Regular";
   src: url(../assets/fonts/Montserrat/Montserrat-Regular.ttf);
 }
 @font-face {
+  font-display: swap;
   font-family: "Montserrat-SemiBold";
   src: url(../assets/fonts/Montserrat/Montserrat-SemiBold.ttf);
 }
 @font-face {
+  font-display: swap;
   font-family: "Montserrat-ExtraBold";
   src: url(../assets/fonts/Montserrat/Montserrat-ExtraBold.ttf);
 }
@@ -181,14 +200,14 @@ b {
 .title-container {
   padding: 14rem 25rem;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   z-index: -1;
   position: absolute;
 }
 .title-container-plus {
   padding: 14rem 10rem;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   z-index: -1;
   position: absolute;
 }
@@ -359,6 +378,15 @@ b {
   background-position: center;
   animation: slide 60s infinite linear, color 5s infinite ease-in-out;
 }
+.hero-banner-GOOK {
+  height: 30rem;
+  width: 100%;
+  mix-blend-mode: multiply;
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: center;
+  animation: slide 180s infinite linear;
+}
 @keyframes slide {
   0% {
     background-position-x: 0px;
@@ -429,10 +457,11 @@ b {
   align-content: flex-start;
   align-items: flex-start;
   background-color: #333333;
-  position: relative;
-  z-index: 100;
   padding: 5rem 15rem;
   color: #e6e6e6;
+  width: 100%;
+  position: relative;
+  z-index: 100;
 }
 .cont-footer a {
   color: #e6e6e6;
@@ -465,6 +494,8 @@ b {
   color: #b3b3b3;
   padding: 2.5rem 10rem;
   text-align: center;
+  position: relative;
+  z-index: 100;
   font-family: "Montserrat-Regular";
   font-size: 0.8rem;
   line-height: 1.04rem;
@@ -480,7 +511,6 @@ b {
   justify-content: center;
 }
 .info-card-icon {
-  width: 8rem;
   height: 8rem;
 }
 .info-card-title {
@@ -716,7 +746,7 @@ b {
   align-items: center;
   gap: 10rem;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-between;
   width: 100%;
   height: 100%;
@@ -731,11 +761,20 @@ b {
   flex-direction: column;
   align-items: flex-start;
   width: 50%;
-  height: 100%;
+  padding-bottom: 5rem;
+  min-height: calc(100vh - 10rem);
+  max-height: 100px;
 }
 
 .photo-portrait {
-  height: calc(100vh - 100px);
+  width: calc(50% - 1.5rem);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  min-height: calc(100vh - 5rem);
+  position: fixed;
+  left: 50%;
+  z-index: -10;
 }
 
 .foto-mia {
@@ -935,6 +974,7 @@ b {
   align-items: center;
   gap: 1rem;
   flex-direction: column;
+  background-color: white;
 }
 
 .year-label {
@@ -1238,9 +1278,6 @@ textarea::-webkit-scrollbar-track {
   .div-text {
     width: 100%;
   }
-  .photo-portrait {
-    display: none;
-  }
   .cont-schools {
     display: flex;
     align-items: center;
@@ -1327,5 +1364,21 @@ textarea::-webkit-scrollbar-track {
   }
   .job-card {
     flex-direction: column;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .photo-portrait {
+    display: none;
+  }
+  .div-text {
+    width: 100%;
+  }
+}
+@media (orientation: portrait) {
+  .photo-portrait {
+    display: none;
+  }
+  .div-text {
+    height: 50vh;
   }
 }/*# sourceMappingURL=resume.css.map */

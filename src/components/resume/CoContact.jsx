@@ -53,7 +53,7 @@ const CoMedium = () => {
 		return (
 			<div key={contact.id} className="cont-contact-text-redes">
 				<a href={contact.type + contact.link} target="_blank" rel="noreferrer">
-					<img
+					<img loading="lazy"
 						className="cont-contact-text-redes-img"
 						src={contact.icon}
 						alt={contact.name}
@@ -178,7 +178,7 @@ const CoContact = () => {
 								className="button-tertiary clickable"
 								value="send"
 							>
-								{language == "EN" ? "send" : "enviar"}<img src={Farrow}></img>
+								{language == "EN" ? "send" : "enviar"}<img loading="lazy" src={Farrow}></img>
 								<br />
 								<br />
 							</button>

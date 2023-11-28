@@ -2,26 +2,32 @@
 @use "./general.scss" as c;
 
 @font-face {
+    font-display: swap;
     font-family: "Asap-Bold";
     src: url(../assets/fonts/gook/Asap-Bold.otf);
 }
 @font-face {
+    font-display: swap;
     font-family: "Asap-Regular";
     src: url(../assets/fonts/gook/Asap-Regular.otf);
 }
 @font-face {
+    font-display: swap;
     font-family: "Geomanist-Bold";
     src: url(../assets/fonts/gook/Geomanist-Bold.otf);
 }
 @font-face {
+    font-display: swap;
     font-family: "Geomanist-Book";
     src: url(../assets/fonts/gook/Geomanist-Book.otf);
 }
 @font-face {
+    font-display: swap;
     font-family: "Geomanist-Light";
     src: url(../assets/fonts/gook/Geomanist-Light.otf);
 }
 @font-face {
+    font-display: swap;
     font-family: "Geomanist-Regular";
     src: url(../assets/fonts/gook/Geomanist-Regular.otf);
 }

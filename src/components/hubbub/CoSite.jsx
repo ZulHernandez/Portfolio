@@ -47,20 +47,20 @@ const CoSite = () => {
 				></iframe>
 				<div className="cont-sys">
 					<div className="cont-sys-lvl1">
-						<img src={sys1} />
-						<img src={sys2} />
-						<img src={sys3} />
+						<img loading="lazy" src={sys1} />
+						<img loading="lazy" src={sys2} />
+						<img loading="lazy" src={sys3} />
 					</div>
 					<div className="cont-sys-lvl2">
-						<img src={sys4} />
-						<img src={sys5} />
+						<img loading="lazy" src={sys4} />
+						<img loading="lazy" src={sys5} />
 					</div>
 					<div className="cont-sys-lvl1">
-						<img src={sys6} />
-						<img src={sys7} />
-						<img src={sys8} />
+						<img loading="lazy" src={sys6} />
+						<img loading="lazy" src={sys7} />
+						<img loading="lazy" src={sys8} />
 					</div>
-					<img src={sys9} />
+					<img loading="lazy" src={sys9} />
 				</div>
 			</div>
 		</div>

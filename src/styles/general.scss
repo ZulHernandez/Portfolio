@@ -37,8 +37,24 @@ $gradient: linear-gradient(45deg, rgba($purple-800, 0.1) 0%, rgba($pink-800, 0.1
 }
 
 //main HTML
-html {
+html, body {
     overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    color: $shade-800;
+    font-family: "Montserrat-Regular";
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+
 }
 
 @media screen and (max-width: 3840px) {
@@ -79,18 +95,22 @@ html {
 
 //main FONTS
 @font-face {
+    font-display: swap;
     font-family: "Bebas-Neue";
     src: url(../assets/fonts/Bebas/BebasNeue-Regular.ttf);
 }
 @font-face {
+    font-display: swap;
     font-family: "Montserrat-Regular";
     src: url(../assets/fonts/Montserrat/Montserrat-Regular.ttf);
 }
 @font-face {
+    font-display: swap;
     font-family: "Montserrat-SemiBold";
     src: url(../assets/fonts/Montserrat/Montserrat-SemiBold.ttf);
 }
 @font-face {
+    font-display: swap;
     font-family: "Montserrat-ExtraBold";
     src: url(../assets/fonts/Montserrat/Montserrat-ExtraBold.ttf);
 }
@@ -231,13 +251,13 @@ b {
 .title-container {
     padding: 14rem 25rem;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     z-index: -1;
     position: absolute;
     &-plus {
         padding: 14rem 10rem;
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         z-index: -1;
         position: absolute;
     }
@@ -384,7 +404,9 @@ b {
             background-size: contain;
             background-repeat: repeat-x;
             background-position: center;
-            animation: slide 60s infinite linear, color 5s infinite ease-in-out ;
+            animation:
+                slide 60s infinite linear,
+                color 5s infinite ease-in-out;
         }
         &-GOOK {
             height: 30rem;
@@ -415,7 +437,6 @@ b {
         }
     }
 }
-
 
 //main HEADER
 .nav-header {
@@ -463,10 +484,11 @@ b {
     align-content: flex-start;
     align-items: flex-start;
     background-color: $shade-800;
-    position: relative;
-    z-index: 100;
     padding: 5rem 15rem;
     color: $shade-100;
+    width: 100%;
+    position: relative;
+    z-index: 100;
 
     a {
         color: $shade-100;
@@ -496,6 +518,8 @@ b {
     color: $shade-300;
     padding: 2.5rem 10rem;
     text-align: center;
+    position: relative;
+    z-index: 100;
     @include typo("montserrat", "Regular", "c3");
 }
 
@@ -536,7 +560,6 @@ b {
 }
 
 //main MEDIA
-
 
 @media only screen and (max-width: 140vh) {
     #cont-Home {

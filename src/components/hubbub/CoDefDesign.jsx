@@ -24,7 +24,7 @@ const CoPDF = ({ zoom }) => {
 
 	return pages.map((page) => {
 		return (
-			<img
+			<img loading="lazy"
 				key={pages.indexOf(page)}
 				className="document-page"
 				style={{ width: zoom + "%" }}
@@ -98,13 +98,13 @@ const CoDefDesign = () => {
 							className="zoom-btn clickable"
 							onClick={() => zoomAnima(false)}
 						>
-							<img src={minus} alt="minus" />
+							<img loading="lazy" src={minus} alt="minus" />
 						</div>
 						<span className="zoomInput" type="text">
 							{zoom + "%"}
 						</span>
 						<div className="zoom-btn clickable" onClick={() => zoomAnima(true)}>
-							<img src={plus} alt="plus" />
+							<img loading="lazy" src={plus} alt="plus" />
 						</div>
 					</div>
 				</div>
@@ -115,22 +115,22 @@ const CoDefDesign = () => {
 				</p>
 				<div className="gallery-niv1">
 					<div className="gallery-niv2_1">
-						<img src={gallery1} alt="" />
+						<img loading="lazy" src={gallery1} alt="" />
 						<div className="gallery-niv3">
 							<div className="gallery-niv4">
-								<img src={gallery2} alt="" />
-								<img src={gallery3} alt="" />
+								<img loading="lazy" src={gallery2} alt="" />
+								<img loading="lazy" src={gallery3} alt="" />
 							</div>
 							<div className="gallery-niv4">
-								<img src={gallery4} alt="" />
-								<img src={gallery5} alt="" />
+								<img loading="lazy" src={gallery4} alt="" />
+								<img loading="lazy" src={gallery5} alt="" />
 							</div>
 						</div>
 					</div>
 					<div className="gallery-niv2_2">
-						<img src={gallery6} alt="" />
-						<img src={gallery7} alt="" />
-						<img src={gallery8} alt="" />
+						<img loading="lazy" src={gallery6} alt="" />
+						<img loading="lazy" src={gallery7} alt="" />
+						<img loading="lazy" src={gallery8} alt="" />
 					</div>
 				</div>
 				<iframe width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FDCKDjbG9VOColuADoF4xsS%2FHUBBUB%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DCLIE0yyHuxS5nTHC-1" allowFullScreen></iframe>

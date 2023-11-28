@@ -346,7 +346,7 @@ const CoFigure = ({ data }) => {
 	}
 
 	return figureArray.map((figure) => {
-		return <img src={figure.type} key={figureArray.indexOf(figure)} />;
+		return <img loading="lazy" src={figure.type} key={figureArray.indexOf(figure)} />;
 	});
 };
 
@@ -355,7 +355,7 @@ const CoLegend = ({ data, type }) => {
 		if (type == "figure") {
 			return (
 				<div className="legend-item" key={item.id}>
-					<img src={item.type} alt={item.title} />
+					<img loading="lazy" src={item.type} alt={item.title} />
 					<p>{item.title}</p>
 				</div>
 			);
@@ -448,7 +448,7 @@ const CoProblems = () => {
 	return data.map((problem) => {
 		return (
 			<div className="problem-card" key={problem.id}>
-				<img src={problem.icon} alt={problem.title} />
+				<img loading="lazy" src={problem.icon} alt={problem.title} />
 				<div>
 					<h4>{problem.title}</h4>
 					<p>{problem.desc}</p>

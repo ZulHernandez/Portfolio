@@ -9,8 +9,8 @@ const CoHero = (props) => {
 	return (
 		<div style={{ zIndex: "1" }} className="hero">
 			<div className="hero-data">
-				<img className="hero-logo" src={props.logo} alt={props.company} />
-				<img
+				<img loading="lazy" className="hero-logo" src={props.logo} alt={props.company} />
+				<img loading="lazy"
 					className="hero-logoName"
 					src={props.logoName}
 					alt={props.company}

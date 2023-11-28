@@ -96,12 +96,12 @@ const CoHome = () => {
 							</p>
 						</div>
 					</div>
-					<div className="photo-portrait">
-						<img
+					<div className="photo-portrait" style={{backgroundImage:  "url(" + images[setImage()] + ")"}}>
+						{/* <img loading="lazy"
 							className="foto-mia"
 							src={images[setImage()]}
 							alt="Saúl Ulises Hernández Cruz"
-						/>
+						/> */}
 					</div>
 				</div>
 			</div>

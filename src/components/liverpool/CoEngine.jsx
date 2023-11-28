@@ -77,7 +77,7 @@ const CoTech = () => {
 	return tecs.map((tec) => {
 		return (
 			<div key={tec.id} className="tec-card">
-				<img className="tec-card-img" src={tec.logo} alt={tec.name} />
+				<img loading="lazy" className="tec-card-img" src={tec.logo} alt={tec.name} />
 				<p className="tec-card-title">{tec.name}</p>
 			</div>
 		);
@@ -113,7 +113,7 @@ const CoCardCopa = () => {
 		return (
 			<a key={caso.id} href={caso.link} target="_blank" rel="noreferrer">
 				<div className="caso-card">
-					<img className="caso-card-img" src={caso.banner} alt={caso.title} />
+					<img loading="lazy" className="caso-card-img" src={caso.banner} alt={caso.title} />
 					<div className="caso-card-info">
 						<div>
 							<h3>{caso.title}</h3>

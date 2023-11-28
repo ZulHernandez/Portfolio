@@ -6,34 +6,42 @@ $red: #ff7c7c;
 
 //main FONTS
 @font-face {
+    font-display: swap;
     font-family: "Mons1";
     src: url(../assets/fonts/hubbub/Montserrat-ExtraLight.ttf);
 }
 @font-face {
+    font-display: swap;
     font-family: "Mons2";
     src: url(../assets/fonts/hubbub/Montserrat-Light_0.ttf);
 }
 @font-face {
+    font-display: swap;
     font-family: "Mons3";
     src: url(../assets/fonts/hubbub/Montserrat-Regular_0.ttf);
 }
 @font-face {
+    font-display: swap;
     font-family: "Mons4";
     src: url(../assets/fonts/hubbub/Montserrat-Medium_0.ttf);
 }
 @font-face {
+    font-display: swap;
     font-family: "Mons5";
     src: url(../assets/fonts/hubbub/Montserrat-SemiBold_0.ttf);
 }
 @font-face {
+    font-display: swap;
     font-family: "Mons6";
     src: url(../assets/fonts/hubbub/Montserrat-Bold_0.ttf);
 }
 @font-face {
+    font-display: swap;
     font-family: "Mons7";
     src: url(../assets/fonts/hubbub/Montserrat-ExtraBold_0.ttf);
 }
 @font-face {
+    font-display: swap;
     font-family: "Mons8";
     src: url(../assets/fonts/hubbub/Montserrat-Black_0.ttf);
 }
@@ -127,7 +135,7 @@ $red: #ff7c7c;
 .darkHubbub {
     background-color: #333333;
     color: c.$shade-100;
-    h3{
+    h3 {
         color: c.$shade-200;
     }
 }
@@ -472,14 +480,14 @@ $red: #ff7c7c;
     }
     &-niv2_1 {
         @include c.containers(2rem, row);
-        img{
+        img {
             width: calc(50% - 1rem);
             border-radius: 1rem;
         }
     }
     &-niv2_2 {
         @include c.containers(2rem, row);
-        img{
+        img {
             width: calc((100% - 4rem) / 3);
             border-radius: 1rem;
         }
@@ -489,7 +497,7 @@ $red: #ff7c7c;
     }
     &-niv4 {
         @include c.containers(2rem, row);
-        img{
+        img {
             width: calc(50% - 1rem);
             border-radius: 1rem;
         }
@@ -502,7 +510,7 @@ iframe {
     border-radius: 1rem;
 }
 
-.cont-devtools{
+.cont-devtools {
     @include c.containers(5rem, row);
     width: 100%;
     align-items: flex-start;
@@ -513,61 +521,61 @@ iframe {
 .cont-sys {
     @include c.containers(2rem, column);
     width: 100%;
-    img{
+    img {
         width: 100%;
     }
-    &-lvl1{
+    &-lvl1 {
         @include c.containers(2rem, row);
         width: 100%;
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
-        img{
+        img {
             width: 30rem;
         }
     }
-    &-lvl2{
+    &-lvl2 {
         @include c.containers(2rem, row);
         width: 100%;
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
-        img{
+        img {
             width: calc(50% - 1rem);
         }
     }
 }
 
-.cont-link{
+.cont-link {
     @include c.containers(5rem, row);
     width: 100%;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    a{
+    a {
         @include c.typo("bebas", "Regular", "xl");
         text-align: center;
         width: 10rem;
         color: c.$shade-800;
         @include c.containers(1rem, column);
-        &:hover{
+        &:hover {
             text-decoration: underline;
         }
-        img{
+        img {
             width: 5rem;
             height: 5rem;
         }
     }
 }
 
-.img-fin{
+.img-fin {
     @include c.containers(5rem, row);
     justify-content: center;
     width: 100%;
     border-radius: 1rem;
 }
 
-#code{
+#code {
     width: 50%;
 }
 
@@ -631,13 +639,13 @@ iframe {
         }
         &-niv2_1 {
             @include c.containers(2rem, column);
-            img{
+            img {
                 width: 100%;
             }
         }
         &-niv2_2 {
             @include c.containers(2rem, row);
-            img{
+            img {
                 width: calc((100% - 4rem) / 3);
             }
         }
@@ -646,7 +654,7 @@ iframe {
         }
         &-niv4 {
             @include c.containers(2rem, row);
-            img{
+            img {
                 width: calc(50% - 1rem);
             }
         }

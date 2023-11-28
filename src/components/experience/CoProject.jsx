@@ -447,7 +447,7 @@ const CoProCard = ({ project }) => {
 		if (pro.link === "") {
 			return (
 				<div key={pro.id} className="proj-card">
-					<img className="proj-card-img" src={pro.img} alt={pro.name}></img>
+					<img loading="lazy" className="proj-card-img" src={pro.img} alt={pro.name}></img>
 					<div className="proj-card-data">
 						<h3 style={{ color: "#e6e6e6" }}>{pro.name}</h3>
 						<p className="proj-card-data-date">{pro.date}</p>
@@ -459,7 +459,7 @@ const CoProCard = ({ project }) => {
 			return (
 				<a key={pro.id} href={pro.link} target="_blank" rel="noreferrer">
 					<div className="proj-card">
-						<img className="proj-card-img" src={pro.img} alt={pro.name}></img>
+						<img loading="lazy" className="proj-card-img" src={pro.img} alt={pro.name}></img>
 						<div className="proj-card-data">
 							<h3 style={{ color: "#e6e6e6" }}>{pro.name}</h3>
 							<p className="proj-card-data-date">{pro.date}</p>

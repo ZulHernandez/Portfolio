@@ -18,8 +18,23 @@
   background-color: #ff2079;
 }
 
-html {
+html, body {
   overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  color: #333333;
+  font-family: "Montserrat-Regular";
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
 @media screen and (max-width: 3840px) {
@@ -64,18 +79,22 @@ html {
 }
 
 @font-face {
+  font-display: swap;
   font-family: "Bebas-Neue";
   src: url(../assets/fonts/Bebas/BebasNeue-Regular.ttf);
 }
 @font-face {
+  font-display: swap;
   font-family: "Montserrat-Regular";
   src: url(../assets/fonts/Montserrat/Montserrat-Regular.ttf);
 }
 @font-face {
+  font-display: swap;
   font-family: "Montserrat-SemiBold";
   src: url(../assets/fonts/Montserrat/Montserrat-SemiBold.ttf);
 }
 @font-face {
+  font-display: swap;
   font-family: "Montserrat-ExtraBold";
   src: url(../assets/fonts/Montserrat/Montserrat-ExtraBold.ttf);
 }
@@ -180,14 +199,14 @@ b {
 .title-container {
   padding: 14rem 25rem;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   z-index: -1;
   position: absolute;
 }
 .title-container-plus {
   padding: 14rem 10rem;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   z-index: -1;
   position: absolute;
 }
@@ -437,10 +456,11 @@ b {
   align-content: flex-start;
   align-items: flex-start;
   background-color: #333333;
-  position: relative;
-  z-index: 100;
   padding: 5rem 15rem;
   color: #e6e6e6;
+  width: 100%;
+  position: relative;
+  z-index: 100;
 }
 .cont-footer a {
   color: #e6e6e6;
@@ -473,6 +493,8 @@ b {
   color: #b3b3b3;
   padding: 2.5rem 10rem;
   text-align: center;
+  position: relative;
+  z-index: 100;
   font-family: "Montserrat-Regular";
   font-size: 0.8rem;
   line-height: 1.04rem;
@@ -642,34 +664,42 @@ b {
   }
 }
 @font-face {
+  font-display: swap;
   font-family: "Mons1";
   src: url(../assets/fonts/hubbub/Montserrat-ExtraLight.ttf);
 }
 @font-face {
+  font-display: swap;
   font-family: "Mons2";
   src: url(../assets/fonts/hubbub/Montserrat-Light_0.ttf);
 }
 @font-face {
+  font-display: swap;
   font-family: "Mons3";
   src: url(../assets/fonts/hubbub/Montserrat-Regular_0.ttf);
 }
 @font-face {
+  font-display: swap;
   font-family: "Mons4";
   src: url(../assets/fonts/hubbub/Montserrat-Medium_0.ttf);
 }
 @font-face {
+  font-display: swap;
   font-family: "Mons5";
   src: url(../assets/fonts/hubbub/Montserrat-SemiBold_0.ttf);
 }
 @font-face {
+  font-display: swap;
   font-family: "Mons6";
   src: url(../assets/fonts/hubbub/Montserrat-Bold_0.ttf);
 }
 @font-face {
+  font-display: swap;
   font-family: "Mons7";
   src: url(../assets/fonts/hubbub/Montserrat-ExtraBold_0.ttf);
 }
 @font-face {
+  font-display: swap;
   font-family: "Mons8";
   src: url(../assets/fonts/hubbub/Montserrat-Black_0.ttf);
 }

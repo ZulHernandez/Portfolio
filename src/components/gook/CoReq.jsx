@@ -171,10 +171,10 @@ const CoReq = () => {
 						: "Como parte de un research de segundo nivel se investigaron negocios que se dedicasen a ofrecer tanto productos de la salud visual en linea como productos bajo e-commerce en general. Varias de las marcas que terminaron por ayudar en los benchmarks para GOOK fueron:"}
 				</p>
 				<div className="cont-brand">
-					<img src={mercado} alt="mercado" />
-					<img src={amazon} alt="amazon" />
-					<img src={benfrank} alt="ben&frank" />
-					<img src={lux} alt="LUX" />
+					<img loading="lazy" src={mercado} alt="mercado" />
+					<img loading="lazy" src={amazon} alt="amazon" />
+					<img loading="lazy" src={benfrank} alt="ben&frank" />
+					<img loading="lazy" src={lux} alt="LUX" />
 				</div>
 			</div>
 		</div>

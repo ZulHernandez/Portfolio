@@ -25,8 +25,8 @@ const CoPlan = () => {
 						? "To solve the time management with which the project had, it was decided to use scrum to, in this way, focus on continuous deliveries and reviews, together with the possibility of iterations with the client. The planning was as follows."
 						: "Para resolver la administración del tiempo con el que contaba el proyecto se decidió el uso de scrum para, de esta forma, centrarnos en las entregas y revisiones continuas aunadas a la posibilidad de iteraciones con el cliente. La planeación quedo del siguiente modo."}
 				</p>
-				<img src={pasos} alt="HUBBUB" style={{ width: "100%" }} />
-				<img src={avance} alt="HUBBUB" style={{ width: "100%" }} />
+				<img loading="lazy" src={pasos} alt="HUBBUB" style={{ width: "100%" }} />
+				<img loading="lazy" src={avance} alt="HUBBUB" style={{ width: "100%" }} />
 			</div>
 		</div>
 	);

@@ -48,7 +48,7 @@ const CoLinks = () => {
 				target="_blank"
 				rel="noreferrer"
 			>
-				<img className="link-icon" src={link.icon} alt={link.name} />
+				<img loading="lazy" className="link-icon" src={link.icon} alt={link.name} />
 				<p>{link.name}</p>
 			</a>
 		);
@@ -98,7 +98,7 @@ const RoHubbub = () => {
 			</center>
 			<div style={{padding: "10rem"}}>
 				<div style={{paddingBottom: "10rem"}} className="img-fin">
-					<img src={hubbub} id="code" />
+					<img loading="lazy" src={hubbub} id="code" />
 				</div>
 				<p
 					style={{ textAlign: "center", width: "100%" }}

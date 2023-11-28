@@ -19,11 +19,11 @@ const CoScreen = () => {
 
 	return (
 		<div className="cont-screen">
-			<img id="s1" src={screens[0]} alt="HUBBUB" />
-			<img id="s2" src={screens[1]} alt="HUBBUB" />
-			<img id="s3" src={screens[2]} alt="HUBBUB" />
-			<img id="s2" src={screens[3]} alt="HUBBUB" />
-			<img id="s1" src={screens[4]} alt="HUBBUB" />
+			<img loading="lazy" id="s1" src={screens[0]} alt="HUBBUB" />
+			<img loading="lazy" id="s2" src={screens[1]} alt="HUBBUB" />
+			<img loading="lazy" id="s3" src={screens[2]} alt="HUBBUB" />
+			<img loading="lazy" id="s2" src={screens[3]} alt="HUBBUB" />
+			<img loading="lazy" id="s1" src={screens[4]} alt="HUBBUB" />
 		</div>
 	);
 };

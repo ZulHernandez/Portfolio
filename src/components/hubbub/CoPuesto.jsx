@@ -242,7 +242,7 @@ const CoPuesto = () => {
 				</p>
 				<div className="cont-step">
 					<div>
-						<img
+						<img loading="lazy"
 							style={{ transform: "rotate(-90deg)", margin: "5rem 0 0 0" }}
 							className="cont-brands-arrow clickable"
 							src={arrow}
@@ -263,7 +263,7 @@ const CoPuesto = () => {
 						step={language == "EN" ? stepsMacro[2] : pasosMacro[2]}
 						opacidad={step == 2 ? "selected" : "noneselected"}
 					/>
-					<img
+					<img loading="lazy"
 						style={{ transform: "rotate(90deg)", margin: "5rem 0 0 0" }}
 						className="cont-brands-arrow clickable"
 						src={arrow}

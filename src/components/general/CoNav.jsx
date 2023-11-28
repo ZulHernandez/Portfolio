@@ -68,7 +68,7 @@ const CoRedes = (props) => {
 	return redes.map((red) => {
 		return (
 			<a key={red.id} rel="noreferrer" href={red.link} target="_blank">
-				<img
+				<img loading="lazy"
 					className="nav-link-icons clickable"
 					src={red.bn}
 					onMouseOver={(e) => (e.currentTarget.src = red.cl)}
@@ -89,7 +89,7 @@ const CoNav = () => {
 		<div className="nav-header">
 			<div className="container-nav-link-left">
 				<Link to="/">
-					<img src={ruta == "/" ? sign : signGrey} alt="sign" />
+					<img loading="lazy" src={ruta == "/" ? sign : signGrey} alt="sign" />
 				</Link>
 				<span className="nav-link">|</span>
 				<Link to="/experience">

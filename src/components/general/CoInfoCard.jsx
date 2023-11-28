@@ -5,7 +5,7 @@ const CoInfoCard = ({ data, title, size }) => {
 	return data.map((item) => {
 		return (
 			<div key={item.id} className={size + "info-card"}>
-				<img
+				<img loading="lazy"
 					className={size + "info-card-icon"}
 					src={item.icon}
 					alt={item.title}
