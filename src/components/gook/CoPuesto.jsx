@@ -23,14 +23,14 @@ const CoPuesto = () => {
 			id: 2,
 			title: "2. Investigación",
 			description:
-				"Recopilación de estandares en la industría, buenas prácticas y experiencia",
+				"Recopilación de estándares en la industria, buenas prácticas y experiencia",
 			icon: research,
 		},
 		{
 			id: 3,
 			title: "3. Diseño",
 			description:
-				"Determinación de UI y diseño de UX en Adobe XD y testeo de interfaz con usuarios",
+				"Determinación de UI y diseño de UX en Adobe XD y test de interfaz con usuarios",
 			icon: design,
 		},
 		{
@@ -49,7 +49,7 @@ const CoPuesto = () => {
 		},
 		{
 			id: 6,
-			title: "6. Testeo y seguimiento",
+			title: "6. Test y seguimiento",
 			description: "Mejora continua de UI, UX y servicios post-entrega",
 			icon: prototype,
 		},

@@ -34,15 +34,11 @@ const CoSite = () => {
 				</p>
 				<iframe
 					title="paleyPark"
-					frameborder="0"
+					frameBorder="0"
 					allowfullscreen
 					mozallowfullscreen="true"
 					webkitallowfullscreen="true"
 					allow="autoplay; fullscreen; xr-spatial-tracking"
-					xr-spatial-tracking
-					execution-while-out-of-viewport
-					execution-while-not-rendered
-					web-share
 					src="https://sketchfab.com/models/de7a7fbca06140319776930b19a0ddbf/embed?autospin=1&autostart=1&camera=0&annotations_visible=1"
 				></iframe>
 				<div className="cont-sys">

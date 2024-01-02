@@ -44,8 +44,8 @@ const CoHome = () => {
 			id={language == "EN" ? "about-me" : "sobre-mi"}
 			style={{ zIndex: "1" }}
 		>
-			<CoTitle titles={language == "EN" ? titles : titulos} />
-			<div className="div-content" style={{ paddingBottom: "0px" }}>
+			<CoTitle titles={language == "EN" ? titles : titulos}/>
+			<div className="div-content" style={{height: "fit-content"}}>
 				<div id="cont-Home">
 					<div className="div-text">
 						<div>
@@ -62,7 +62,7 @@ const CoHome = () => {
 							<p className="monXl">
 								I am {calculaAnio("12/19/1999")} years old and I am a{" "}
 								<b>Senior User Interface and User Experience Designer</b> with{" "}
-								<b>over {calculaAnio("1/1/2016")} years of experience.</b>
+								<b>over {calculaAnio("1/1/2016")} years of experience.</b>{" "}
 								Throughout my career, I have participated in projects where I
 								have created{" "}
 								<b>prototypes, conducted research, and performed testing</b> for
@@ -90,18 +90,15 @@ const CoHome = () => {
 							<p className="monXl">
 								También he tenido la oportunidad de{" "}
 								<b>definir y aplicar frameworks de diseño</b>, desde{" "}
-								<b>librerias de diseño y tokens</b> hasta su implementación en
+								<b>librerías de diseño y tokens</b> hasta su implementación en
 								aplicaciones{" "}
 								<b>creando insumos en SASS, JSONs y otras tecnologías.</b>
 							</p>
 						</div>
-					</div>
-					<div className="photo-portrait" style={{backgroundImage:  "url(" + images[setImage()] + ")"}}>
-						{/* <img loading="lazy"
-							className="foto-mia"
-							src={images[setImage()]}
-							alt="Saúl Ulises Hernández Cruz"
-						/> */}
+						<div
+							className="photo-portrait"
+							style={{ backgroundImage: "url(" + images[setImage()] + ")" }}
+						></div>
 					</div>
 				</div>
 			</div>

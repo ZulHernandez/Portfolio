@@ -39,7 +39,7 @@ const CoTools = () => {
 			icon: miro,
 			title: "Miro",
 			description:
-				"Espacio desde el cual se comunicacban y administraban los sprints del proyecto",
+				"Espacio desde el cual se comunicaban y administraban los sprints del proyecto",
 		},
 	];
 
@@ -87,7 +87,7 @@ const CoTools = () => {
 			icon: figma,
 			title: "Figma",
 			description:
-				"Espacio desde el cual se comunicacban y administraban los sprints del proyecto",
+				"Espacio desde el cual se comunicaban y administraban los sprints del proyecto",
 		},
 	];
 
@@ -121,14 +121,14 @@ const CoTools = () => {
 			icon: javascript,
 			title: "Java Script",
 			description:
-				"Utilizadas diferentes librerias para animaciones, manejo de DOMs, gráficas, 3D, modales y crawlers",
+				"Utilizadas diferentes librerías para animaciones, manejo de DOMs, gráficas, 3D, modales y crawlers",
 		},
 		{
 			id: 2,
 			icon: npm,
 			title: "NPM",
 			description:
-				"Herramienta con la que se administraron todas las librerias de Js utilizádas en el sistema",
+				"Herramienta con la que se administraron todas las librerías de Js utilizadas en el sistema",
 		},
 		{
 			id: 3,
@@ -184,13 +184,13 @@ const CoTools = () => {
 				<p className="monBs">
 					{language == "EN"
 						? "Once the design and experience definition stage was finished, the stage of selection of tools began from the graphic design section and also in the development from the programming side."
-						: "Una vez terminada la etapa de diseño y definición de experiencia se comenzó con la etapa de selección de herramientas desde el apartado de diseño gráfico y tambien en el desarrollo desde el lado de programación."}
+						: "Una vez terminada la etapa de diseño y definición de experiencia se comenzó con la etapa de selección de herramientas desde el apartado de diseño gráfico y también en el desarrollo desde el lado de programación."}
 				</p>
 				<div>
 					<h3 style={{ textAlign: "Left" }}>
 						{language == "EN"
-							? "Project managment"
-							: "Administracón de proyectos"}
+							? "Project management"
+							: "Administración de proyectos"}
 					</h3>
 					<p className="monBs">
 						{language == "EN"

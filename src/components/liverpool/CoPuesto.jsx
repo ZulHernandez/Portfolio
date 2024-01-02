@@ -51,7 +51,7 @@ let actEnfoque = [
 		icon: research,
 		title: "Investigación",
 		description:
-			"Investigación y test centrados en el usuario apra la obtención de conclusiones.",
+			"Investigación y test centrados en el usuario para la obtención de conclusiones.",
 	},
 	{
 		id: 2,

@@ -135,8 +135,8 @@ const CoDesign = () => {
 				</div>
 				<p className="monBs-dark">
 					{language == "EN"
-						? "From these design guidelines, avatars were also generated for the users registered on the site and others for the combos and promotions within the products offered in the marketplace. Likewise, gifs and other types of graphic resources were also created for the page."
-						: "Nacido de estos guidelines de diseño tambien se generaron avatares para los usuarios registrados en el sitio y otros más para los combos y promociones dentro de los productos ofrecidos en el marketplace. De igual forma gifs y otro tipo de recursos gráficos tambien fueron creados para la página."}
+						? "From these design guidelines, avatars were also generated for the users registered on the site and others for the combos and promotions within the products offered in the marketplace. Likewise, GIFs and other types of graphic resources were also created for the page."
+						: "Nacido de estos guidelines de diseño también se generaron avatares para los usuarios registrados en el sitio y otros más para los combos y promociones dentro de los productos ofrecidos en el marketplace. De igual forma GIFs y otro tipo de recursos gráficos también fueron creados para la página."}
 				</p>
 				<div className="cont-avatares">
 					<CoAvatar avatares={avatares} />
@@ -150,7 +150,7 @@ const CoDesign = () => {
 				<p className="monBs-dark">
 					{language == "EN"
 						? "Once the brand guidelines were downloaded, the prototyping of the administration system and marketplace as a whole began. All this process of defining experience and interface was tested with workers and buyers respectively, The final mockup concluded in the following prototype."	
-						: "Bajados los lineamientos de marca se comenzó con el prototipado del sistema de administración y marketplace en su conjunto. Todo este proceso de definición de experiencia e interfaz fue testeado con trabajadores y compradores respectivamente, La maqueta final concluyo en el siguiente prototipo."}
+						: "Bajados los lineamientos de marca se comenzó con el prototipo del sistema de administración y marketplace en su conjunto. Todo este proceso de definición de experiencia e interfaz fue test con trabajadores y compradores respectivamente, La maqueta final concluyo en el siguiente prototipo."}
 				</p>
 				<iframe width="1920" height="1080" src="https://xd.adobe.com/embed/65a0283f-cdd5-47e4-9c96-06d3e51439c5-30f3/" frameborder="0" allowfullscreen sandbox="allow-same-origin allow-scripts allow-pointer-lock allow-forms"></iframe>
 			</div>

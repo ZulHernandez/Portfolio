@@ -30,13 +30,13 @@ let pasosMacro = [
 		id: 1,
 		title: "1. Investigación",
 		description:
-			"Análisis del problema, generación y entendimiento de conceptos e investigación de ususarios y proyectos.",
+			"Análisis del problema, generación y entendimiento de conceptos e investigación de usuarios y proyectos.",
 	},
 	{
 		id: 2,
 		title: "2. Diseño",
 		description:
-			"Definición de propuestas e identidad gráfica. También se bocetan ideas y prototipos del proyecto.",
+			"Definición de propuestas e identidad gráfica. También se externalizaron ideas y prototipos del proyecto.",
 	},
 	{
 		id: 3,
@@ -81,7 +81,7 @@ let pasosMicro0 = [
 		class: "paso1",
 		title: "b) Conceptos",
 		description:
-			"Investigación sobre el ruido y visualización de datos. Integración del diseño centrado en el usuario (conceptos, teorémas y filosofía)",
+			"Investigación sobre el ruido y visualización de datos. Integración del diseño centrado en el usuario (conceptos, teoremas y filosofía)",
 	},
 	{
 		id: 1,
@@ -108,7 +108,7 @@ let stepsMicro1 = [
 	{
 		id: 3,
 		class: "paso2",
-		title: "c) Prototipado",
+		title: "c) Prototype",
 		description:
 			"Refinement of ideas, creation of experiences and exploration of UI",
 	},
@@ -131,7 +131,7 @@ let pasosMicro1 = [
 	{
 		id: 3,
 		class: "paso2",
-		title: "c) Prototipado",
+		title: "c) Prototipo",
 		description:
 			"Refinamiento de ideas, creación de experiencias y exploración de UI",
 	},
@@ -165,14 +165,14 @@ let pasosMicro2 = [
 		class: "paso3",
 		title: "a) Planificación",
 		description:
-			"Definiciónde modulos, planificación del tiempo y selección de tecnologías",
+			"Definición de módulos, planificación del tiempo y selección de tecnologías",
 	},
 	{
 		id: 2,
 		class: "paso3",
 		title: "b) Codificación",
 		description:
-			"Programación de funcionalidades, experiencia y estílos. La conección a base de datos tambien se incluye.",
+			"Programación de funcionalidades, experiencia y estilos. La conexión a base de datos también se incluye.",
 	},
 	{
 		id: 3,
@@ -238,7 +238,7 @@ const CoPuesto = () => {
 				<p className="monBs-dark">
 					{language == "EN"
 						? "The responsibilities within this project fall from the research and determination of the project's scope argued in functional and non-functional requirements, through the design process and determination of graphic communication, to the development and programming of the system. At the same time, each of these macro-stages has specific tasks that allow you to advance little by little in the development of the project."
-						: "Las responsabilidades dentro de este proyecto recaen desde la investigación y determinación de alcances del proyecto argumentado en requerimientos funcionales y no funcionales, pasando por el proceso de diseño y determinación de comunicación gráfica, hasta el desarrollo y programación edl sistema. Al mismo tiempo, cada una de estas macroetapas posee tareas especificas que permiten avanzar poco a poco en el desarrollo del proyecto."}
+						: "Las responsabilidades dentro de este proyecto recaen desde la investigación y determinación de alcances del proyecto argumentado en requerimientos funcionales y no funcionales, pasando por el proceso de diseño y determinación de comunicación gráfica, hasta el desarrollo y programación edl sistema. Al mismo tiempo, cada una de estas macro-etapas posee tareas especificas que permiten avanzar poco a poco en el desarrollo del proyecto."}
 				</p>
 				<div className="cont-step">
 					<div>

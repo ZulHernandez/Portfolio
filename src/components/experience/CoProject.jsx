@@ -206,7 +206,7 @@ let proyBrand = [
 		name: "Monarch",
 		img: monarch,
 		date: "(enero 2021 - abril 2021)",
-		des: "Compañia de diseño",
+		des: "Compañía de diseño",
 		link: "https://www.behance.net/gallery/165169467/MONARCH",
 	},
 	{
@@ -222,7 +222,7 @@ let proyBrand = [
 		name: "Kashmir",
 		img: kashmir,
 		date: "(agosto 2021 - noviembre 2021)",
-		des: "Compañia de audio HiFi",
+		des: "Compañía de audio HiFi",
 		link: "https://www.behance.net/gallery/124647895/Kashmir",
 	},
 	{
@@ -230,7 +230,7 @@ let proyBrand = [
 		name: "Beruon",
 		img: beruon,
 		date: "(diciembre 2019 - septiembre 2021)",
-		des: "Compañia de programación",
+		des: "Compañía de programación",
 		link: "https://www.behance.net/gallery/121925513/Beruon",
 	},
 	{
@@ -257,7 +257,7 @@ let proEditorial = [
 		name: "Feminism history",
 		img: feminismo,
 		date: "(august 2021 - march 2022)",
-		des: "Infography",
+		des: "Infographic",
 		link: "https://www.behance.net/gallery/162886465/Waves-of-feminism",
 	},
 	{
@@ -265,7 +265,7 @@ let proEditorial = [
 		name: "Hollowknight",
 		img: hollow,
 		date: "(june 2021 - september 2021)",
-		des: "Infography",
+		des: "Infographic",
 		link: "https://www.behance.net/gallery/162885415/Hollowknight-Infography",
 	},
 	{
@@ -299,7 +299,7 @@ let proyEditorial = [
 		name: "Hollowknight",
 		img: hollow,
 		date: "(junio 2021 - septiembre 2021)",
-		des: "Infiografía",
+		des: "Infografía",
 		link: "https://www.behance.net/gallery/162885415/Hollowknight-Infography",
 	},
 	{
@@ -384,7 +384,7 @@ let proEdu = [
 	},
 	{
 		id: 2,
-		name: "Conamat",
+		name: "CONAMAT",
 		img: conamat,
 		date: "(september 2018 - november 2019)",
 		des: "Highschool-university teacher",
@@ -418,7 +418,7 @@ let proyEdu = [
 	},
 	{
 		id: 2,
-		name: "Conamat",
+		name: "CONAMAT",
 		img: conamat,
 		date: "(septiembre 2018 - noviembre 2019)",
 		des: "Profesor nivel bachillerato-universidad",
@@ -512,7 +512,7 @@ const CoProject = () => {
 				</div>
 				<br />
 				<h3 style={{ color: "#e6e6e6" }}>
-					{language == "EN" ? "Miscellaneous" : "Miscelaneos"}
+					{language == "EN" ? "Miscellaneous" : "Misceláneos"}
 				</h3>
 				<div className="con-proj">
 					<CoProCard project={language == "EN" ? proMisc : proyMisc} />

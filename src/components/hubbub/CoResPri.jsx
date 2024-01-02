@@ -57,7 +57,7 @@ let puntoGraphs = [
 	},
 	{
 		id: 2,
-		title: "¿Te interesa y crees inportante conocer el fenómeno del ruido?",
+		title: "¿Te interesa y crees importante conocer el fenómeno del ruido?",
 		data: [
 			{
 				id: 1,
@@ -236,7 +236,7 @@ let barrasGraphs = [
 			},
 			{
 				id: 3,
-				title: "Estadadística",
+				title: "Estadística",
 				value: 29,
 			},
 			{
@@ -296,7 +296,7 @@ let barsGraphs = [
 		data: [
 			{
 				id: 1,
-				title: "Consecuences",
+				title: "Consequences",
 				value: 55,
 			},
 			{
@@ -410,7 +410,7 @@ const CoProblems = () => {
 		},
 		{
 			id: 2,
-			title: "Invicible",
+			title: "Invisibly",
 			desc: "Data without space to be seen",
 			icon: invicible,
 		},
@@ -430,7 +430,7 @@ const CoProblems = () => {
 		},
 		{
 			id: 2,
-			title: "Invicibilidad",
+			title: "Invisibilidad",
 			desc: "Datos sin espacio para ser vistos",
 			icon: invicible,
 		},
@@ -479,7 +479,7 @@ const CoResPri = () => {
 		{
 			id: 3,
 			title: "User",
-			description: "Othernes as design and research compass",
+			description: "Otherness as design and research compass",
 			icon: user,
 		},
 	];
@@ -491,7 +491,7 @@ const CoResPri = () => {
 				<p className="monBs">
 					{language == "EN"
 						? "The first part of the research related essentially to the approach to the user yielded the following results:"
-						: "La primer parte de la investigación relacionada escencialmente con el acercamiento al usuario arrojaron los siguientes resultados:"}
+						: "La primer parte de la investigación relacionada esencialmente con el acercamiento al usuario arrojaron los siguientes resultados:"}
 				</p>
 				<div className="cont-res">
 					<div className="cont-problem">

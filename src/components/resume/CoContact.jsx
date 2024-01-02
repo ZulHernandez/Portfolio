@@ -158,7 +158,7 @@ const CoContact = () => {
 							/>
 						</div>
 						<div className="cont-contact-form-input">
-							<label className="label-input">{language == "EN" ? "Tell me something!" : "Cuentame algo"}</label>
+							<label className="label-input">{language == "EN" ? "Tell me something!" : "Cuéntame algo"}</label>
 							<textarea
 								name="message"
 								id="message"

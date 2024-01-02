@@ -47,7 +47,7 @@ const CoLeftNav = () => {
 		"sobre mi",
 		"estudios y\n cursos",
 		"experiencia y\n proyectos",
-		"Contactame",
+		"Contáctame",
 	];
 
 	return (

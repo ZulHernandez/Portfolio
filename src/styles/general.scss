@@ -40,6 +40,7 @@ $gradient: linear-gradient(45deg, rgba($purple-800, 0.1) 0%, rgba($pink-800, 0.1
 html, body {
     overflow-x: hidden;
     width: 100%;
+    font-size: 16px;
 }
 
 body {
@@ -48,7 +49,6 @@ body {
     padding: 0px;
     color: $shade-800;
     font-family: "Montserrat-Regular";
-    font-size: 16px;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -189,6 +189,7 @@ body {
 }
 .monXl {
     @include typo("montserrat", "Regular", "xl");
+    width: 100%;
 }
 .monBs {
     @include typo("montserrat", "Regular", "base");
@@ -234,7 +235,8 @@ b {
     align-items: flex-start;
     align-self: stretch;
     mix-blend-mode: multiply;
-    height: max-content;
+    min-height: 100vh;
+    max-height: max-content;
     position: relative;
     z-index: 1;
     width: 100%;
@@ -562,11 +564,6 @@ b {
 //main MEDIA
 
 @media only screen and (max-width: 140vh) {
-    #cont-Home {
-        width: 100%;
-        height: max-content;
-        padding-bottom: 100px;
-    }
     .div-text {
         width: 100%;
     }
@@ -661,5 +658,20 @@ b {
     }
 }
 
-@media only screen and (max-width: 70vh) {
+@media only screen and (max-width: 600px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        font-size: 6px;
+    }
+    h2 {
+        @include typo("bebas", "Regular", "10xl");
+        text-align: left;
+        width: max-content;
+        line-height: -100px;
+    }
+    .div-content{
+        padding: 9rem 5rem 0rem 5rem;
+        height: max-content;
+    }
 }

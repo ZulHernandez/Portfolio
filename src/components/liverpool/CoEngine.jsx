@@ -245,7 +245,7 @@ const CoEngine = () => {
 				<p className="monBs-dark">
 					{language == "EN"
 						? "Another important part of my work within UX was the creation of the tokenization process of the GLUE design system. In this sense, everything concerning the conceptualization, methodology, process description, and process map related to the UX engineering process was done by me. \nThe realization of this initiative involved the following steps:"
-						: "Otra parte importante de mi trabajo dentro de UX fue la creación del proceso de tokenización del sistema de diseño GLUE. En este sentido, todo lo relacionado con la conceptualización, metodología, descripción de procesos y mapa de procesos relacionados con el proceso de ingeniería UX fue realizado por mí. \nLa realización de esta iniciativa involucró los siguientes pasos:"}
+						: "Otra parte importante de mi trabajo dentro de UX fue la creación del proceso de tokenization del sistema de diseño GLUE. En este sentido, todo lo relacionado con la conceptualización, metodología, descripción de procesos y mapa de procesos relacionados con el proceso de ingeniería UX fue realizado por mí. \nLa realización de esta iniciativa involucró los siguientes pasos:"}
 				</p>
 				<div className="cont-steps">
 					<CoInfoCard data={language == "EN" ? steps : pasos} size="mini" />
@@ -256,7 +256,7 @@ const CoEngine = () => {
 					</h3>
 					{language == "EN"
 						? "Thanks to the various sources consulted related to processes and other companies that have embarked on their use of tokens for the definition of design rules throughout their entire design framework. These cases that helped the research in scope, technical possibilities, value, and success were:"
-						: "Gracias a las diferentes fuentes consultadas relacionadas con procesos y otras empresas que han emprendido su uso de tokens para la definición de reglas de diseño a lo largo de todo su framework de diseño. estos casos que ayudaron a la investigación de alcance, posibilidades técnicas, valor y exito fueron:"}
+						: "Gracias a las diferentes fuentes consultadas relacionadas con procesos y otras empresas que han emprendido su uso de tokens para la definición de reglas de diseño a lo largo de todo su framework de diseño. estos casos que ayudaron a la investigación de alcance, posibilidades técnicas, valor y éxito fueron:"}
 				</p>
 				<div className="cont-caso">
 					<CoCardCopa />

@@ -40,7 +40,7 @@ const CoDefDesign = () => {
 	const [zoom, setZoom] = useState(100);
 
 	const titles = ["Design", "definition"];
-	const titulos = ["Definicióm", "de diseño"];
+	const titulos = ["Definición", "de diseño"];
 
 	function zoomAnima(plus) {
 		if (window.innerWidth <= window.innerHeight * 1) {
@@ -110,8 +110,8 @@ const CoDefDesign = () => {
 				</div>
 				<p className="monBs-dark">
 					{language == "EN"
-						? "Based on the user stories, the next step was the exploration and externalization of ideas, this was done first through sketches, and later with a model and prototype made in Figma where animations, interactions and sections of the site were fully determined. The sketches and figma prototype are just below."
-						: "Basándose en las historias de usuario, el siguiente paso fue la exploración y exteriorización de ideas, esto se realizado primeramente a través de sketches, y posteriormente con una maqueta y prototipo hecho en Figma donde se determino por completo animaciones, interacciones y secciones del sitio. Los bocetos y prototipo de figma se encuentran justo abajo."}
+						? "Based on the user stories, the next step was the exploration and externalization of ideas, this was done first through sketches, and later with a model and prototype made in Figma where animations, interactions and sections of the site were fully determined. The sketches and Figma prototype are just below."
+						: "Basándose en las historias de usuario, el siguiente paso fue la exploración y exteriorización de ideas, esto se realizado primeramente a través de sketches, y posteriormente con una maqueta y prototipo hecho en Figma donde se determino por completo animaciones, interacciones y secciones del sitio. Los bocetos y prototipo de Figma se encuentran justo abajo."}
 				</p>
 				<div className="gallery-niv1">
 					<div className="gallery-niv2_1">

@@ -99,8 +99,8 @@ const CoReq = () => {
 		},
 		{
 			id: 3,
-			title: "B.3- Inventoristas",
-			description: "Definieron lo relacionado al manejo de SKUS y calculo de productos",
+			title: "B.3- Inventaristas",
+			description: "Definieron lo relacionado al manejo de SKUs y calculo de productos",
 			icon: inventory,
 		},
 		{
@@ -127,7 +127,7 @@ const CoReq = () => {
 		{
 			id: 3,
 			title: "B.3- Inventors",
-			description: "They defined what is related to the management of SKUS and product calculation",
+			description: "They defined what is related to the management of SKUs and product calculation",
 			icon: inventory,
 		},
 		{

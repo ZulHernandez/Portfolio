@@ -382,7 +382,7 @@ let footOpciones = [
 			},
 			{
 				id: 4,
-				text: "Contactame",
+				text: "Contáctame",
 				type: "",
 				link: "/#contactame",
 				anchor: "",
@@ -578,3 +578,4 @@ const CoFooter = () => {
 };
 
 export default CoFooter;
+ 

@@ -259,7 +259,7 @@ let trabajosSecond = [
 		img: marsoft,
 		duration: "(abril 2018 - noviembre 2021)",
 		role: "Co-fundador / Director de diseño",
-		tags: ["compañia", "trabajo", "diseño", "programación"],
+		tags: ["compañía", "trabajo", "diseño", "programación"],
 		des: "Fundación de una compañía dedicada al desarrollo de software y diseño empresarial.<br/>Administración de proyectos y equipos de trabajo en ambos giros de la empresa. Comunicación constante con clientes, definición de requerimientos y testeo.",
 	},
 	{

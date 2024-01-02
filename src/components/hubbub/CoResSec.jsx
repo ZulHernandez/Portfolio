@@ -51,7 +51,7 @@ const CoResSec = () => {
 				<p className="monBs-dark">
 					{language == "EN"
 						? "With this, they were able to determine the new elements that would comprise the project's website and, at the same time, determine which ones would be essential to maintain so as not to separate both branches of HUBBUB in their entirety. The determination of a color palette and typographies were the products of this."
-						: "Con esto pudieron determinaste los nuevos elementos que comprenderían el sitio web del proyecto y, al mismo tiempo, determinar cuales serían los esenciales a mantener para no seperar en su totalidad ambas ramas de HUBBUB. La determinación de una paleta de colores y tipográfias fueron los productos de esto."}
+						: "Con esto pudieron determinaste los nuevos elementos que comprenderían el sitio web del proyecto y, al mismo tiempo, determinar cuales serían los esenciales a mantener para no separar en su totalidad ambas ramas de HUBBUB. La determinación de una paleta de colores y tipografías fueron los productos de esto."}
 				</p>
 				<div className="cont-design">
 					<div className="cont-colors">
