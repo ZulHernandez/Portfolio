@@ -18,6 +18,7 @@ import Swal from "sweetalert2";
 
 import { useContext } from "react";
 import { MyContext } from "../../components/context/MyContext";
+import { Link } from "react-router-dom";
 
 let experience = [
 	{
@@ -28,7 +29,7 @@ let experience = [
 		role: "UI/UX Senior Designer",
 		tags: ["job", "design", "programming"],
 		side: "left",
-		url: "experience/liverpool",
+		url: "/experience/liverpool",
 		des: "Research, prototype, and management of digital products for more than six brands.<br/>Creation, management, and automation of the company’s design framework.<br/>Development of plugins and tools for automating design and programming processes.",
 	},
 	{
@@ -40,7 +41,7 @@ let experience = [
 		subc: uam,
 		subcName: "UAM Azcapotzalco",
 		tags: ["project", "design", "programming"],
-		url: "experience/hubbub",
+		url: "/experience/hubbub",
 		des: "Design and development of a data visualization website about the noise phenomenon in Mexico City and the Metropolitan Area.",
 	},
 	{
@@ -76,7 +77,7 @@ let experience = [
 		subcName: "Marsoft",
 		tags: ["project", "design", "programming"],
 		side: "left",
-		url: "experience/gook",
+		url: "/experience/gook",
 		des: "Development and design of a Mini ERP and Marketplace for e-commerce of optical health products",
 	},
 	{
@@ -142,7 +143,7 @@ let experiencia = [
 		role: "Diseñador UI/UX Senior",
 		tags: ["trabajo", "diseño", "programación"],
 		side: "left",
-		url: "experience/liverpool",
+		url: "/experience/liverpool",
 		des: "Investigación, prototipo y administración de productos digitales para más de seis marcas.<br/>Creación, administración y automatización del framework de diseño de la empresa.<br/>Desarrollo de plugin y herramientas para automatización de procesos de diseño y programación.",
 	},
 	{
@@ -154,7 +155,7 @@ let experiencia = [
 		subc: uam,
 		subcName: "UAM Azcapotzalco",
 		tags: ["proyecto", "diseño", "programación"],
-		url: "experience/hubbub",
+		url: "/experience/hubbub",
 		des: "Definición de historias de usuarios y creación de prototipos para diferentes herramientas externas e internas del Instituto Mexicano del Seguro Social.",
 	},
 	{
@@ -190,7 +191,7 @@ let experiencia = [
 		subcName: "Marsoft",
 		tags: ["proyecto", "diseño", "programación"],
 		side: "left",
-		url: "experience/liverpool",
+		url: "/experience/liverpool",
 		des: "Desarrollo y diseño de Mini ERP y Marketplace para e-commerce de productos de la salud óptica.",
 	},
 	{
@@ -284,7 +285,6 @@ CoMonth.propTypes = {
 };
 
 function alerta(compa, language) {
-
 	let tagss;
 	let subCoStyle = "block";
 	let display = "flex";
@@ -336,13 +336,7 @@ function alerta(compa, language) {
 			compa.des +
 			"</p><div class='button' style='display:" +
 			display +
-			"'><div onClick='window.open(`" +
-			compa.url +
-			"`,`_self`)' class='button-tertiary clickable'>" +
-			botonText +
-			"<img loading='lazy' src=" +
-			Farrow +
-			"></img></div></div>",
+			"'></div>",
 		width: 600,
 		padding: "3rem 3rem 5rem 3rem",
 		background: "#fff",
@@ -352,7 +346,6 @@ function alerta(compa, language) {
 }
 
 const CoExpCard = ({ company }) => {
-
 	const { language } = useContext(MyContext);
 
 	CoExpCard.propTypes = {
@@ -362,18 +355,19 @@ const CoExpCard = ({ company }) => {
 	return (
 		<div
 			className="job-card clickable"
-			onClick={() => alerta(company, language)}
 			style={{
 				borderRadius:
 					company.side == "left" ? "20px 20px 0px 20px" : "20px 20px 20px 0px",
 			}}
 		>
-			<img loading="lazy"
+			<img
+				onClick={() => alerta(company, language)}
+				loading="lazy"
 				className="job-card-img"
 				src={company.img}
 				alt={company.company}
 			></img>
-			<div className="job-card-data">
+			<div className="job-card-data" onClick={() => alerta(company, language)}>
 				<div>
 					<p className="job-card-data-duration">{company.duration}</p>
 					<p className="job-card-data-company">{company.company}</p>
@@ -385,7 +379,20 @@ const CoExpCard = ({ company }) => {
 					subcName={company.subcName}
 				/>
 			</div>
-			<img loading="lazy" className="job-card-out" src={out}></img>
+			<div style={{display: company.url ? "flex" : "none"}}>
+				<Link to={"" + company.url}>
+					<span
+						className="button-tertiary clickable"
+						style={{
+							justifyContent: "flex-end",
+							alignItems: "flex-start",
+							margin: "0",
+						}}
+					>
+						{language == "EN" ? "SEE MORE +" : "VER MÁS +"}
+					</span>
+				</Link>
+			</div>
 		</div>
 	);
 };

@@ -16,8 +16,8 @@ import sys9 from "../../assets/imgs/hubbub/system/sys9.gif";
 const CoSite = () => {
 	const { language } = useContext(MyContext);
 
-	const titles = ["Second hand", "research"];
-	const titulos = ["Investigación", "de segunda", "mano"];
+	const titles = ["Results"];
+	const titulos = ["Resultados"];
 
 	return (
 		<div style={{ zIndex: "3" }}>

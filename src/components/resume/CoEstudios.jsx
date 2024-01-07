@@ -43,10 +43,23 @@ const CoCurso = () => {
 			name: "Educación IT",
 			logo: "/it.svg",
 		},
+		{
+			id: 4,
+			name: "LinkedIn Learning",
+			logo: "/linkedin.svg",
+		},
 	];
 	let courses = [
 		{
 			id: 1,
+			institution: [institutes[3]],
+			date: "November 2023",
+			nombre: "How to manage your time the best way",
+			num: "bd04b266b27a42a8c34a...",
+			link: "https://www.linkedin.com/learning/certificates/bd04b266b27a42a8c34a03da5454bd0ca0397d895ee52cb5163331fe78b00ff0?accountId=0&u=0&success=true&authUUID=ycMhIqRfRyqdlUWKDLMKPA%3D%3D",
+		},
+		{
+			id: 2,
 			institution: [institutes[2]],
 			date: "November 2023",
 			nombre: "Responsive Web Design & Bootstrap",
@@ -54,7 +67,7 @@ const CoCurso = () => {
 			link: "https://www.educacionit.com/perfil/saul-ulises-hernandez-cruz-913342/certificado/63826",
 		},
 		{
-			id: 2,
+			id: 3,
 			institution: [institutes[2]],
 			date: "August 2023",
 			nombre: "React.JS Developer",
@@ -62,7 +75,7 @@ const CoCurso = () => {
 			link: "https://www.educacionit.com/perfil/saul-ulises-hernandez-cruz-913342/certificado/63297",
 		},
 		{
-			id: 3,
+			id: 4,
 			institution: [institutes[0], institutes[1]],
 			date: "August 2022",
 			nombre: "Create page layouts and low-fidelity prototypes",
@@ -70,7 +83,7 @@ const CoCurso = () => {
 			link: "https://coursera.org/share/d076e8e063b9539efafacc1780c63315",
 		},
 		{
-			id: 4,
+			id: 5,
 			institution: [institutes[0], institutes[1]],
 			date: "July 2022",
 			nombre:
@@ -79,7 +92,7 @@ const CoCurso = () => {
 			link: "https://www.coursera.org/account/accomplishments/certificate/SZPFQ7A2EZNS",
 		},
 		{
-			id: 5,
+			id: 6,
 			institution: [institutes[0], institutes[1]],
 			date: "July 2022",
 			nombre: "Basic aspects of user experience design",
@@ -90,14 +103,22 @@ const CoCurso = () => {
 	let cursos = [
 		{
 			id: 1,
+			institution: [institutes[3]],
+			date: "Noviembre 2023",
+			nombre: "Cómo gestionar mejor tu tiempo",
+			num: "bd04b266b27a42a8c34a...",
+			link: "https://www.linkedin.com/learning/certificates/bd04b266b27a42a8c34a03da5454bd0ca0397d895ee52cb5163331fe78b00ff0?accountId=0&u=0&success=true&authUUID=ycMhIqRfRyqdlUWKDLMKPA%3D%3D",
+		},
+		{
+			id: 2,
 			institution: [institutes[2]],
 			date: "Noviembre 2023",
-			nombre: "Responsive Web Design & Bootstrap",
+			nombre: "Diseño Responsivo Web y Bootstrap",
 			num: "91334263826",
 			link: "https://www.educacionit.com/perfil/saul-ulises-hernandez-cruz-913342/certificado/63826",
 		},
 		{
-			id: 2,
+			id: 3,
 			institution: [institutes[2]],
 			date: "Agosto 2023",
 			nombre: "React.JS Developer",
@@ -105,7 +126,7 @@ const CoCurso = () => {
 			link: "https://www.educacionit.com/perfil/saul-ulises-hernandez-cruz-913342/certificado/63297",
 		},
 		{
-			id: 3,
+			id: 4,
 			institution: [institutes[0], institutes[1]],
 			date: "Agosto 2022",
 			nombre: "Crear esquemas de página y prototipos de baja fidelidad",
@@ -113,7 +134,7 @@ const CoCurso = () => {
 			link: "https://coursera.org/share/d076e8e063b9539efafacc1780c63315",
 		},
 		{
-			id: 4,
+			id: 5,
 			institution: [institutes[0], institutes[1]],
 			date: "Julio 2022",
 			nombre:
@@ -122,7 +143,7 @@ const CoCurso = () => {
 			link: "https://www.coursera.org/account/accomplishments/certificate/SZPFQ7A2EZNS",
 		},
 		{
-			id: 5,
+			id: 6,
 			institution: [institutes[0], institutes[1]],
 			date: "Julio 2022",
 			nombre: "Aspectos básicos del diseño de la experiencia del usuario",

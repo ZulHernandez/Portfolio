@@ -71,9 +71,9 @@ let footOptions = [
 			},
 			{
 				id: 5,
-				text: "ISSUU (Saúl Hernández)",
+				text: "Relayto (Saúl Hernández)",
 				type: "",
-				link: "https://issuu.com/nhoro",
+				link: "https://relayto.com/saul-hernandez/docs",
 				anchor: "_blank",
 			},
 		],
@@ -328,9 +328,9 @@ let footOpciones = [
 			},
 			{
 				id: 5,
-				text: "ISSUU (Saúl Hernández)",
+				text: "Relayto (Saúl Hernández)",
 				type: "",
-				link: "https://issuu.com/nhoro",
+				link: "https://relayto.com/saul-hernandez/docs",
 				anchor: "_blank",
 			},
 		],

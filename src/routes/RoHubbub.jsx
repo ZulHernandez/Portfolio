@@ -48,11 +48,39 @@ const CoLinks = () => {
 				target="_blank"
 				rel="noreferrer"
 			>
-				<img loading="lazy" className="link-icon" src={link.icon} alt={link.name} />
+				<img
+					loading="lazy"
+					className="link-icon"
+					src={link.icon}
+					alt={link.name}
+				/>
 				<p>{link.name}</p>
 			</a>
 		);
 	});
+};
+
+const CoFrame = () => {
+	return (
+		<div>
+			<iframe
+				allowfullscreen
+				src="https://relayto.com/saul-hernandez/ver-el-ruido-un-ejercicio-de-visualizacion-de-la-informacion-para-el-ruido-de-la-ciudad-de-otxc8jwj5vnqe?embed=1"
+				width="100%"
+				height="100%"
+				style={{ mixBlendMode: "multiply" }}
+			></iframe>
+			{/* <iframe
+					title="paleyPark"
+					frameBorder="0"
+					allowfullscreen
+					mozallowfullscreen="true"
+					webkitallowfullscreen="true"
+					allow="autoplay; fullscreen; xr-spatial-tracking"
+					src="https://sketchfab.com/models/de7a7fbca06140319776930b19a0ddbf/embed?autospin=1&autostart=1&camera=0&annotations_visible=1"
+				></iframe> */}
+		</div>
+	);
 };
 
 const RoHubbub = () => {
@@ -96,8 +124,8 @@ const RoHubbub = () => {
 			<center>
 				<hr className="line-hubbub" />
 			</center>
-			<div style={{padding: "10rem"}}>
-				<div style={{paddingBottom: "10rem"}} className="img-fin">
+			<div style={{ padding: "10rem" }}>
+				<div style={{ paddingBottom: "10rem" }} className="img-fin">
 					<img loading="lazy" src={hubbub} id="code" />
 				</div>
 				<p
@@ -108,9 +136,11 @@ const RoHubbub = () => {
 						? "All the documents related to the project can be found in the following links."
 						: "Todos los documentos relacionados con el proyecto los puedes encontrar en los siguientes enlaces."}
 				</p>
-				<div style={{paddingTop: "5rem"}} className="cont-link">
+				<div style={{ paddingTop: "5rem" }} className="cont-link">
 					<CoLinks />
 				</div>
+				<br /><br />
+				<CoFrame />
 			</div>
 		</div>
 	);

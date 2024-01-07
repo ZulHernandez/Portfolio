@@ -1,17 +1,21 @@
 import sign from "/sign.svg";
 import signGrey from "/Greysign.svg";
+
 import bnBehance from "../../assets/imgs/vector/bn-behance.svg";
 import bnGit from "../../assets/imgs/vector/bn-git.svg";
 import bnIssuu from "../../assets/imgs/vector/bn-issuu.svg";
 import bnLink from "../../assets/imgs/vector/bn-link.svg";
 import bnSketch from "../../assets/imgs/vector/bn-sketch.svg";
+import bnCalendario from "../../assets/imgs/vector/bn-Calendar.svg";
+import bnRaylto from "../../assets/imgs/vector/bn-raylto.svg";
+
 import clBehance from "../../assets/imgs/vector/color-behance.svg";
 import clGit from "../../assets/imgs/vector/color-git.svg";
 import clIssuu from "../../assets/imgs/vector/color-issuu.svg";
 import clLink from "../../assets/imgs/vector/color-link.svg";
 import clSketch from "../../assets/imgs/vector/color-sketch.svg";
-import bnCalendario from "../../assets/imgs/vector/bn-Calendar.svg";
 import cCalendario from "../../assets/imgs/vector/color-Calendar.svg";
+import clRaylto from "../../assets/imgs/vector/color-raylto.svg";
 
 import { Link } from "react-router-dom";
 import { useContext } from "react";
@@ -35,10 +39,10 @@ let redes = [
 	},
 	{
 		id: 3,
-		name: "ISSUU",
-		bn: bnIssuu,
-		cl: clIssuu,
-		link: "https://issuu.com/nhoro",
+		name: "RAYLTO",
+		bn: bnRaylto,
+		cl: clRaylto,
+		link: "https://relayto.com/saul-hernandez/docs",
 	},
 	{
 		id: 4,
@@ -105,10 +109,10 @@ const CoNav = () => {
 				</Link>
 			</div>
 			<div className="container-nav-link-right">
-				<div className="container-nav-link-right-media">
+				<div id="social-media" className="container-nav-link-right-media">
 					<CoRedes />
 				</div>
-				<div className="container-nav-link-right-media">
+				<div className="container-nav-link-right-language">
 					<span
 						className={
 							language == "ES"
