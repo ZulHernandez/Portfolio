@@ -21,10 +21,10 @@ import { useContext } from "react";
 import { MyContext } from "../../components/context/MyContext";
 import { Link } from "react-router-dom";
 
-import bannerCV from "../../assets/imgs/bitmap/banners/cv.png";
-import bannerLinkedIn from "../../assets/imgs/bitmap/banners/linkedin.png";
-import bannerBehance from "../../assets/imgs/bitmap/banners/behance.png";
-import bannerGitHub from "../../assets/imgs/bitmap/banners/github.png";
+import bannerCV from "../../assets/imgs/bitmap/banners/cv.webp";
+import bannerLinkedIn from "../../assets/imgs/bitmap/banners/linkedin.webp";
+import bannerBehance from "../../assets/imgs/bitmap/banners/behance.webp";
+import bannerGitHub from "../../assets/imgs/bitmap/banners/github.webp";
 
 let experience = [
 	{
