@@ -1,5 +1,6 @@
 import CoTitle from "../general/CoTitle";
 import CoTag from "../general/CoTag";
+import CoCardCopa from "../general/CoCardCopa";
 import liverpool from "../../assets/imgs/vector/companies/Cliverpool.svg";
 import hubbub from "../../assets/imgs/vector/companies/Chubbub.svg";
 import grupopm from "../../assets/imgs/vector/companies/CPM.svg";
@@ -19,6 +20,11 @@ import Swal from "sweetalert2";
 import { useContext } from "react";
 import { MyContext } from "../../components/context/MyContext";
 import { Link } from "react-router-dom";
+
+import bannerCV from "../../assets/imgs/bitmap/banners/cv.png";
+import bannerLinkedIn from "../../assets/imgs/bitmap/banners/linkedin.png";
+import bannerBehance from "../../assets/imgs/bitmap/banners/behance.png";
+import bannerGitHub from "../../assets/imgs/bitmap/banners/github.png";
 
 let experience = [
 	{
@@ -263,8 +269,6 @@ CoYear.propTypes = {
 	year: PropTypes.string.isRequired,
 };
 
-// Remove the import statement for PropTypes since it has already been imported in the previous code block
-
 const CoMonth = (props) => {
 	return (
 		<div
@@ -379,7 +383,7 @@ const CoExpCard = ({ company }) => {
 					subcName={company.subcName}
 				/>
 			</div>
-			<div style={{display: company.url ? "flex" : "none"}}>
+			<div style={{ display: company.url ? "flex" : "none" }}>
 				<Link to={"" + company.url}>
 					<span
 						className="button-tertiary clickable"
@@ -438,6 +442,46 @@ const CoExp = ({ company }) => {
 const CoExperiencia = () => {
 	const { language } = useContext(MyContext);
 
+	let casos = [
+		{
+			id: 1,
+			banner: bannerCV,
+			title: language == "EN" ? "Resume" : "Currículum",
+			sub:
+				language == "EN"
+					? "Read and download my personal resume"
+					: "Lee y descarga mi currículum personal",
+			link: "https://drive.google.com/file/d/1xEG-wwRRmfoqxibw3679_W8au78mYfuj/view?usp=sharing",
+		},
+		/* {
+			id: 2,
+			banner: bannerLinkedIn,
+			title: "LinkedIn",
+			sub: language == "EN"
+			? "Here is my LinkedIn professional profile"
+			: "Aquí mi perfil profesional de LinkedIn",
+			link: "https://www.linkedin.com/in/saululises/",
+		}, */
+		{
+			id: 3,
+			banner: bannerBehance,
+			title: "Behance",
+			sub: language == "EN"
+			? "Other design projects an collaboration outside UX&UI"
+			: "Otros proyectos de diseño y colaboraciones fuera de UX&UI",
+			link: "https://www.behance.net/zulhernndez",
+		},
+		{
+			id: 4,
+			banner: bannerGitHub,
+			title: "GitHub",
+			sub: language == "EN"
+			? "Repositories and software projects"
+			: "Repositorios y proyectos de software",
+			link: "https://github.com/ZulHernandez",
+		},
+	];
+
 	const titles = ["experience", "& projects"];
 	const titulos = ["experiencia", "y proyectos"];
 
@@ -449,6 +493,17 @@ const CoExperiencia = () => {
 		>
 			<CoTitle titles={language == "EN" ? titles : titulos} />
 			<div id="exp-cont" className="div-content middle">
+				<Link to="/experience">
+					<div className="button-tertiary clickable" style={{ width: "100%" }}>
+						{language == "EN"
+							? "Explore whole experience"
+							: "Explora toda mi experiencia"}
+					</div>
+				</Link>
+				<div
+					className="date-lateral-line dark"
+					style={{ height: "50px" }}
+				></div>
 				<CoYear year={language == "EN" ? "TODAY" : "ACTUALIDAD"} />
 				<CoExp company={language == "EN" ? experience[0] : experiencia[0]} />
 				<CoYear year="2023" />
@@ -468,6 +523,25 @@ const CoExperiencia = () => {
 				<CoYear year="2017" />
 				<CoExp company={language == "EN" ? experience[9] : experiencia[9]} />
 				<CoYear year="2016" />
+				<div
+					className="date-lateral-line dark"
+					style={{ height: "50px" }}
+				></div>
+				<Link to="/experience">
+					<div
+						className="button-tertiary clickable"
+						style={{ width: "100%", margin: "0" }}
+					>
+						{language == "EN"
+							? "Explore whole experience"
+							: "Explora toda mi experiencia"}
+					</div>
+				</Link>
+				<br />
+				<br />
+				<div className="cont-caso">
+					<CoCardCopa casos={casos} />
+				</div>
 			</div>
 		</div>
 	);

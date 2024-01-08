@@ -42,11 +42,11 @@ const CoLeftNav = () => {
 	let options = [
 		"about me",
 		"studies &\n courses",
-		"experience &\n projects",
+		"experience &\n resume",
 		"get in touch",
 		"sobre mi",
 		"estudios y\n cursos",
-		"experiencia y\n proyectos",
+		"experiencia y\n currículum",
 		"Contáctame",
 	];
 

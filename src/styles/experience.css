@@ -67,14 +67,17 @@ body {
   }
 }
 ::-moz-selection {
-  background: #ff2079;
+  background: #ff589a;
   color: #000;
-  text-shadow: #333333 0px 0px 1px;
+  mix-blend-mode: difference;
+  text-decoration: dotted underline;
 }
 ::selection {
-  background: #ff2079;
+  background: #ff589a;
   color: #000;
-  text-shadow: #333333 0px 0px 1px;
+  mix-blend-mode: difference;
+  -webkit-text-decoration: dotted underline;
+          text-decoration: dotted underline;
 }
 
 @font-face {

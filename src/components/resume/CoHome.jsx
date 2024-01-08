@@ -1,13 +1,40 @@
 import CoTitle from "../general/CoTitle";
-import rGris from "../../assets/imgs/bitmap/misFotos/rayaAzul.webp";
-import nGris from "../../assets/imgs/bitmap/misFotos/BNnegro.webp";
-import gGris from "../../assets/imgs/bitmap/misFotos/BNguinda.webp";
+
+import BNguinda from "../../assets/imgs/bitmap/misFotos/BNguinda.webp";
+import BNnegro from "../../assets/imgs/bitmap/misFotos/BNnegro.webp";
+import BNmorado from "../../assets/imgs/bitmap/misFotos/BNraya.webp";
+
+import Mguinda from "../../assets/imgs/bitmap/misFotos/Mguinda.webp";
+import Mnegro from "../../assets/imgs/bitmap/misFotos/Mnegro.webp";
+import Mraya from "../../assets/imgs/bitmap/misFotos/Mraya.webp";
+
+import Pguinda from "../../assets/imgs/bitmap/misFotos/Pguinda.webp";
+import Pnegro from "../../assets/imgs/bitmap/misFotos/Pnegro.webp";
+import Praya from "../../assets/imgs/bitmap/misFotos/Praya.webp";
+
+import Rguinda from "../../assets/imgs/bitmap/misFotos/Rguinda.webp";
+import Rnegro from "../../assets/imgs/bitmap/misFotos/Rnegro.webp";
+import Rraya from "../../assets/imgs/bitmap/misFotos/Rraya.webp";
 
 import { useContext } from "react";
 import { MyContext } from "../../components/context/MyContext";
 
 //* Imagenes de mi
-let images = [rGris, nGris, gGris];
+let images = [
+	BNguinda,
+	BNnegro,
+	BNmorado,
+	Mguinda,
+	Mnegro,
+	Mraya,
+	Pguinda,
+	Pnegro,
+	Praya,
+	Rguinda,
+	Rnegro,
+	Rraya,
+];
+let iman;
 
 //funcion Componente Home
 const CoHome = () => {
@@ -34,7 +61,9 @@ const CoHome = () => {
 
 	//funcion Calcula la hora del día para mostrar diferentes imagenes
 	function setImage() {
-		return Math.floor(Math.random() * (2 - 0 + 1) + 0);
+		iman = Math.floor(Math.random() * (2 - 0 + 1) + 0);
+		console.log(iman);
+		return iman;
 	}
 
 	//* Contexto para conocer la posición dentro de la página
@@ -44,8 +73,8 @@ const CoHome = () => {
 			id={language == "EN" ? "about-me" : "sobre-mi"}
 			style={{ zIndex: "1" }}
 		>
-			<CoTitle titles={language == "EN" ? titles : titulos}/>
-			<div className="div-content" style={{height: "fit-content"}}>
+			<CoTitle titles={language == "EN" ? titles : titulos} />
+			<div className="div-content" style={{ height: "fit-content" }}>
 				<div id="cont-Home">
 					<div className="div-text">
 						<div>
@@ -95,10 +124,30 @@ const CoHome = () => {
 								<b>creando insumos en SASS, JSONs y otras tecnologías.</b>
 							</p>
 						</div>
-						<div
-							className="photo-portrait"
-							style={{ backgroundImage: "url(" + images[setImage()] + ")" }}
-						></div>
+						<div className="photo">
+							<div
+								id="imgP"
+								className="photo-portrait"
+								style={{
+									backgroundImage: "url(" + images[setImage() + 3] + ")",
+								}}
+							></div>
+							<div
+								id="imgPi"
+								className="photo-portrait"
+								style={{ backgroundImage: "url(" + images[iman + 6] + ")" }}
+							></div>
+							<div
+								id="imgR"
+								className="photo-portrait"
+								style={{ backgroundImage: "url(" + images[iman + 9] + ")" }}
+							></div>
+							<div
+								id="imgB"
+								className="photo-portrait"
+								style={{ backgroundImage: "url(" + images[iman] + ")" }}
+							></div>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -86,9 +86,10 @@ body {
     }
 }
 ::selection {
-    background: $red-800;
+    background: $red-600;
     color: #000;
-    text-shadow: $shade-800 0px 0px 1px;
+    mix-blend-mode: difference;
+    text-decoration: dotted underline;
 }
 
 //main FONTS

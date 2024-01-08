@@ -83,15 +83,59 @@
 	max-height: 100%;
 }
 
+.photo{
+	width: calc(50% - 1.5rem);
+	min-height: calc(90% - 0rem);
+	position: fixed;
+	left: 50%;
+	z-index: -10;
+}
+
 .photo-portrait {
 	width: calc(50% - 1.5rem);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: bottom center;
-	min-height: calc(80% - 0rem);
+	min-height: calc(90% - 0rem);
 	position: fixed;
 	left: 50%;
 	z-index: -10;
+	transition: all 0.25s ease-in-out;
+}
+
+#imgP {
+	mix-blend-mode: multiply;
+	background-position-x: calc(50% + 0rem);
+	opacity: 0;
+}
+
+#imgPi {
+	background-position-y: calc(50% - 0rem);
+	mix-blend-mode: multiply;
+	opacity: 0;
+}
+
+#imgR {
+	background-position-x: calc(50% - 0rem);
+	mix-blend-mode: multiply;
+	opacity: 0;
+}
+
+.photo{
+	&:hover{
+		#imgP{
+			background-position-x: calc(50% + 2rem);
+			opacity: 1;
+		}
+		#imgPi{
+			background-position-y: calc(50% - 2rem);
+			opacity: 1;
+		}
+		#imgR {
+			background-position-x: calc(50% - 2rem);
+			opacity: 1;
+		}
+	}
 }
 
 .foto-mia {
@@ -457,6 +501,7 @@ textarea {
 		background: transparent;
 	}
 }
+	
 
 //main MEDIA
 

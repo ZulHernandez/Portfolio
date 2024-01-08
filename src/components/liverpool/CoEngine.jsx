@@ -1,5 +1,6 @@
 import CoTitle from "../general/CoTitle";
 import CoInfoCard from "../general/CoInfoCard";
+import CoCardCopa from "../general/CoCardCopa";
 
 import research from "../../assets/imgs/liverpool/investigation.svg";
 import toolkit from "../../assets/imgs/liverpool/toolkit.svg";
@@ -84,48 +85,29 @@ const CoTech = () => {
 	});
 };
 
-const CoCardCopa = () => {
-	let casos = [
-		{
-			id: 1,
-			banner: bannerSales,
-			title: "SalesForce",
-			sub: "Lightning Design System",
-			link: "https://www.lightningdesignsystem.com/",
-		},
-		{
-			id: 2,
-			banner: bannerPega,
-			title: "Pega",
-			sub: "Constellation Design System",
-			link: "https://design.pega.com/design/design-tokens/",
-		},
-		{
-			id: 3,
-			banner: bannerAtla,
-			title: "Atlasian",
-			sub: "Atlasian Design System",
-			link: "https://atlassian.design/tokens/design-tokens",
-		},
-	];
-
-	return casos.map((caso) => {
-		return (
-			<a key={caso.id} href={caso.link} target="_blank" rel="noreferrer">
-				<div className="caso-card">
-					<img loading="lazy" className="caso-card-img" src={caso.banner} alt={caso.title} />
-					<div className="caso-card-info">
-						<div>
-							<h3>{caso.title}</h3>
-							<p>{caso.sub}</p>
-						</div>
-						<p className="">{caso.link}</p>
-					</div>
-				</div>
-			</a>
-		);
-	});
-};
+let casos = [
+	{
+		id: 1,
+		banner: bannerSales,
+		title: "SalesForce",
+		sub: "Lightning Design System",
+		link: "https://www.lightningdesignsystem.com/",
+	},
+	{
+		id: 2,
+		banner: bannerPega,
+		title: "Pega",
+		sub: "Constellation Design System",
+		link: "https://design.pega.com/design/design-tokens/",
+	},
+	{
+		id: 3,
+		banner: bannerAtla,
+		title: "Atlasian",
+		sub: "Atlasian Design System",
+		link: "https://atlassian.design/tokens/design-tokens",
+	},
+];
 
 const CoEngine = () => {
 	const { language } = useContext(MyContext);
@@ -259,7 +241,7 @@ const CoEngine = () => {
 						: "Gracias a las diferentes fuentes consultadas relacionadas con procesos y otras empresas que han emprendido su uso de tokens para la definición de reglas de diseño a lo largo de todo su framework de diseño. estos casos que ayudaron a la investigación de alcance, posibilidades técnicas, valor y éxito fueron:"}
 				</p>
 				<div className="cont-caso">
-					<CoCardCopa />
+					<CoCardCopa casos={casos} />
 				</div>
 				<p className="monBs-dark">
 					<h3 style={{ textAlign: "Left" }}>
