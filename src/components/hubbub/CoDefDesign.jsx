@@ -1,11 +1,6 @@
 import { useContext, useState } from "react";
 import { MyContext } from "../context/MyContext";
 
-import page1 from "../../assets/imgs/hubbub/userStory/userStory_Página_1.webp";
-import page2 from "../../assets/imgs/hubbub/userStory/userStory_Página_2.webp";
-import page3 from "../../assets/imgs/hubbub/userStory/userStory_Página_3.webp";
-import page4 from "../../assets/imgs/hubbub/userStory/userStory_Página_4.webp";
-import page5 from "../../assets/imgs/hubbub/userStory/userStory_Página_5.webp";
 import plus from "../../assets/imgs/hubbub/userStory/zoom_in.svg";
 import minus from "../../assets/imgs/hubbub/userStory/zoom_out.svg";
 import gallery1 from "../../assets/imgs/hubbub/bocetos/1.webp";
@@ -17,22 +12,29 @@ import gallery6 from "../../assets/imgs/hubbub/bocetos/6.webp";
 import gallery7 from "../../assets/imgs/hubbub/bocetos/7.webp";
 import gallery8 from "../../assets/imgs/hubbub/bocetos/8.webp";
 
+import huEsp from "../../assets/imgs/hubbub/userStory/histUsuario.webp";
+import huEng from "../../assets/imgs/hubbub/userStory/storyUser.webp";
+
 import CoTitle from "../general/CoTitle";
 
-const CoPDF = ({ zoom }) => {
-	let pages = [page1, page2, page3, page4, page5];
+import PropTypes from "prop-types";
 
-	return pages.map((page) => {
-		return (
-			<img loading="lazy"
-				key={pages.indexOf(page)}
-				className="document-page"
-				style={{ width: zoom + "%" }}
-				src={page}
-				alt="page"
-			/>
-		);
-	});
+const CoPDF = ({ zoom }) => {
+	//let pages = [page1, page2, page3, page4, page5];
+	const { language } = useContext(MyContext);
+	return (
+		<img
+			loading="lazy"
+			className="document-page"
+			style={{ width: zoom + "%" }}
+			src={language == "EN" ? huEng : huEsp}
+			alt="page"
+		/>
+	);
+};
+
+CoPDF.propTypes = {
+	zoom: PropTypes.number.isRequired,
 };
 
 const CoDefDesign = () => {
@@ -133,7 +135,12 @@ const CoDefDesign = () => {
 						<img loading="lazy" src={gallery8} alt="" />
 					</div>
 				</div>
-				<iframe width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FDCKDjbG9VOColuADoF4xsS%2FHUBBUB%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DCLIE0yyHuxS5nTHC-1" allowFullScreen></iframe>
+				<iframe
+					width="800"
+					height="450"
+					src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FDCKDjbG9VOColuADoF4xsS%2FHUBBUB%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DCLIE0yyHuxS5nTHC-1"
+					allowFullScreen
+				></iframe>
 			</div>
 		</div>
 	);

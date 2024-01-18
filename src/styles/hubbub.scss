@@ -307,6 +307,13 @@ $red: #ff7c7c;
     box-shadow: 0px 0px 20.625px 0px rgba(0, 0, 0, 0.5);
 }
 
+.hubbubScreen {
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
 .cont-design {
     @include c.containers(5rem, row);
     width: 100%;
@@ -586,6 +593,17 @@ iframe {
 }
 
 @media only screen and (max-width: 100vh) {
+    .cont-design {
+        @include c.containers(5rem, column);
+        width: 100%;
+        height: fit-content;
+    }
+    .cont-colors,
+    .cont-typo,
+    #code {
+        height: fit-content;
+        width: 100%;
+    }
     .cont-step {
         width: 100%;
     }
@@ -682,14 +700,5 @@ iframe {
         @include c.containers(2.3rem, column);
         width: 100%;
         align-items: center;
-    }
-    .cont-design {
-        @include c.containers(5rem, column);
-        width: 100%;
-    }
-    .cont-colors,
-    .cont-typo,
-    #code {
-        width: 100%;
     }
 }

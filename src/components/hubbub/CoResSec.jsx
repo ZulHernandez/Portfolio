@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { MyContext } from "../context/MyContext";
+import { useEffect } from "react";
 
 import screen1 from "../../assets/imgs/hubbub/research/celCarru/HUBBUB1.webp";
 import screen2 from "../../assets/imgs/hubbub/research/celCarru/HUBBUB2.webp";
@@ -8,22 +9,22 @@ import screen4 from "../../assets/imgs/hubbub/research/celCarru/HUBBUB5.webp";
 import screen5 from "../../assets/imgs/hubbub/research/celCarru/HUBBUB6.webp";
 import CoTitle from "../general/CoTitle";
 
-const CoScreen = () => {
-	let screens = [
-		screen4,
-		screen5,
-		screen1,
-		screen2,
-		screen3,
-	];
+let screens = [
+	screen4,
+	screen5,
+	screen1,
+	screen2,
+	screen3,
+];
 
+const CoScreen = () => {
 	return (
 		<div className="cont-screen">
-			<img loading="lazy" id="s1" src={screens[0]} alt="HUBBUB" />
-			<img loading="lazy" id="s2" src={screens[1]} alt="HUBBUB" />
-			<img loading="lazy" id="s3" src={screens[2]} alt="HUBBUB" />
-			<img loading="lazy" id="s2" src={screens[3]} alt="HUBBUB" />
-			<img loading="lazy" id="s1" src={screens[4]} alt="HUBBUB" />
+			<img className="hubbubScreen" loading="lazy" id="s1" src={screens[0]} alt="HUBBUB" />
+			<img className="hubbubScreen" loading="lazy" id="s2" src={screens[1]} alt="HUBBUB" />
+			<img className="hubbubScreen" loading="lazy" id="s3" src={screens[2]} alt="HUBBUB" />
+			<img className="hubbubScreen" loading="lazy" id="s2" src={screens[3]} alt="HUBBUB" />
+			<img className="hubbubScreen" loading="lazy" id="s1" src={screens[4]} alt="HUBBUB" />
 		</div>
 	);
 };
