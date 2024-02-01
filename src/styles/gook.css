@@ -755,6 +755,20 @@ b {
     z-index: 100;
   }
 }
+@media only screen and (max-width: 600px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    font-size: 6px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    font-size: 7px;
+  }
+}
 @font-face {
   font-display: swap;
   font-family: "Asap-Bold";

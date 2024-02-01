@@ -755,6 +755,27 @@ b {
     z-index: 100;
   }
 }
+@media only screen and (max-width: 600px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    font-size: 6px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    font-size: 7px;
+  }
+}
+.line-exp {
+  border: 0.3rem solid #333333;
+  opacity: 1;
+  width: 90%;
+  border-radius: 10px;
+}
+
 .job-pri-card {
   display: flex;
   align-items: center;
@@ -765,7 +786,7 @@ b {
   border-radius: 10px;
   justify-content: flex-start;
   align-items: center;
-  width: 30rem;
+  width: 40rem;
   transition: all 0.25s ease-in-out;
 }
 .job-pri-card:hover {
@@ -773,8 +794,8 @@ b {
   box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.2);
 }
 .job-pri-card-img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 }
 
 .job-sec-card {
@@ -787,7 +808,7 @@ b {
   border-radius: 10px;
   justify-content: flex-start;
   align-items: center;
-  width: 20rem;
+  width: 25rem;
   transition: all 0.25s ease-in-out;
 }
 .job-sec-card:hover {
@@ -795,8 +816,8 @@ b {
   box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.2);
 }
 .job-sec-card-img {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
 }
 .job-sec-card-data {
   display: flex;
@@ -905,6 +926,49 @@ b {
   flex-wrap: wrap;
 }
 
+.mproj-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.1);
+  border-radius: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 20rem;
+  transition: all 0.25s ease-in-out;
+}
+.mproj-card img {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+.mproj-card:hover {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.2);
+}
+.mproj-card-info {
+  color: #333333;
+  width: 100%;
+  padding: 1rem;
+}
+.mproj-card-info h4 {
+  text-align: center;
+}
+.mproj-card-info-date {
+  font-family: "Bebas-Neue";
+  font-size: 1.2rem;
+  line-height: 1.56rem;
+  text-align: center;
+  color: #ff589a;
+}
+.mproj-card-info-desc {
+  font-family: "Montserrat-semibold";
+  font-size: 1.2rem;
+  line-height: 1.56rem;
+  text-align: center;
+  color: #666666;
+}
+
 @media only screen and (max-width: 70vh) {
   .cont-jobs-pri {
     flex-direction: column;
@@ -923,10 +987,7 @@ b {
     flex-direction: column;
     width: 100%;
   }
-  .job-sec-card {
-    width: 100%;
-  }
-  .proj-card {
+  .job-sec-card, .proj-card, .mproj-card {
     width: 100%;
   }
   .con-proj {

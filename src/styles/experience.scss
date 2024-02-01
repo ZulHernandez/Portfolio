@@ -1,6 +1,16 @@
 @use "./general.scss" as c;
 
 //main EXPERIENCEHOME
+
+.line {
+    &-exp {
+        border: 0.3rem solid c.$shade-800;
+        opacity: 1;
+        width: 90%;
+        border-radius: 10px;
+    }
+}
+
 .job-pri-card {
     @include c.containers(1rem, column);
     box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.1);
@@ -8,15 +18,15 @@
     border-radius: 10px;
     justify-content: flex-start;
     align-items: center;
-    width: 30rem;
+    width: 40rem;
     transition: all 0.25s ease-in-out;
     &:hover {
         background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
         box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.2);
     }
     &-img {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
     }
 }
 
@@ -27,15 +37,15 @@
     border-radius: 10px;
     justify-content: flex-start;
     align-items: center;
-    width: 20rem;
+    width: 25rem;
     transition: all 0.25s ease-in-out;
     &:hover {
         background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
         box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.2);
     }
     &-img {
-        width: 20px;
-        height: 20px;
+        width: 40px;
+        height: 40px;
     }
     &-data {
         @include c.containers(0rem, column);
@@ -116,6 +126,44 @@
     flex-wrap: wrap;
 }
 
+
+.mproj-card {
+    @include c.containers(1rem, column);
+    box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.1);
+    border-radius: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20rem;
+    transition: all 0.25s ease-in-out;
+    & img {
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+    }
+    &:hover {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+        box-shadow: 0px 30px 30px 0px rgba(51, 51, 51, 0.2);
+    }
+    &-info {
+        color: c.$shade-800;
+        width: 100%;
+        padding: 1rem;
+        & h4 {
+            text-align: center;
+        }
+
+        &-date {
+            @include c.typo("bebas", "semibold", "xs");
+            text-align: center;
+            color: c.$red-600;
+        }
+        &-desc {
+            @include c.typo("montserrat", "semibold", "xs");
+            text-align: center;
+            color: c.$shade-600;
+        }
+    }
+}
+
 //main MEDIA
 
 @media only screen and (max-width: 70vh) {
@@ -136,10 +184,7 @@
         flex-direction: column;
         width: 100%;
     }
-    .job-sec-card {
-        width: 100%;
-    }
-    .proj-card {
+    .job-sec-card, .proj-card, .mproj-card {
         width: 100%;
     }
     .con-proj {
